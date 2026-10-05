@@ -33,9 +33,9 @@
 
 <a id="about"></a>
 
-## What is that, IRVIO?
+## What is IRVIO?
 
-First of all - plz read our [Manifest](https://irvio.net/?lang=en).  
+First of all - Start with our [Manifest](https://irvio.net/?lang=en), it explains why IRVIO exists!  
 IRVIO is a free, open-source VPN network. Instead of routing traffic through infrastructure controlled by a single VPN provider, the client establishes a direct encrypted tunnel to another participant - an **Exit Node**. Internet traffic then leaves through that node's connection and public IP address.
 
 The service infrastructure is separated from the user data path. **Server** nodes help participants discover one another, traverse NAT, and establish direct connections, but they do not act as intermediate transit nodes between a client and a separate Exit Node.
