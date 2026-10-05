@@ -1,4 +1,4 @@
-<h1 align="center"><img src="docs/assets/irvio-logo.png" width="52" alt="Логотип IRVIO" align="absmiddle">&nbsp;&nbsp;IRVIO PROJECT</h1>
+<h1 align="center"><img src="docs/assets/irvio-logo.png" width="52" alt="IRVIO logo" align="absmiddle">&nbsp;&nbsp;IRVIO PROJECT</h1>
 
 <p align="center">
   <strong>OPEN SOURCE · ONE-HOP · PEER-TO-PEER VPN</strong>
@@ -13,261 +13,263 @@
 </p>
 
 <p align="center">
-  Открытая распределённая сеть, в которой участники помогают друг другу получать доступ к интернету без единого центрального VPN-шлюза.
+  <strong>English</strong> ·
+  <a href="README.ru.md">Русский</a>
 </p>
 
 <p align="center">
-  <a href="https://irvio.net">Сайт</a> ·
-  <a href="#quick-start">Быстрый старт</a> ·
-  <a href="#architecture">Архитектура</a> ·
-  <a href="#contributing">Участие в проекте</a>
+  An open, distributed network where participants provide internet access to one another - without a central VPN gateway.
+</p>
+
+<p align="center">
+  <a href="https://irvio.net">Website</a> ·
+  <a href="#quick-start">Quick Start</a> ·
+  <a href="#architecture">Architecture</a> ·
+  <a href="#contributing">Contributing</a>
 </p>
 
 > [!WARNING]
-> Подключаясь к IRVIO, вы не только используете чужую точку выхода, но и становитесь Exit Node для других участников. Их интернет-трафик может выходить через ваш публичный IP-адрес. Перед запуском ознакомьтесь с принципом работы сети, возможными рисками и применимым законодательством.
+> When you connect to IRVIO, you do more than use someone else's Exit Node: your device also becomes an Exit Node for other participants. Their internet traffic may leave the network through your public IP address. Before running IRVIO, make sure you understand how the network works, the risks involved, and the laws that apply to you.
 
 <a id="about"></a>
 
-## Что такое IRVIO
+## What is that, IRVIO?
 
-IRVIO — бесплатная VPN-сеть с открытым исходным кодом. Вместо маршрута через инфраструктуру одного VPN-провайдера клиент устанавливает прямой зашифрованный туннель до выбранного участника сети — **Exit Node**. В интернет трафик выходит через подключение и публичный IP-адрес этого узла.
+First of all - plz read our [Manifest](https://irvio.net/?lang=en).  
+IRVIO is a free, open-source VPN network. Instead of routing traffic through infrastructure controlled by a single VPN provider, the client establishes a direct encrypted tunnel to another participant - an **Exit Node**. Internet traffic then leaves through that node's connection and public IP address.
 
-Служебная инфраструктура отделена от передачи пользовательских данных. Узлы **Server** помогают участникам обнаружить друг друга, пройти NAT и установить прямое соединение, но не являются промежуточными транзитными узлами между клиентом и отдельной Exit Node.
+The service infrastructure is separated from the user data path. **Server** nodes help participants discover one another, traverse NAT, and establish direct connections, but they do not act as intermediate transit nodes between a client and a separate Exit Node.
 
-### Принцип участия
+### The participation model
 
-IRVIO не располагает собственной централизованной сетью точек выхода. Подключаясь к сети, участник получает доступ к Exit Node других пользователей и одновременно предоставляет сети собственное подключение. Именно этот взаимный обмен позволяет IRVIO оставаться бесплатной и распределённой.
+IRVIO does not operate a centralized fleet of exit servers. By joining the network, you gain access to Exit Nodes provided by other participants while contributing your own internet connection in return. This mutual exchange is what allows IRVIO to remain free and distributed.
 
-Чужие точки выхода работают для вас — ваша точка выхода работает для других.
+Other people's Exit Nodes work for you; your Exit Node works for others.
 
-Проект находится на стадии **alpha**. Первая поддерживаемая платформа — **Ubuntu 24.04 LTS, AMD64**. Интерфейсы, протоколы и формат установки до стабильного релиза могут меняться.
+The project is currently in **alpha**. The first supported platform is **Ubuntu 24.04 LTS on AMD64**. Interfaces, protocols, and installation procedures may change before the first stable release.
 
 <a id="architecture"></a>
 
-## Как это работает
+## How it works
 
 ```mermaid
 flowchart LR
-    C[Клиент] -->|Зашифрованный one-hop туннель| E[Exit Node]
-    E --> I[Интернет]
-    C -. Поиск и координация .-> S[Server]
-    E -. Объявление узла .-> S
+    C[Client] -->|Encrypted one-hop tunnel| E[Exit Node]
+    E --> I[Internet]
+    C -. Discovery and coordination .-> S[Server]
+    E -. Node announcement .-> S
 ```
 
-В IRVIO есть две функциональные роли. Один узел может выполнять одну или обе роли одновременно.
+IRVIO has two functional roles. A single node may perform either role or both roles at the same time.
 
 ### Exit Node
 
-Обычный участник сети. Он может использовать IRVIO для собственного трафика и одновременно предоставлять своё интернет-подключение другим участникам. Туннель завершается на Exit Node, после чего трафик выходит в интернет через её сетевое подключение.
+An Exit Node is a regular network participant. It can use IRVIO for its own traffic while sharing its internet connection with other participants. The encrypted tunnel terminates at the Exit Node, and traffic reaches the internet through that node's network connection.
 
 ### Server
 
-Узел служебной инфраструктуры. Он участвует в peer discovery, Kademlia/DHT, Rendezvous и других координационных механизмах, которые помогают участникам найти друг друга и установить прямое соединение. Для стабильной доступности Server требуется публичный IP-адрес либо постоянно проброшенный входящий порт.
+A Server provides IRVIO's distributed service infrastructure. It participates in peer discovery, Kademlia/DHT, Rendezvous, and other coordination mechanisms that help participants find one another and establish direct connections. To remain reliably reachable, a Server needs either a public IP address or a consistently forwarded inbound port.
 
-Server сам по себе не является relay между клиентом и отдельной Exit Node. При этом машина с ролью Server может одновременно публиковаться как Exit Node. Если клиент выбирает её точкой выхода, one-hop туннель завершается непосредственно на этой машине.
+A Server is not a relay between a client and a separate Exit Node. However, the same machine may advertise itself as both a Server and an Exit Node. If a client selects that machine as its exit, the one-hop tunnel terminates directly on it.
 
-### Один выбор для пользователя
+### One decision for the user
 
-Пользователю не нужно вручную сравнивать IP-адреса и параметры узлов. Он выбирает страну выхода, после чего клиент получает доступных кандидатов, проверяет их со своего устройства и подключается к подходящей Exit Node.
+Users do not need to compare IP addresses or inspect individual node parameters. They choose an exit country; the client obtains suitable candidates, tests them directly from the user's device, and connects to an appropriate Exit Node.
 
-Поиск участников не зависит от одного центрального сервера. Если соединение с кандидатом установить не удалось, клиент переходит к следующему доступному варианту.
+Peer discovery does not depend on a single central server. If a connection to one candidate cannot be established, the client moves on to the next available option.
+
+<a id="privacy"></a>
+
+## Privacy and model boundaries
+
+IRVIO does not use a single centralized VPN gateway, but decentralization alone does not guarantee absolute anonymity.
+
+- Traffic between the client and the selected Exit Node travels through an encrypted tunnel.
+- Beyond the tunnel, the standard VPN model applies: the Exit Node can observe connection destinations, while external services see the Exit Node's public IP address.
+- A Server processes discovery and coordination messages, but it is not a third transit node in the Client → Exit Node connection.
+- Independent node operators control their own systems and logging policies.
+- Local diagnostic logs may contain PeerIDs and network addresses.
+
+Do not post logs, dumps, or other diagnostic data in Issues before reviewing their contents.
 
 <a id="technology"></a>
 
-## Техническая основа
+## Technical foundation
 
-| Компонент | Назначение |
+| Component | Purpose |
 |---|---|
-| **AmneziaWG** | Зашифрованный туннель на основе WireGuard с обфускацией |
-| **go-libp2p** | Одноранговое сетевое взаимодействие и идентификация узлов |
-| **Kademlia / DHT** | Распределённое обнаружение участников и объявлений узлов |
-| **Rendezvous, STUN и ICE** | Поиск участников и установление соединения через NAT |
-| **One-hop data plane** | Пользовательский трафик идёт напрямую от клиента к Exit Node |
-| **systemd** | Управление daemon и серверной службой в Ubuntu |
+| **AmneziaWG** | An encrypted WireGuard-based tunnel with obfuscation |
+| **go-libp2p** | Peer-to-peer networking and node identity |
+| **Kademlia / DHT** | Distributed discovery of participants and node announcements |
+| **Rendezvous, STUN, and ICE** | Peer discovery and connection establishment across NAT |
+| **One-hop data plane** | User traffic travels directly from the client to the Exit Node |
+| **systemd** | Management of the daemon and Server service on Ubuntu |
 
-Шифрование IRVIO защищает участок между клиентом и Exit Node. После выхода из туннеля действует обычная модель VPN: внешние сервисы видят IP-адрес точки выхода, а конфиденциальность прикладных данных по-прежнему зависит от HTTPS и других протоколов сквозного шифрования.
+IRVIO encryption protects the path between the client and the Exit Node. Once traffic leaves the tunnel, the usual VPN model applies: external services see the Exit Node's IP address, and application-level confidentiality still depends on HTTPS or another end-to-end encryption protocol.
 
 <a id="quick-start"></a>
 
-## Быстрый старт
+## Quick Start
 
-Скачивайте архив и файл контрольной суммы только со [страницы официальных релизов](https://github.com/Irviodotnet/Irvio/releases).
+Download the archive and its checksum only from the [official Releases page](https://github.com/Irviodotnet/Irvio/releases).
 
-Проверьте SHA-256 перед распаковкой. Контрольная сумма подтверждает целостность скачанного файла, но сама по себе не подтверждает личность издателя.
+Verify the SHA-256 checksum before extracting the archive. A checksum confirms that the downloaded file is intact, but it does not authenticate the publisher by itself.
 
-Актуальные bootstrap-ссылка и QR-код опубликованы на [странице подключения к сети IRVIO](https://irvio.net/installation.html?lang=ru). Используйте только данные, опубликованные на официальном сайте проекта.
+The current bootstrap link and QR code are published on the [IRVIO network connection page](https://irvio.net/installation.html?lang=en). Use only bootstrap information published on the official project website.
 
-После проверки распакуйте архив и перейдите в его каталог.
+After verification, extract the archive and change into its directory.
 
-### Клиент с UI
+### Client with UI
 
-В терминале обычного пользователя:
+Run the following command from a regular user's terminal:
 
 ```bash
 sudo ./install.sh --user "$USER"
 ```
 
-Установщик добавит необходимые зависимости, daemon, UI и системные службы. После установки выйдите из пользовательского сеанса и войдите снова, чтобы применилось членство в группе доступа.
+The installer adds the required dependencies, daemon, UI, and system services. Once installation is complete, sign out of your desktop session and sign back in so the new group membership takes effect.
 
-Запустите **IRVIO** из меню приложений или командой:
+Launch **IRVIO** from the application menu or run:
 
 ```bash
 irvio
 ```
 
-Daemon запустится автоматически при открытии UI. Затем:
+The daemon starts automatically when the UI opens. Then:
 
-1. Импортируйте актуальную bootstrap-ссылку или QR-код.
-2. Дождитесь получения списка доступных стран.
-3. Выберите страну выхода.
-4. Нажмите **CONNECT**.
+1. Import the current bootstrap link or QR code.
+2. Wait for the list of available countries.
+3. Select an exit country.
+4. Press **CONNECT**.
 
-Запускать daemon вручную не требуется.
+You do not need to start the daemon manually.
 
 > [!IMPORTANT]
-> Не запускайте графический интерфейс через `sudo`. Импорт bootstrap-кода сам по себе не включает VPN: туннель запускается только после выбора страны и нажатия **CONNECT**.
+> Do not run the UI with `sudo`. Importing a bootstrap code does not connect the VPN; the tunnel starts only after you select a country and press **CONNECT**.
 
-### Server без UI
+### Headless Server
 
 ```bash
 sudo ./install.sh \
   --role server \
-  --bootstrap 'irvio-bootstrap:v1:<ПОЛНЫЙ_BUNDLE>'
+  --bootstrap 'irvio-bootstrap:v1:<FULL_BUNDLE>'
 ```
 
-Вместо `<ПОЛНЫЙ_BUNDLE>` подставьте полную актуальную bootstrap-ссылку с официальной страницы подключения.
+Replace `<FULL_BUNDLE>` with the complete current bootstrap link from the official connection page.
 
-Установщик добавит зависимости, настроит службу и её автозапуск, запустит Server и проверит его готовность. При успешной проверке он выведет:
+The installer adds the required dependencies, configures and enables the service, starts the Server, and checks whether it is ready. A successful check prints:
 
 ```text
 IRVIO server: OK
 ```
 
-При ошибке установщик сообщит причину и предложит команды диагностики. Команда предназначена для новой установки: существующую неизвестную ручную установку installer намеренно не перезаписывает.
+If something goes wrong, the installer reports the reason and provides diagnostic commands. This command is intended for a fresh installation; the installer deliberately refuses to overwrite an unknown manual setup.
 
-Подробная инструкция по установке, первому подключению и диагностике доступна [на сайте IRVIO](https://irvio.net/installation.html?lang=ru).
+For complete installation, first-connection, and troubleshooting instructions, see the [IRVIO installation guide](https://irvio.net/installation.html?lang=en).
 
 <a id="server-ports"></a>
 
-## Сетевые порты Server
+## Server network ports
 
-Стандартная серверная установка использует следующие внешние порты:
+A standard Server installation uses the following externally reachable ports:
 
-| Протокол и порт | Назначение |
+| Protocol and port | Purpose |
 |---|---|
 | `TCP/4000` | Bootstrap / libp2p |
 | `UDP/3478` | STUN |
 | `UDP/51820` | ICE / AmneziaWG |
 
-Активный UFW настраивается установщиком. Правила firewall в панели хостинг-провайдера необходимо разрешить отдельно. Нестандартные правила firewall установщик не перезаписывает.
+The installer configures UFW when it is active. If your hosting provider has a separate firewall, you must allow these ports there as well. The installer does not overwrite custom firewall rules.
 
-Перед развёртыванием сверяйте таблицу с документацией конкретного релиза: сетевые параметры alpha-версий могут меняться.
+Before deployment, compare this table with the documentation for the exact release you are installing. Network parameters may still change during the alpha stage.
 
 <a id="diagnostics"></a>
 
-## Диагностика
+## Diagnostics
 
-Основные журналы IRVIO находятся в **systemd journal**, а не в отдельном файле `irvio.log`.
+The main IRVIO logs are stored in the **systemd journal**, not in a separate `irvio.log` file.
 
-Последние 100 записей клиентского daemon:
-
-```bash
-sudo journalctl -u hydrad.service -n 100 --no-pager
-```
-
-Наблюдение за клиентским daemon в реальном времени:
+Show the latest 100 client daemon entries:
 
 ```bash
-sudo journalctl -u hydrad.service -f
+sudo journalctl -u irviod.service -n 100 --no-pager
 ```
 
-Последние 100 записей Server:
+Follow client daemon logs in real time:
+
+```bash
+sudo journalctl -u irviod.service -f
+```
+
+Show the latest 100 Server entries:
 
 ```bash
 sudo journalctl -u irvio-server.service -n 100 --no-pager
 ```
 
-Наблюдение за Server в реальном времени:
+Follow Server logs in real time:
 
 ```bash
 sudo journalctl -u irvio-server.service -f
 ```
 
-Повторная проверка готовности установленного Server:
+Run the Server readiness check again:
 
 ```bash
 sudo /opt/irvio/scripts/check-server.sh
 ```
 
-Перед публикацией диагностических журналов проверьте их содержимое: там могут находиться PeerID и сетевые адреса.
-
-<a id="privacy"></a>
-
-## Приватность и границы модели
-
-IRVIO не использует единый центральный VPN-шлюз, но децентрализация сама по себе не означает абсолютную анонимность.
-
-- Трафик между клиентом и выбранной Exit Node передаётся через зашифрованный туннель.
-- После завершения туннеля действует стандартная модель VPN: Exit Node видит направления исходящих соединений, а внешние сервисы видят её публичный IP-адрес.
-- Server обрабатывает служебные сообщения поиска и координации, но не является третьим транзитным узлом в соединении Client → Exit Node.
-- Независимые операторы узлов контролируют собственные системы и политики журналирования.
-- Локальные диагностические журналы могут содержать PeerID и сетевые адреса.
-
-Не отправляйте в Issues журналы, дампы или другие диагностические данные, предварительно не проверив их содержимое.
+Review diagnostic logs before sharing them publicly: they may contain PeerIDs and network addresses.
 
 <a id="project-status"></a>
 
-## Статус проекта
+## Project status
 
-IRVIO находится на стадии первого публичного Linux-релиза. Текущий фокус:
+IRVIO is preparing for its first public Linux release. The current focus is:
 
-- клиент с UI для Ubuntu 24.04 LTS;
-- headless Server для распределённой инфраструктуры;
-- устойчивое обнаружение узлов и прямые P2P-соединения;
-- расширение географии Exit Node и Server;
-- проверка установки, обновления и восстановления после сбоев.
+- an Ubuntu 24.04 LTS desktop client with UI;
+- a headless Server for the distributed service infrastructure;
+- reliable peer discovery and direct P2P connections;
+- broader geographic coverage of Exit Nodes and Servers;
+- testing installation, upgrades, and recovery from failures.
 
-Поддержка Windows, macOS, Android и iOS находится в планах и будет добавляться по мере готовности соответствующих клиентов. Эти платформы пока не заявлены как поддерживаемые.
+Windows, macOS, Android, and iOS support is planned and will be added as the corresponding clients become ready. These platforms are not currently supported.
 
 <a id="contributing"></a>
 
-## Участие в проекте
+## Contributing
 
-Помочь IRVIO можно кодом, тестированием, документацией или предоставлением сетевой инфраструктуры.
+You can help IRVIO by contributing codes, testing, any documentation, or network infrastructure.
 
-### Запустить узел
+### Run a node
 
-Один из наиболее полезных вкладов — запустить постоянно доступный Server или Exit Node в своей стране. Это расширяет географию сети, упрощает обнаружение участников и повышает её устойчивость.
+One of the most useful contributions is to run a consistently available Server or Exit Node in your country. This expands the network's geographic reach, improves peer discovery, and makes IRVIO more resilient.
 
-Оператор публичного узла должен самостоятельно обеспечить его обновление, корректную настройку firewall, наблюдение за состоянием и соблюдение применимых требований своей юрисдикции.
+Operators of public nodes are responsible for keeping them updated, configuring firewalls correctly, monitoring their health, and complying with the laws and requirements that apply in their jurisdiction.
 
-### Помочь разработкой
+### Contribute code
 
-Мы приглашаем разработчиков присоединиться к IRVIO. Особенно полезен вклад в создание клиентов для **Windows, macOS, iOS и Android**, а также в тестирование, документацию и развитие сетевой инфраструктуры.
+We welcome developers who want to help build IRVIO. Contributions are especially valuable for **Windows, macOS, iOS, and Android clients**, as well as testing, documentation, and network infrastructure.
 
-Перед первым Pull Request откройте Issue и кратко опишите предлагаемое изменение. Это позволит заранее согласовать архитектуру и избежать дублирования работы.
+Before opening your first Pull Request, please create an Issue with a short description of the proposed change. This gives us a chance to align on the architecture and avoid duplicated effort.
 
 <a id="security"></a>
 
-## Безопасность
+## Security
 
-Не публикуйте сведения об уязвимостях в открытых Issues. Для непубличного сообщения напишите на [irvio@proton.me](mailto:irvio@proton.me) и укажите в теме письма `SECURITY`.
+Do not report vulnerabilities through public Issues. To disclose a security issue privately, email [irvio@proton.me](mailto:irvio@proton.me) and include `SECURITY` in the subject line.
 
 <a id="license"></a>
 
-## Лицензия
+## Contact
 
-Исходный код IRVIO распространяется на условиях **GNU Affero General Public License v3.0**. Полный текст находится в файле [`LICENSE`](LICENSE).
-
-## Контакты
-
-- Сайт: [irvio.net](https://irvio.net)
-- Репозиторий: [github.com/Irviodotnet/Irvio](https://github.com/Irviodotnet/Irvio)
+- Website: [irvio.net](https://irvio.net)
+- Repository: [github.com/Irviodotnet/Irvio](https://github.com/Irviodotnet/Irvio)
 - Email: [irvio@proton.me](mailto:irvio@proton.me)
 
 ---
 
 <p align="center">
-  <strong>IRVIO создаётся людьми и для людей.</strong><br>
-  Чем больше участников — тем шире география и устойчивее сеть.
+  <strong>IRVIO is built by people, for people.</strong><br>
+  The more participants join, the broader and more resilient the network becomes.
 </p>
