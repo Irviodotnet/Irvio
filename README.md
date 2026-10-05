@@ -1,8 +1,4 @@
-<p align="center">
-  <img src="docs/assets/irvio-logo.png" width="144" alt="Логотип IRVIO">
-</p>
-
-<h1 align="center">IRVIO</h1>
+<h1 align="center"><img src="docs/assets/irvio-logo.png" width="52" alt="Логотип IRVIO" align="absmiddle">&nbsp;&nbsp;IRVIO PROJECT</h1>
 
 <p align="center">
   <strong>OPEN SOURCE · ONE-HOP · PEER-TO-PEER VPN</strong>
