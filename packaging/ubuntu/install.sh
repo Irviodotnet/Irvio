@@ -52,7 +52,8 @@ fi
 require_root
 [[ -n $target_user && $target_user != root && $target_user != -* ]] || die 'Specify the desktop login with --user LOGIN (not root).'
 id "$target_user" >/dev/null 2>&1 || die "Unknown desktop user: $target_user"
-(( $(id -u "$target_user") >= 1000 )) || die 'Refusing to grant Local API access to a system account.'
+target_uid=$(id -u "$target_user")
+(( target_uid >= 1000 && target_uid < 4294967295 )) || die 'Refusing to grant Local API access to a system account.'
 check_fresh_targets
 # Dependencies are explicit. In particular, we do not install/switch DNS managers.
 if $install_deps; then
@@ -71,12 +72,12 @@ install -m 0644 "$BUNDLE/scripts/common.sh" "$stage/scripts/common.sh"
 install -m 0755 "$BUNDLE/uninstall.sh" "$stage/uninstall.sh"
 install -m 0644 "$BUNDLE/install.md" "$BUNDLE/BUILD_INFO.json" "$stage/"
 install -m 0644 "$BUNDLE/integration/INSTALL_MARKER" "$stage/INSTALL_MARKER"
+configure_desktop_access "$stage" "$target_uid"
 chmod -R go-w "$stage"
 chmod 0755 "$stage"
 chown -R root:root "$stage"
 
 getent group irvio >/dev/null || groupadd --system irvio
-usermod -a -G irvio "$target_user"
 [[ -d $STATE ]] || install -d -o root -g irvio -m 0700 "$STATE"
 [[ -d $STATE/geo ]] || install -d -o root -g root -m 0755 "$STATE/geo"
 if [[ ! -e $STATE/geo/country.mmdb ]]; then
@@ -99,6 +100,6 @@ trap - ERR
 if command -v update-desktop-database >/dev/null; then
     update-desktop-database /usr/local/share/applications || true
 fi
-note "Installed for $target_user. Log out of the desktop session and log back in to activate irvio-group access."
+note "Installed for $target_user (UID $target_uid). Local API access is available immediately; no logout or reboot is required."
 note 'Then open IRVIO from the application menu (or run irvio as your normal user).'
 note 'No bootstrap/profile is included, no VPN connection was started.'

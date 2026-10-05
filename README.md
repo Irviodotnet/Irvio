@@ -123,7 +123,7 @@ Run the following command from a regular user's terminal:
 sudo ./install.sh --user "$USER"
 ```
 
-The installer adds the required dependencies, daemon, UI, and system services. Once installation is complete, sign out of your desktop session and sign back in so the new group membership takes effect.
+The installer adds the required dependencies, daemon, UI, and system services. Open IRVIO immediately after installation; no logout or reboot is required. The Local API socket is restricted to the selected user's UID, which the daemon also verifies using SO_PEERCRED.
 
 Launch **IRVIO** from the application menu or run:
 

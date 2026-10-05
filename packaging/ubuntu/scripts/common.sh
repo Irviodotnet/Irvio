@@ -24,6 +24,14 @@ die() { printf 'IRVIO: %s\n' "$*" >&2; exit 1; }
 note() { printf 'IRVIO: %s\n' "$*"; }
 require_root() { [[ $EUID == 0 ]] || die 'Run with sudo; do not run the UI as root.'; }
 
+configure_desktop_access() {
+    local stage=$1 uid=$2
+    [[ $uid =~ ^[1-9][0-9]{3,9}$ ]] && ((uid < 4294967295)) || die 'Invalid desktop UID.'
+    sed -i -e "s/^SocketUser=.*/SocketUser=$uid/" -e 's/^SocketGroup=.*/SocketGroup=root/' \
+        -e 's/^SocketMode=.*/SocketMode=0600/' "$stage/integration/systemd/irvio.socket"
+    sed -i "/^\[Service\]$/a Environment=IRVIO_LOCAL_API_UID=$uid" "$stage/integration/systemd/irviod.service"
+}
+
 check_host() {
     [[ -r /etc/os-release ]] || die 'Cannot identify the operating system.'
     # shellcheck disable=SC1091
