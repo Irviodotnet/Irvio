@@ -1,0 +1,65 @@
+// IRVIO Project
+// Copyright (C) 2026 IRVIO Project contributors
+// SPDX-License-Identifier: AGPL-3.0-only
+// https://irvio.net
+// irvio@proton.me
+
+syntax = "proto3";
+
+package hydra.v1;
+
+option go_package = "hydra.local/hydra/proto/hydra/v1;irviova1";
+
+enum TunnelLeaseOperation {
+  TUNNEL_LEASE_OPERATION_UNSPECIFIED = 0;
+  TUNNEL_LEASE_OPERATION_ACQUIRE = 1;
+  TUNNEL_LEASE_OPERATION_RELEASE = 2;
+  TUNNEL_LEASE_OPERATION_RENEW = 3;
+}
+
+enum TunnelLeaseErrorCode {
+  TUNNEL_LEASE_ERROR_CODE_UNSPECIFIED = 0;
+  TUNNEL_LEASE_ERROR_CODE_INVALID_REQUEST = 1;
+  TUNNEL_LEASE_ERROR_CODE_WRONG_PEER = 2;
+  TUNNEL_LEASE_ERROR_CODE_EXHAUSTED = 3;
+  TUNNEL_LEASE_ERROR_CODE_NOT_FOUND = 4;
+  TUNNEL_LEASE_ERROR_CODE_INTERNAL = 5;
+  TUNNEL_LEASE_ERROR_CODE_STALE = 6;
+  TUNNEL_LEASE_ERROR_CODE_EXPIRED = 7;
+  TUNNEL_LEASE_ERROR_CODE_REVOCATION_PENDING = 8;
+}
+
+message TunnelLeaseRequest {
+  uint32 protocol_version = 1;
+  TunnelLeaseOperation operation = 2;
+  bytes exit_peer_id = 3;
+  bytes client_peer_id = 4;
+  bytes lease_id = 5;
+  uint64 lease_generation = 6;
+  bytes session_token = 7;
+}
+
+message TunnelLease {
+  bytes lease_id = 1;
+  bytes exit_peer_id = 2;
+  bytes client_peer_id = 3;
+  bytes ipv4_address = 4;
+  uint32 ipv4_prefix_bits = 5;
+  bytes ipv6_address = 6;
+  uint32 ipv6_prefix_bits = 7;
+  int64 valid_until_unix = 8;
+  uint64 generation = 9;
+  bytes session_token = 10;
+}
+
+message TunnelLeaseError {
+  TunnelLeaseErrorCode code = 1;
+}
+
+message TunnelLeaseResponse {
+  uint32 protocol_version = 1;
+  oneof result {
+    TunnelLease lease = 2;
+    TunnelLeaseError error = 3;
+  }
+}

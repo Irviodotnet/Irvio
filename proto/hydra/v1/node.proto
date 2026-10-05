@@ -1,0 +1,35 @@
+// IRVIO Project
+// Copyright (C) 2026 IRVIO Project contributors
+// SPDX-License-Identifier: AGPL-3.0-only
+// https://irvio.net
+// irvio@proton.me
+
+syntax = "proto3";
+
+package hydra.v1;
+
+import "proto/hydra/v1/reachability.proto";
+
+option go_package = "hydra.local/hydra/proto/hydra/v1;irviova1";
+
+message NodeAnnouncement {
+  uint32 protocol_version = 1;
+  bytes node_id = 2;
+  bytes session_epoch = 3;
+  uint64 sequence = 4;
+  uint64 capabilities = 5;
+  repeated string libp2p_addrs = 6;
+  string country = 7;
+  bool egress_ipv4 = 8;
+  bool egress_ipv6 = 9;
+  bytes awg_public_key = 10;
+  int64 created_at_unix = 11;
+  int64 expires_at_unix = 12;
+  uint64 awg_key_epoch = 13;
+  repeated PublicControlEndpoint public_control_endpoints = 14;
+  uint64 incarnation = 15;
+  bool accepting_new_sessions = 16;
+  string claimed_country_ipv4 = 17;
+  string claimed_country_ipv6 = 18;
+  repeated string session_features = 19;
+}

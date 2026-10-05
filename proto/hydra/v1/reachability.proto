@@ -1,0 +1,92 @@
+// IRVIO Project
+// Copyright (C) 2026 IRVIO Project contributors
+// SPDX-License-Identifier: AGPL-3.0-only
+// https://irvio.net
+// irvio@proton.me
+
+syntax = "proto3";
+
+package hydra.v1;
+
+option go_package = "hydra.local/hydra/proto/hydra/v1;irviova1";
+
+enum ReachabilityFamily {
+  REACHABILITY_FAMILY_UNSPECIFIED = 0;
+  REACHABILITY_FAMILY_IPV4 = 1;
+  REACHABILITY_FAMILY_IPV6 = 2;
+}
+
+enum ReachabilityErrorCode {
+  REACHABILITY_ERROR_CODE_UNSPECIFIED = 0;
+  REACHABILITY_ERROR_CODE_INVALID_REQUEST = 1;
+  REACHABILITY_ERROR_CODE_WRONG_PEER = 2;
+  REACHABILITY_ERROR_CODE_RATE_LIMITED = 3;
+  REACHABILITY_ERROR_CODE_UNREACHABLE = 4;
+  REACHABILITY_ERROR_CODE_IDENTITY_MISMATCH = 5;
+  REACHABILITY_ERROR_CODE_INTERNAL = 6;
+}
+
+message ReachabilityRequest {
+  uint32 protocol_version = 1;
+  bytes subject_peer_id = 2;
+  bytes attempt_id = 3;
+  ReachabilityFamily family = 4;
+  uint32 external_control_port = 5;
+  uint64 network_generation = 6;
+  uint64 public_epoch = 7;
+}
+
+message ReachabilityAttestation {
+  uint32 protocol_version = 1;
+  bytes subject_peer_id = 2;
+  bytes verifier_peer_id = 3;
+  ReachabilityFamily family = 4;
+  bytes observed_ip = 5;
+  uint32 external_control_port = 6;
+  uint64 network_generation = 7;
+  uint64 public_epoch = 8;
+  bytes attempt_id = 9;
+  int64 verified_at_unix = 10;
+  int64 expires_at_unix = 11;
+}
+
+message SignedReachabilityAttestation {
+  bytes attestation = 1;
+  bytes verifier_public_key = 2;
+  bytes signature = 3;
+}
+
+message ReachabilityResponse {
+  uint32 protocol_version = 1;
+  oneof result {
+    SignedReachabilityAttestation attestation = 2;
+    ReachabilityErrorCode error = 3;
+  }
+}
+
+message ReachabilityChallenge {
+  uint32 protocol_version = 1;
+  bytes attempt_id = 2;
+  bytes nonce = 3;
+  bytes verifier_peer_id = 4;
+}
+
+message ReachabilityChallengeResponse {
+  uint32 protocol_version = 1;
+  bytes attempt_id = 2;
+  bytes nonce = 3;
+}
+
+message PublicReachabilityProof {
+  repeated SignedReachabilityAttestation attestations = 1;
+}
+
+message PublicControlEndpoint {
+  ReachabilityFamily family = 1;
+  bytes observed_ip = 2;
+  uint32 external_control_port = 3;
+  uint64 network_generation = 4;
+  uint64 public_epoch = 5;
+  int64 expires_at_unix = 6;
+  PublicReachabilityProof proof = 7;
+}

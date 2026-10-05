@@ -1,0 +1,103 @@
+// IRVIO Project
+// Copyright (C) 2026 IRVIO Project contributors
+// SPDX-License-Identifier: AGPL-3.0-only
+// https://irvio.net
+// irvio@proton.me
+
+syntax = "proto3";
+
+package hydra.v1;
+
+option go_package = "hydra.local/hydra/proto/hydra/v1;irviova1";
+
+enum IceCandidateType {
+  ICE_CANDIDATE_TYPE_UNSPECIFIED = 0;
+  ICE_CANDIDATE_TYPE_HOST = 1;
+  ICE_CANDIDATE_TYPE_SERVER_REFLEXIVE = 2;
+}
+
+enum IceNetworkType {
+  ICE_NETWORK_TYPE_UNSPECIFIED = 0;
+  ICE_NETWORK_TYPE_UDP4 = 1;
+  ICE_NETWORK_TYPE_UDP6 = 2;
+}
+
+enum IceSessionPurpose {
+  ICE_SESSION_PURPOSE_UNSPECIFIED = 0;
+  ICE_SESSION_PURPOSE_EXIT = 1;
+}
+
+enum IceRole {
+  ICE_ROLE_UNSPECIFIED = 0;
+  ICE_ROLE_CONTROLLING = 1;
+  ICE_ROLE_CONTROLLED = 2;
+}
+
+enum IceSignalErrorCode {
+  ICE_SIGNAL_ERROR_CODE_UNSPECIFIED = 0;
+  ICE_SIGNAL_ERROR_CODE_INVALID_REQUEST = 1;
+  ICE_SIGNAL_ERROR_CODE_UNSUPPORTED_VERSION = 2;
+  ICE_SIGNAL_ERROR_CODE_WRONG_PEER = 3;
+  ICE_SIGNAL_ERROR_CODE_UNAUTHORIZED = 4;
+  ICE_SIGNAL_ERROR_CODE_BUSY = 5;
+  ICE_SIGNAL_ERROR_CODE_SESSION_CONFLICT = 6;
+  ICE_SIGNAL_ERROR_CODE_INTERNAL_ERROR = 7;
+}
+
+message IceCandidate {
+  IceCandidateType type = 1;
+  IceNetworkType network = 2;
+  bytes address = 3;
+  uint32 port = 4;
+  bytes related_address = 5;
+  uint32 related_port = 6;
+  string foundation = 7;
+  uint32 priority = 8;
+  uint32 component = 9;
+}
+
+message IceCredentials {
+  string ufrag = 1;
+  string pwd = 2;
+}
+
+message IceDescription {
+  IceCredentials credentials = 1;
+  repeated IceCandidate candidates = 2;
+}
+
+message IceOffer {
+  uint32 protocol_version = 1;
+  bytes session_id = 2;
+  bytes initiator_peer_id = 3;
+  bytes responder_peer_id = 4;
+  IceSessionPurpose purpose = 5;
+  IceRole role = 6;
+  IceDescription description = 7;
+  int64 created_at_unix = 8;
+  int64 expires_at_unix = 9;
+}
+
+message IceAnswer {
+  uint32 protocol_version = 1;
+  bytes session_id = 2;
+  bytes initiator_peer_id = 3;
+  bytes responder_peer_id = 4;
+  IceSessionPurpose purpose = 5;
+  IceRole role = 6;
+  IceDescription description = 7;
+  int64 created_at_unix = 8;
+  int64 expires_at_unix = 9;
+}
+
+message IceSignalError {
+  IceSignalErrorCode code = 1;
+  string message = 2;
+}
+
+message IceSignalResponse {
+  oneof result {
+    IceAnswer answer = 1;
+    IceSignalError error = 2;
+  }
+}

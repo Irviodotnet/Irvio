@@ -1,0 +1,260 @@
+// IRVIO Project
+// Copyright (C) 2026 IRVIO Project contributors
+// SPDX-License-Identifier: AGPL-3.0-only
+// https://irvio.net
+// irvio@proton.me
+
+syntax = "proto3";
+
+package hydra.local.v1;
+
+option go_package = "hydra.local/hydra/proto/hydra/local/v1;localv1";
+
+enum Method {
+  METHOD_UNSPECIFIED = 0;
+  METHOD_HELLO = 1;
+  METHOD_GET_STATUS = 2;
+  METHOD_CONNECT = 3;
+  METHOD_DISCONNECT = 4;
+  METHOD_GET_CONTRIBUTION = 5;
+  METHOD_SET_CONTRIBUTION = 6;
+  METHOD_SUBSCRIBE_EVENTS = 7;
+  METHOD_GET_RECENT_LOGS = 8;
+  METHOD_SUBSCRIBE_LOGS = 9;
+  METHOD_GET_BOOTSTRAP_STATE = 10;
+  METHOD_IMPORT_BOOTSTRAP_BUNDLE = 11;
+  METHOD_GENERATE_BOOTSTRAP_BUNDLE = 12;
+  METHOD_DELETE_PROFILE = 13;
+  METHOD_GET_AVAILABLE_COUNTRIES = 14;
+  METHOD_SHUTDOWN = 15;
+  METHOD_GET_TRAFFIC_STATS = 16;
+}
+
+enum ResultCode {
+  RESULT_CODE_UNSPECIFIED = 0;
+  RESULT_CODE_OK = 1;
+  RESULT_CODE_INVALID_ARGUMENT = 2;
+  RESULT_CODE_UNSUPPORTED_API = 3;
+  RESULT_CODE_UNAUTHORIZED = 4;
+  RESULT_CODE_BUSY = 5;
+  RESULT_CODE_NOT_READY = 6;
+  RESULT_CODE_UNSUPPORTED = 7;
+  RESULT_CODE_INTERNAL = 8;
+}
+
+enum ConnectionState {
+  CONNECTION_STATE_UNSPECIFIED = 0;
+  CONNECTION_STATE_DISCONNECTED = 1;
+  CONNECTION_STATE_CONNECTING = 2;
+  CONNECTION_STATE_CONNECTED = 3;
+  CONNECTION_STATE_RECOVERING = 4;
+  CONNECTION_STATE_NO_NETWORK = 5;
+  CONNECTION_STATE_NO_EXIT = 6;
+  CONNECTION_STATE_DISCONNECTING = 7;
+  CONNECTION_STATE_ERROR = 8;
+}
+
+enum LogSeverity {
+  LOG_SEVERITY_UNSPECIFIED = 0;
+  LOG_SEVERITY_INFO = 1;
+  LOG_SEVERITY_WARNING = 2;
+  LOG_SEVERITY_ERROR = 3;
+}
+
+enum BootstrapPhase {
+  BOOTSTRAP_PHASE_UNSPECIFIED = 0;
+  BOOTSTRAP_PHASE_EMPTY = 1;
+  BOOTSTRAP_PHASE_CONNECTING = 2;
+  BOOTSTRAP_PHASE_READY = 3;
+  BOOTSTRAP_PHASE_DEGRADED = 4;
+  BOOTSTRAP_PHASE_FAILED = 5;
+}
+
+enum AvailableCountriesStatus {
+  AVAILABLE_COUNTRIES_STATUS_UNSPECIFIED = 0;
+  AVAILABLE_COUNTRIES_STATUS_READY = 1;
+  AVAILABLE_COUNTRIES_STATUS_PARTIAL = 2;
+  AVAILABLE_COUNTRIES_STATUS_EMPTY = 3;
+  AVAILABLE_COUNTRIES_STATUS_UNAVAILABLE = 4;
+}
+
+message Envelope {
+  uint32 api_major = 1;
+  uint32 api_minor = 2;
+  uint64 request_id = 3;
+  oneof payload {
+    Request request = 10;
+    Response response = 11;
+    Event event = 12;
+  }
+}
+
+message Request {
+  Method method = 1;
+  string country_code = 2;
+  bool contribution_enabled = 3;
+  GetRecentLogsRequest get_recent_logs = 10;
+  SubscribeLogsRequest subscribe_logs = 11;
+  ImportBootstrapBundleRequest import_bootstrap_bundle = 12;
+  GenerateBootstrapBundleRequest generate_bootstrap_bundle = 13;
+  DeleteProfileRequest delete_profile = 14;
+  GetAvailableCountriesRequest get_available_countries = 15;
+}
+
+message Hello {
+  uint32 server_api_major = 1;
+  uint32 server_api_minor = 2;
+  uint32 negotiated_api_minor = 3;
+  string product_version = 4;
+  string core_version = 5;
+}
+
+message Response {
+  ResultCode code = 1;
+  string user_message = 2;
+  bool accepted = 3;
+  oneof payload {
+    Hello hello = 10;
+    Status status = 11;
+    Contribution contribution = 12;
+    LogTail log_tail = 13;
+    BootstrapState bootstrap_state = 14;
+    GeneratedBootstrapBundle generated_bootstrap_bundle = 15;
+    AvailableCountries available_countries = 16;
+    TrafficStats traffic_stats = 17;
+  }
+}
+
+// Local-only aggregate. Missing optional values are unavailable, not zero.
+message TrafficStats {
+  uint64 session_id = 1;
+  uint64 sampled_at_unix_ms = 2;
+  optional uint32 clients = 3;
+  optional uint64 my_upload_bytes = 4;
+  optional uint64 shared_upload_bytes = 5;
+  bool complete = 6;
+  bool active = 7;
+  optional uint64 my_download_bytes = 8;
+}
+
+message Status {
+  ConnectionState state = 1;
+  string country_code = 2;
+  bool contribution_enabled = 3;
+  ConnectionInfo connection = 4;
+  UserVisibleError error = 5;
+}
+
+message ConnectionInfo {
+  string exit_country_code = 1;
+  optional uint32 latency_ms = 2;
+  uint64 connected_since_unix_ms = 3;
+}
+
+message UserVisibleError {
+  ResultCode code = 1;
+  string user_message = 2;
+}
+
+message Contribution {
+  bool enabled = 1;
+  bool supported = 2;
+}
+
+message GetRecentLogsRequest {
+  uint32 limit = 1;
+}
+
+message SubscribeLogsRequest {
+  bytes daemon_incarnation = 1;
+  uint64 after_sequence = 2;
+}
+
+message LogRecord {
+  uint64 sequence = 1;
+  uint64 timestamp_unix_ms = 2;
+  LogSeverity severity = 3;
+  string message = 4;
+  map<string, string> fields = 5;
+}
+
+message LogTail {
+  repeated LogRecord records = 1;
+  uint64 last_sequence = 2;
+  bytes daemon_incarnation = 3;
+  bool gap = 4;
+}
+
+message BootstrapEndpoint {
+  bytes ip = 1;
+  uint32 port = 2;
+}
+
+message BootstrapNode {
+  string peer_id = 1;
+  repeated BootstrapEndpoint endpoints = 2;
+}
+
+message BootstrapBundle {
+  uint32 format_version = 1;
+  uint64 generated_at_unix_ms = 2;
+  repeated BootstrapNode nodes = 3;
+}
+
+message BootstrapState {
+  BootstrapPhase phase = 1;
+  uint32 configured_count = 2;
+  uint32 currently_reachable_count = 3;
+  ResultCode last_error_code = 4;
+  string user_message = 5;
+}
+
+message ImportBootstrapBundleRequest {
+  string code = 1;
+}
+
+message GenerateBootstrapBundleRequest {
+  uint32 preferred_node_count = 1;
+}
+
+message GeneratedBootstrapBundle {
+  string code = 1;
+  uint32 node_count = 2;
+  uint64 generated_at_unix_ms = 3;
+}
+
+message DeleteProfileRequest {
+  bool confirm = 1;
+}
+
+message GetAvailableCountriesRequest {
+  bool refresh = 1;
+}
+
+message AvailableCountries {
+  AvailableCountriesStatus status = 1;
+  repeated string country_codes = 2;
+  uint64 generated_at_unix_ms = 3;
+}
+
+message Event {
+  uint64 sequence = 1;
+  oneof payload {
+    StatusChanged status_changed = 10;
+    ContributionChanged contribution_changed = 11;
+    LogRecordAdded log_record_added = 12;
+  }
+}
+
+message StatusChanged {
+  Status status = 1;
+}
+
+message ContributionChanged {
+  Contribution contribution = 1;
+}
+
+message LogRecordAdded {
+  bytes daemon_incarnation = 1;
+  LogRecord record = 2;
+}

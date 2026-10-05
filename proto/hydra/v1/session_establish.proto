@@ -1,0 +1,98 @@
+// IRVIO Project
+// Copyright (C) 2026 IRVIO Project contributors
+// SPDX-License-Identifier: AGPL-3.0-only
+// https://irvio.net
+// irvio@proton.me
+
+syntax = "proto3";
+
+package hydra.v1;
+
+import "proto/hydra/v1/ice.proto";
+import "proto/hydra/v1/tunnel.proto";
+
+option go_package = "hydra.local/hydra/proto/hydra/v1;irviova1";
+
+enum SessionEstablishKind {
+  SESSION_ESTABLISH_KIND_UNSPECIFIED = 0;
+  SESSION_ESTABLISH_KIND_PREPARE = 1;
+  SESSION_ESTABLISH_KIND_READY = 2;
+  SESSION_ESTABLISH_KIND_DECLINE = 3;
+  SESSION_ESTABLISH_KIND_OFFER = 4;
+  SESSION_ESTABLISH_KIND_ANSWER = 5;
+  SESSION_ESTABLISH_KIND_CANCEL = 6;
+}
+
+message SessionPrepare {
+  string country_intent = 1;
+  bytes descriptor_id = 2;
+  uint64 descriptor_incarnation = 3;
+  uint64 descriptor_sequence = 4;
+  IceSessionPurpose purpose = 5;
+  uint64 network_generation = 6;
+  uint64 runtime_generation = 7;
+}
+
+message SessionReady {
+  bytes prepare_hash = 1;
+  bytes signed_announcement = 2;
+  bytes exit_challenge = 3;
+  uint64 network_generation = 4;
+  uint64 awg_key_epoch = 5;
+}
+
+message SessionOffer {
+  bytes ready_hash = 1;
+  bytes exit_challenge = 2;
+  IceOffer ice_offer = 3;
+  uint64 client_awg_key_epoch = 4;
+  uint64 exit_awg_key_epoch = 5;
+  bytes awg_profile_hash = 6;
+  bool request_ipv4 = 7;
+  bool request_ipv6 = 8;
+  bytes client_signed_announcement = 9;
+}
+
+message SessionAnswer {
+  bytes offer_hash = 1;
+  IceAnswer ice_answer = 2;
+  TunnelLease provisional_grant = 3;
+  repeated bytes exit_control_addresses = 4;
+  uint32 exit_control_port = 5;
+  bytes awg_profile_hash = 6;
+  int64 activation_deadline_unix = 7;
+}
+
+message SessionDecline {
+  uint32 reason = 1;
+}
+
+message SessionCancel {
+  uint32 reason = 1;
+}
+
+message SessionEstablishPayload {
+  uint32 protocol_version = 1;
+  SessionEstablishKind kind = 2;
+  bytes sender_peer_id = 3;
+  bytes recipient_peer_id = 4;
+  bytes attempt_id = 5;
+  bytes owner_token = 6;
+  bytes predecessor_hash = 7;
+  int64 created_at_unix_milli = 8;
+  int64 expires_at_unix_milli = 9;
+  oneof body {
+    SessionPrepare prepare = 10;
+    SessionReady ready = 11;
+    SessionDecline decline = 12;
+    SessionOffer offer = 13;
+    SessionAnswer answer = 14;
+    SessionCancel cancel = 15;
+  }
+}
+
+message SignedSessionEstablish {
+  bytes payload = 1;
+  bytes signer_public_key = 2;
+  bytes signature = 3;
+}

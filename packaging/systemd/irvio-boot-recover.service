@@ -1,0 +1,22 @@
+# IRVIO Project
+# Copyright (C) 2026 IRVIO Project contributors
+# SPDX-License-Identifier: AGPL-3.0-only
+# https://irvio.net
+# irvio@proton.me
+
+[Unit]
+Description=Reconcile IRVIO-owned state from a previous boot
+DefaultDependencies=no
+After=local-fs.target
+Before=irvio.socket
+RequiresMountsFor=/var/lib/irvio
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/irviod --boot-recover
+StateDirectory=irvio
+StateDirectoryMode=0700
+RemainAfterExit=yes
+
+[Install]
+WantedBy=sysinit.target

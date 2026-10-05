@@ -1,0 +1,8 @@
+/hydrad
+/bin/
+*.db
+*.db-shm
+*.db-wal
+identity.key
+*.log
+.tmp/

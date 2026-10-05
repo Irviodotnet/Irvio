@@ -1,0 +1,215 @@
+// IRVIO Project
+// Copyright (C) 2026 IRVIO Project contributors
+// SPDX-License-Identifier: AGPL-3.0-only
+// https://irvio.net
+// irvio@proton.me
+
+syntax = "proto3";
+
+package hydra.v1;
+
+import "proto/hydra/v1/reachability.proto";
+
+option go_package = "hydra.local/hydra/proto/hydra/v1;irviova1";
+
+enum RendezvousErrorCode {
+  RENDEZVOUS_ERROR_CODE_UNSPECIFIED = 0;
+  RENDEZVOUS_ERROR_CODE_INVALID_REQUEST = 1;
+  RENDEZVOUS_ERROR_CODE_UNSUPPORTED_VERSION = 2;
+  RENDEZVOUS_ERROR_CODE_WRONG_PEER = 3;
+  RENDEZVOUS_ERROR_CODE_UNAUTHORIZED = 4;
+  RENDEZVOUS_ERROR_CODE_BUSY = 5;
+  RENDEZVOUS_ERROR_CODE_RATE_LIMITED = 6;
+  RENDEZVOUS_ERROR_CODE_STALE = 7;
+  RENDEZVOUS_ERROR_CODE_CONFLICT = 8;
+  RENDEZVOUS_ERROR_CODE_NOT_FOUND = 9;
+  RENDEZVOUS_ERROR_CODE_ROUTE_FAILED = 10;
+  RENDEZVOUS_ERROR_CODE_TIMEOUT = 11;
+  RENDEZVOUS_ERROR_CODE_INTERNAL = 12;
+}
+
+enum CountryObservationState {
+  COUNTRY_OBSERVATION_STATE_UNSPECIFIED = 0;
+  COUNTRY_OBSERVATION_STATE_OBSERVED = 1;
+  COUNTRY_OBSERVATION_STATE_UNKNOWN = 2;
+  COUNTRY_OBSERVATION_STATE_CONFLICTING = 3;
+}
+
+message CountryObservation {
+  CountryObservationState state = 1;
+  string country = 2;
+  bytes observed_ip = 3;
+  ReachabilityFamily family = 4;
+  string database_type = 5;
+  int64 database_build_unix = 6;
+  int64 observed_at_unix = 7;
+}
+
+message RegistrationReceiptPayload {
+  uint32 protocol_version = 1;
+  bytes server_peer_id = 2;
+  uint64 server_incarnation = 3;
+  bytes subject_peer_id = 4;
+  bytes registration_id = 5;
+  uint64 receipt_sequence = 6;
+  bytes descriptor_id = 7;
+  uint64 descriptor_incarnation = 8;
+  uint64 descriptor_sequence = 9;
+  bytes observed_ip = 10;
+  ReachabilityFamily observed_family = 11;
+  CountryObservation country = 12;
+  int64 issued_at_unix = 13;
+  int64 expires_at_unix = 14;
+  bytes server_public_proof = 15;
+}
+
+message OwnerRoute {
+  bytes server_peer_id = 1;
+  uint64 server_incarnation = 2;
+  bytes registration_id = 3;
+  repeated string control_addresses = 4;
+}
+
+message BrokeredCandidate {
+  bytes signed_announcement = 1;
+  repeated bytes owner_receipts = 2;
+  repeated OwnerRoute owner_routes = 3;
+}
+
+message RendezvousHello {
+  uint32 protocol_version = 1;
+  uint64 server_incarnation = 2;
+  uint32 max_frame_size = 3;
+}
+
+message RendezvousRegister {
+  uint32 protocol_version = 1;
+  bytes registration_id = 2;
+  bytes signed_announcement = 3;
+  uint64 heartbeat_sequence = 4;
+}
+
+message RendezvousRegistered {
+  uint32 protocol_version = 1;
+  uint64 server_incarnation = 2;
+  bytes registration_id = 3;
+  bytes signed_receipt = 4;
+  int64 stale_after_unix = 5;
+  int64 expires_after_unix = 6;
+}
+
+message RendezvousUpdate {
+  uint32 protocol_version = 1;
+  uint64 server_incarnation = 2;
+  bytes registration_id = 3;
+  bytes signed_announcement = 4;
+}
+
+message RendezvousHeartbeat {
+  uint32 protocol_version = 1;
+  uint64 server_incarnation = 2;
+  bytes registration_id = 3;
+  uint64 sequence = 4;
+}
+
+message RendezvousHeartbeatAck {
+  uint32 protocol_version = 1;
+  uint64 server_incarnation = 2;
+  bytes registration_id = 3;
+  uint64 sequence = 4;
+  int64 accepted_at_unix = 5;
+  bytes signed_receipt = 6;
+}
+
+message RendezvousGetCandidates {
+  uint32 protocol_version = 1;
+  string country = 2;
+  uint32 limit = 3;
+  repeated bytes exclude_peer_ids = 4;
+  bytes request_id = 5;
+}
+
+message RendezvousCandidates {
+  uint32 protocol_version = 1;
+  string country = 2;
+  uint64 available_peer_count = 3;
+  repeated BrokeredCandidate candidates = 4;
+  bool partial = 5;
+  bytes request_id = 6;
+}
+
+message RendezvousSampleLocal {
+  uint32 protocol_version = 1;
+  string country = 2;
+  uint32 limit = 3;
+  repeated bytes exclude_peer_ids = 4;
+  bytes request_id = 5;
+}
+
+message RendezvousSampleResult {
+  uint32 protocol_version = 1;
+  string country = 2;
+  repeated BrokeredCandidate candidates = 3;
+  bool partial = 4;
+  bytes request_id = 5;
+}
+
+message RendezvousSignal {
+  uint32 protocol_version = 1;
+  bytes request_handle = 2;
+  bytes target_peer_id = 3;
+  OwnerRoute owner_route = 4;
+  bytes signed_message = 5;
+  int64 deadline_unix_milli = 6;
+  bool response = 7;
+  uint32 hop_count = 8;
+}
+
+message RendezvousUnregister {
+  uint32 protocol_version = 1;
+  uint64 server_incarnation = 2;
+  bytes registration_id = 3;
+  bool accepting_new_sessions = 4;
+}
+
+message RendezvousError {
+  uint32 protocol_version = 1;
+  RendezvousErrorCode code = 2;
+  string message = 3;
+  bytes request_id = 4;
+}
+
+message ListLocalAvailableCountriesRequest {
+  uint32 protocol_version = 1;
+}
+
+message ListLocalAvailableCountriesResponse {
+  uint32 protocol_version = 1;
+  repeated string country_codes = 2;
+}
+
+message AvailableCountriesFrame {
+  oneof message {
+    ListLocalAvailableCountriesRequest request = 1;
+    ListLocalAvailableCountriesResponse response = 2;
+    RendezvousError error = 3;
+  }
+}
+
+message RendezvousFrame {
+  oneof message {
+    RendezvousHello hello = 1;
+    RendezvousRegister register = 2;
+    RendezvousRegistered registered = 3;
+    RendezvousUpdate update = 4;
+    RendezvousHeartbeat heartbeat = 5;
+    RendezvousHeartbeatAck heartbeat_ack = 6;
+    RendezvousGetCandidates get_candidates = 7;
+    RendezvousCandidates candidates = 8;
+    RendezvousSampleLocal sample_local = 9;
+    RendezvousSampleResult sample_result = 10;
+    RendezvousSignal signal = 11;
+    RendezvousUnregister unregister = 12;
+    RendezvousError error = 13;
+  }
+}

@@ -1,0 +1,22 @@
+[Unit]
+Description=IRVIO Server and Exit Node
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=simple
+User=root
+EnvironmentFile=/etc/irvio/server.env
+ExecStart=/opt/irvio/bin/irviod --role server --bootstrap ${IRVIO_BOOTSTRAP}
+Restart=on-failure
+RestartSec=5s
+TimeoutStopSec=60s
+StateDirectory=irvio
+StateDirectoryMode=0700
+UMask=0077
+LimitNOFILE=65536
+NoNewPrivileges=yes
+UnsetEnvironment=HTTP_PROXY HTTPS_PROXY ALL_PROXY http_proxy https_proxy all_proxy FTP_PROXY ftp_proxy
+
+[Install]
+WantedBy=multi-user.target

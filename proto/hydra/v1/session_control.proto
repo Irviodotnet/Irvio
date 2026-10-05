@@ -1,0 +1,59 @@
+// IRVIO Project
+// Copyright (C) 2026 IRVIO Project contributors
+// SPDX-License-Identifier: AGPL-3.0-only
+// https://irvio.net
+// irvio@proton.me
+
+syntax = "proto3";
+
+package hydra.v1;
+
+import "proto/hydra/v1/tunnel.proto";
+
+option go_package = "hydra.local/hydra/proto/hydra/v1;irviova1";
+
+enum SessionControlOperation {
+  SESSION_CONTROL_OPERATION_UNSPECIFIED = 0;
+  SESSION_CONTROL_OPERATION_BIND = 1;
+  SESSION_CONTROL_OPERATION_BOUND = 2;
+  SESSION_CONTROL_OPERATION_RENEW = 3;
+  SESSION_CONTROL_OPERATION_RENEWED = 4;
+  SESSION_CONTROL_OPERATION_STATE_QUERY = 5;
+  SESSION_CONTROL_OPERATION_STATE = 6;
+  SESSION_CONTROL_OPERATION_RELEASE = 7;
+  SESSION_CONTROL_OPERATION_RELEASE_ACCEPTED = 8;
+  SESSION_CONTROL_OPERATION_ERROR = 9;
+  SESSION_CONTROL_OPERATION_AWG_ROTATE = 10;
+  SESSION_CONTROL_OPERATION_AWG_ROTATED = 11;
+  SESSION_CONTROL_OPERATION_AWG_ROTATE_READY = 12;
+  SESSION_CONTROL_OPERATION_AWG_ROTATE_COMMIT = 13;
+}
+
+message SessionControlRequest {
+  uint32 protocol_version = 1;
+  SessionControlOperation operation = 2;
+  bytes request_id = 3;
+  bytes lease_id = 4;
+  bytes session_token = 5;
+  uint64 expected_lease_revision = 6;
+  bytes awg_binding_digest = 7;
+  uint64 awg_key_epoch = 8;
+}
+
+message SessionControlResponse {
+  uint32 protocol_version = 1;
+  SessionControlOperation operation = 2;
+  bytes request_id = 3;
+  TunnelLease lease = 4;
+  TunnelLeaseError error = 5;
+  int64 authoritative_remaining_nanos = 6;
+  bytes signed_awg_binding = 7;
+  uint64 awg_key_epoch = 8;
+}
+
+message SessionControlFrame {
+  oneof message {
+    SessionControlRequest request = 1;
+    SessionControlResponse response = 2;
+  }
+}
