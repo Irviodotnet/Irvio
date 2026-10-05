@@ -29,7 +29,7 @@
 </p>
 
 > [!WARNING]
-> When you connect to IRVIO, you do more than use someone else's Exit Node: your device also becomes an Exit Node for other participants. Their internet traffic may leave the network through your public IP address. Before running IRVIO, make sure you understand how the network works, the risks involved, and the laws that apply to you.
+> When you connect to IRVIO, you do more than use someone else's Exit Node: your device also becomes an Exit Node for other participants. Their internet traffic may leave the network through your public IP address. Before running IRVIO, make sure you understand how the network works.
 
 <a id="about"></a>
 
