@@ -255,12 +255,6 @@ Before opening your first Pull Request, please create an Issue with a short desc
 
 <a id="security"></a>
 
-## Security
-
-Do not report vulnerabilities through public Issues. To disclose a security issue privately, email [irvio@proton.me](mailto:irvio@proton.me) and include `SECURITY` in the subject line.
-
-<a id="license"></a>
-
 ## Contact
 
 - Website: [irvio.net](https://irvio.net)
