@@ -275,6 +275,7 @@ type desktopController struct {
 	desiredCountry  exitselector.CountryIntent
 	countries       rendezvous.AvailableCountries
 	countriesAt     time.Time
+	countryView     countryPresenceView
 }
 
 // TrafficStats never takes the Connect/Disconnect mutex or starts discovery.
@@ -302,7 +303,7 @@ func (d *desktopController) Status() irvioruntime.Status {
 	return irvioruntime.Status{State: irvioruntime.StateIdle, ProtectedMode: killswitch.StateVPNOff, UpdatedAt: time.Now().UTC()}
 }
 
-func (d *desktopController) AvailableCountries(ctx context.Context, refresh bool) (rendezvous.AvailableCountries, error) {
+func (d *desktopController) AvailableCountries(ctx context.Context, refresh bool) (result rendezvous.AvailableCountries, resultErr error) {
 	d.discoveryMu.Lock()
 	if d.discoveryDone != nil {
 		select {
@@ -326,6 +327,11 @@ func (d *desktopController) AvailableCountries(ctx context.Context, refresh bool
 	d.discoveryMu.Unlock()
 	defer close(done)
 	defer cancel()
+	defer func() {
+		if resultErr == nil && ctx.Err() == nil {
+			result = d.countryView.observe(result, time.Now())
+		}
+	}()
 	if d.daemon != nil {
 		return d.daemon.AvailableCountries(ctx, refresh)
 	}
@@ -334,6 +340,7 @@ func (d *desktopController) AvailableCountries(ctx context.Context, refresh bool
 	}
 	addresses, err := d.bootstrap.StartupAddresses()
 	if err != nil || len(addresses) == 0 {
+		d.countryView = countryPresenceView{}
 		return rendezvous.AvailableCountries{Status: rendezvous.AvailableCountriesUnavailable, GeneratedAt: time.Now().UTC()}, nil
 	}
 	probe, err := irvioruntime.NewDaemon(irvioruntime.DaemonConfig{

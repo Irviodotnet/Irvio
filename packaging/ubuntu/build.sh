@@ -14,7 +14,7 @@ if (($# != 2)); then
 fi
 OUT=$(realpath -m -- "$1")
 MMDB=$(realpath -e -- "$2")
-NAME=irvio-1.1.0-alpha.20261005.3-ubuntu-amd64
+NAME=irvio-1.1.0-alpha.20261005.4-ubuntu-amd64
 SRC=$REPO/packaging/ubuntu
 mkdir -p "$OUT"
 [[ ! -e $OUT/$NAME.tar.gz ]] || { echo 'Archive already exists; choose a fresh output directory.' >&2; exit 1; }
