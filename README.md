@@ -6,7 +6,7 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/status-alpha-D97706?style=flat-square" alt="Status: Alpha">
-  <img src="https://img.shields.io/badge/platform-Ubuntu%2024.04-E95420?style=flat-square&logo=ubuntu&logoColor=white" alt="Ubuntu 24.04">
+  <img src="https://img.shields.io/badge/platform-Ubuntu%2024.04%20%2F%2026.04-E95420?style=flat-square&logo=ubuntu&logoColor=white" alt="Ubuntu 24.04 / 26.04">
   <img src="https://img.shields.io/badge/architecture-AMD64-555555?style=flat-square" alt="AMD64">
   <img src="https://img.shields.io/badge/written%20in-Go-00ADD8?style=flat-square&logo=go&logoColor=white" alt="Written in Go">
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-AGPL--3.0-2F855A?style=flat-square" alt="AGPL-3.0"></a>
@@ -42,7 +42,7 @@ IRVIO does not operate a centralized fleet of exit servers. By joining the netwo
 
 Other people's Exit Nodes work for you; your Exit Node works for others.
 
-The project is currently in **alpha**. The first supported platform is **Ubuntu 24.04 LTS on AMD64**. Interfaces, protocols, and installation procedures may change before the first stable release.
+The project is currently in **alpha**. Supported platforms are **Ubuntu 24.04 and 26.04 LTS on AMD64**. Interfaces, protocols, and installation procedures may change before the first stable release.
 
 <a id="architecture"></a>
 
@@ -223,7 +223,7 @@ Review diagnostic logs before sharing them publicly: they may contain PeerIDs an
 
 IRVIO is preparing for its first public Linux release. The current focus is:
 
-- an Ubuntu 24.04 LTS desktop client with UI;
+- an Ubuntu 24.04 / 26.04 LTS desktop client with UI;
 - a headless Server for the distributed service infrastructure;
 - reliable peer discovery and direct P2P connections;
 - broader geographic coverage of Exit Nodes and Servers;

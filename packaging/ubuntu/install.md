@@ -1,6 +1,6 @@
 # IRVIO — установка для Ubuntu
 
-Этот архив предназначен для **Ubuntu Desktop 24.04 LTS, x86-64 / amd64**.
+Этот архив предназначен для **Ubuntu Desktop 24.04 и 26.04 LTS, x86-64 / amd64**.
 Это тестовая Alpha-сборка. Ubuntu 22.04, ARM64, другие дистрибутивы,
 WSL и контейнеры этим пакетом не поддерживаются.
 
@@ -9,9 +9,9 @@ WSL и контейнеры этим пакетом не поддерживаю�
 Откройте терминал в каталоге со скачанным архивом и его `.sha256`:
 
 ```bash
-sha256sum -c irvio-1.1.0-alpha.20261005.1-ubuntu24.04-amd64.tar.gz.sha256
-tar -xzf irvio-1.1.0-alpha.20261005.1-ubuntu24.04-amd64.tar.gz
-cd irvio-1.1.0-alpha.20261005.1-ubuntu24.04-amd64
+sha256sum -c irvio-1.1.0-alpha.20261005.2-ubuntu-amd64.tar.gz.sha256
+tar -xzf irvio-1.1.0-alpha.20261005.2-ubuntu-amd64.tar.gz
+cd irvio-1.1.0-alpha.20261005.2-ubuntu-amd64
 sha256sum --check --quiet SHA256SUMS
 ```
 

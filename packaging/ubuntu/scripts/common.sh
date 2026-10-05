@@ -28,8 +28,8 @@ check_host() {
     [[ -r /etc/os-release ]] || die 'Cannot identify the operating system.'
     # shellcheck disable=SC1091
     . /etc/os-release
-    [[ ${ID:-} == ubuntu && ${VERSION_ID:-} == 24.04 ]] ||
-        die 'This build supports Ubuntu 24.04 LTS only.'
+    [[ ${ID:-} == ubuntu && ( ${VERSION_ID:-} == 24.04 || ${VERSION_ID:-} == 26.04 ) ]] ||
+        die 'This build supports Ubuntu 24.04/26.04 LTS only.'
     [[ $(dpkg --print-architecture) == amd64 ]] || die 'This build requires amd64 / x86-64.'
     [[ -d /run/systemd/system ]] || die 'A normal systemd host is required (not WSL/container/chroot).'
     [[ -c /dev/net/tun ]] || die '/dev/net/tun is unavailable. Enable TUN support first.'

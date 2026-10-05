@@ -14,7 +14,7 @@ if (($# != 2)); then
 fi
 OUT=$(realpath -m -- "$1")
 MMDB=$(realpath -e -- "$2")
-NAME=irvio-1.1.0-alpha.20261005.1-ubuntu24.04-amd64
+NAME=irvio-1.1.0-alpha.20261005.2-ubuntu-amd64
 SRC=$REPO/packaging/ubuntu
 mkdir -p "$OUT"
 [[ ! -e $OUT/$NAME.tar.gz ]] || { echo 'Archive already exists; choose a fresh output directory.' >&2; exit 1; }
@@ -98,7 +98,7 @@ jq -n \
     --arg irviod_sha256 "$(sha256sum "$bundle/payload/bin/irviod" | cut -d ' ' -f1)" \
     --arg ui_library_sha256 "$(sha256sum "$bundle/payload/ui/lib/libapp.so" | cut -d ' ' -f1)" \
     --arg geoip_sha256 "$(sha256sum "$bundle/payload/geo/country.mmdb" | cut -d ' ' -f1)" \
-    '{package:$package, target:"Desktop: Ubuntu 24.04 amd64; server: Ubuntu 24.04/26.04 amd64", source_head:$head, source_branch:$branch,
+    '{package:$package, target:"Desktop and server: Ubuntu 24.04/26.04 amd64", source_head:$head, source_branch:$branch,
       source_state:$source_state,
       tracked_diff_sha256:$diff_sha256, built_at_utc:$built_at, go:$go, flutter:$flutter,
       daemon_build:"CGO_ENABLED=0 go build -trimpath ./cmd/irviod", ui_build:"flutter build linux --release --no-pub",
