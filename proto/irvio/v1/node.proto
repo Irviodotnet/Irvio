@@ -8,9 +8,9 @@ syntax = "proto3";
 
 package hydra.v1;
 
-import "proto/hydra/v1/reachability.proto";
+import "proto/irvio/v1/reachability.proto";
 
-option go_package = "hydra.local/hydra/proto/hydra/v1;irviova1";
+option go_package = "github.com/Irviodotnet/Irvio/proto/irvio/v1;irviova1";
 
 message NodeAnnouncement {
   uint32 protocol_version = 1;

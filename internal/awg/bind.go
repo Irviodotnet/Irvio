@@ -16,8 +16,8 @@ import (
 
 	awgconn "github.com/amnezia-vpn/amneziawg-go/v3/conn"
 
-	"hydra.local/hydra/internal/networkstate"
-	"hydra.local/hydra/internal/socketmux"
+	"github.com/Irviodotnet/Irvio/internal/networkstate"
+	"github.com/Irviodotnet/Irvio/internal/socketmux"
 )
 
 // IrvioBind borrows the mux Data endpoint without owning OS sockets.

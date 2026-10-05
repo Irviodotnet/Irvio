@@ -14,12 +14,12 @@ import (
 	"net/netip"
 	"sync"
 
-	"hydra.local/hydra/internal/iceadapter"
-	"hydra.local/hydra/internal/iceengine"
-	"hydra.local/hydra/internal/icesession"
-	"hydra.local/hydra/internal/networkstate"
-	"hydra.local/hydra/internal/socketmux"
-	"hydra.local/hydra/internal/stunprobe"
+	"github.com/Irviodotnet/Irvio/internal/iceadapter"
+	"github.com/Irviodotnet/Irvio/internal/iceengine"
+	"github.com/Irviodotnet/Irvio/internal/icesession"
+	"github.com/Irviodotnet/Irvio/internal/networkstate"
+	"github.com/Irviodotnet/Irvio/internal/socketmux"
+	"github.com/Irviodotnet/Irvio/internal/stunprobe"
 )
 
 // Builder creates independent immutable transport generations.

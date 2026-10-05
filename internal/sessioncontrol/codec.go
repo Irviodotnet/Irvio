@@ -14,7 +14,7 @@ import (
 
 	"google.golang.org/protobuf/proto"
 
-	irviov1 "hydra.local/hydra/proto/hydra/v1"
+	irviov1 "github.com/Irviodotnet/Irvio/proto/irvio/v1"
 )
 
 type RequestID [RequestIDSize]byte

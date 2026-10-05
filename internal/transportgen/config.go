@@ -12,10 +12,10 @@ import (
 	"net/netip"
 	"time"
 
-	"hydra.local/hydra/internal/iceadapter"
-	"hydra.local/hydra/internal/icesession"
-	"hydra.local/hydra/internal/socketmux"
-	"hydra.local/hydra/internal/stunprobe"
+	"github.com/Irviodotnet/Irvio/internal/iceadapter"
+	"github.com/Irviodotnet/Irvio/internal/icesession"
+	"github.com/Irviodotnet/Irvio/internal/socketmux"
+	"github.com/Irviodotnet/Irvio/internal/stunprobe"
 )
 
 // Config controls one atomic transport-generation build.

@@ -15,8 +15,8 @@ import (
 
 	"github.com/libp2p/go-libp2p/core/peer"
 
-	"hydra.local/hydra/internal/tunnel"
-	"hydra.local/hydra/internal/tunnellease"
+	"github.com/Irviodotnet/Irvio/internal/tunnel"
+	"github.com/Irviodotnet/Irvio/internal/tunnellease"
 )
 
 // ExitConfig creates one shared downstream TUN and policy owner.

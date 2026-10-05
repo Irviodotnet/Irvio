@@ -20,12 +20,12 @@ import (
 
 	"github.com/libp2p/go-libp2p/core/peer"
 
-	"hydra.local/hydra/internal/awg"
-	"hydra.local/hydra/internal/linuxroute"
-	"hydra.local/hydra/internal/networkstate"
-	"hydra.local/hydra/internal/transportgen"
-	"hydra.local/hydra/internal/tunnel"
-	"hydra.local/hydra/internal/tunnellease"
+	"github.com/Irviodotnet/Irvio/internal/awg"
+	"github.com/Irviodotnet/Irvio/internal/linuxroute"
+	"github.com/Irviodotnet/Irvio/internal/networkstate"
+	"github.com/Irviodotnet/Irvio/internal/transportgen"
+	"github.com/Irviodotnet/Irvio/internal/tunnel"
+	"github.com/Irviodotnet/Irvio/internal/tunnellease"
 )
 
 type ClientDataPlaneConfig struct {

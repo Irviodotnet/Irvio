@@ -11,7 +11,7 @@ import 'dart:typed_data';
 import 'package:fixnum/fixnum.dart';
 
 import '../models/irvio_models.dart';
-import 'generated/hydra/local/v1/control.pb.dart' as wire;
+import 'generated/irvio/local/v1/control.pb.dart' as wire;
 import 'irvio_client.dart';
 
 const defaultIrvioSocketPath = '/run/irvio/control.sock';

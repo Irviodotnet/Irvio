@@ -12,7 +12,7 @@ import (
 	"net/netip"
 	"sync"
 
-	"hydra.local/hydra/internal/networkstate"
+	"github.com/Irviodotnet/Irvio/internal/networkstate"
 )
 
 // Oracle combines network state and marked probes with concurrent-safe bounded evidence.

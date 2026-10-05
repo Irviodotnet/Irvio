@@ -16,7 +16,7 @@ import (
 	"github.com/libp2p/go-libp2p/core/peer"
 	"github.com/pion/ice/v4"
 
-	"hydra.local/hydra/internal/icesession"
+	"github.com/Irviodotnet/Irvio/internal/icesession"
 )
 
 // Attempt owns the one connectivity generation claimed from a PreparedSession.

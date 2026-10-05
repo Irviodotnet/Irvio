@@ -8,7 +8,7 @@
 // versions:
 // 	protoc-gen-go v1.36.12
 // 	protoc        v3.21.12
-// source: proto/hydra/v1/rendezvous.proto
+// source: proto/irvio/v1/rendezvous.proto
 
 package irviova1
 
@@ -90,11 +90,11 @@ func (x RendezvousErrorCode) String() string {
 }
 
 func (RendezvousErrorCode) Descriptor() protoreflect.EnumDescriptor {
-	return file_proto_hydra_v1_rendezvous_proto_enumTypes[0].Descriptor()
+	return file_proto_irvio_v1_rendezvous_proto_enumTypes[0].Descriptor()
 }
 
 func (RendezvousErrorCode) Type() protoreflect.EnumType {
-	return &file_proto_hydra_v1_rendezvous_proto_enumTypes[0]
+	return &file_proto_irvio_v1_rendezvous_proto_enumTypes[0]
 }
 
 func (x RendezvousErrorCode) Number() protoreflect.EnumNumber {
@@ -103,7 +103,7 @@ func (x RendezvousErrorCode) Number() protoreflect.EnumNumber {
 
 // Deprecated: Use RendezvousErrorCode.Descriptor instead.
 func (RendezvousErrorCode) EnumDescriptor() ([]byte, []int) {
-	return file_proto_hydra_v1_rendezvous_proto_rawDescGZIP(), []int{0}
+	return file_proto_irvio_v1_rendezvous_proto_rawDescGZIP(), []int{0}
 }
 
 type CountryObservationState int32
@@ -142,11 +142,11 @@ func (x CountryObservationState) String() string {
 }
 
 func (CountryObservationState) Descriptor() protoreflect.EnumDescriptor {
-	return file_proto_hydra_v1_rendezvous_proto_enumTypes[1].Descriptor()
+	return file_proto_irvio_v1_rendezvous_proto_enumTypes[1].Descriptor()
 }
 
 func (CountryObservationState) Type() protoreflect.EnumType {
-	return &file_proto_hydra_v1_rendezvous_proto_enumTypes[1]
+	return &file_proto_irvio_v1_rendezvous_proto_enumTypes[1]
 }
 
 func (x CountryObservationState) Number() protoreflect.EnumNumber {
@@ -155,7 +155,7 @@ func (x CountryObservationState) Number() protoreflect.EnumNumber {
 
 // Deprecated: Use CountryObservationState.Descriptor instead.
 func (CountryObservationState) EnumDescriptor() ([]byte, []int) {
-	return file_proto_hydra_v1_rendezvous_proto_rawDescGZIP(), []int{1}
+	return file_proto_irvio_v1_rendezvous_proto_rawDescGZIP(), []int{1}
 }
 
 type CountryObservation struct {
@@ -173,7 +173,7 @@ type CountryObservation struct {
 
 func (x *CountryObservation) Reset() {
 	*x = CountryObservation{}
-	mi := &file_proto_hydra_v1_rendezvous_proto_msgTypes[0]
+	mi := &file_proto_irvio_v1_rendezvous_proto_msgTypes[0]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -185,7 +185,7 @@ func (x *CountryObservation) String() string {
 func (*CountryObservation) ProtoMessage() {}
 
 func (x *CountryObservation) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_hydra_v1_rendezvous_proto_msgTypes[0]
+	mi := &file_proto_irvio_v1_rendezvous_proto_msgTypes[0]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -198,7 +198,7 @@ func (x *CountryObservation) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use CountryObservation.ProtoReflect.Descriptor instead.
 func (*CountryObservation) Descriptor() ([]byte, []int) {
-	return file_proto_hydra_v1_rendezvous_proto_rawDescGZIP(), []int{0}
+	return file_proto_irvio_v1_rendezvous_proto_rawDescGZIP(), []int{0}
 }
 
 func (x *CountryObservation) GetState() CountryObservationState {
@@ -273,7 +273,7 @@ type RegistrationReceiptPayload struct {
 
 func (x *RegistrationReceiptPayload) Reset() {
 	*x = RegistrationReceiptPayload{}
-	mi := &file_proto_hydra_v1_rendezvous_proto_msgTypes[1]
+	mi := &file_proto_irvio_v1_rendezvous_proto_msgTypes[1]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -285,7 +285,7 @@ func (x *RegistrationReceiptPayload) String() string {
 func (*RegistrationReceiptPayload) ProtoMessage() {}
 
 func (x *RegistrationReceiptPayload) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_hydra_v1_rendezvous_proto_msgTypes[1]
+	mi := &file_proto_irvio_v1_rendezvous_proto_msgTypes[1]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -298,7 +298,7 @@ func (x *RegistrationReceiptPayload) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use RegistrationReceiptPayload.ProtoReflect.Descriptor instead.
 func (*RegistrationReceiptPayload) Descriptor() ([]byte, []int) {
-	return file_proto_hydra_v1_rendezvous_proto_rawDescGZIP(), []int{1}
+	return file_proto_irvio_v1_rendezvous_proto_rawDescGZIP(), []int{1}
 }
 
 func (x *RegistrationReceiptPayload) GetProtocolVersion() uint32 {
@@ -418,7 +418,7 @@ type OwnerRoute struct {
 
 func (x *OwnerRoute) Reset() {
 	*x = OwnerRoute{}
-	mi := &file_proto_hydra_v1_rendezvous_proto_msgTypes[2]
+	mi := &file_proto_irvio_v1_rendezvous_proto_msgTypes[2]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -430,7 +430,7 @@ func (x *OwnerRoute) String() string {
 func (*OwnerRoute) ProtoMessage() {}
 
 func (x *OwnerRoute) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_hydra_v1_rendezvous_proto_msgTypes[2]
+	mi := &file_proto_irvio_v1_rendezvous_proto_msgTypes[2]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -443,7 +443,7 @@ func (x *OwnerRoute) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use OwnerRoute.ProtoReflect.Descriptor instead.
 func (*OwnerRoute) Descriptor() ([]byte, []int) {
-	return file_proto_hydra_v1_rendezvous_proto_rawDescGZIP(), []int{2}
+	return file_proto_irvio_v1_rendezvous_proto_rawDescGZIP(), []int{2}
 }
 
 func (x *OwnerRoute) GetServerPeerId() []byte {
@@ -485,7 +485,7 @@ type BrokeredCandidate struct {
 
 func (x *BrokeredCandidate) Reset() {
 	*x = BrokeredCandidate{}
-	mi := &file_proto_hydra_v1_rendezvous_proto_msgTypes[3]
+	mi := &file_proto_irvio_v1_rendezvous_proto_msgTypes[3]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -497,7 +497,7 @@ func (x *BrokeredCandidate) String() string {
 func (*BrokeredCandidate) ProtoMessage() {}
 
 func (x *BrokeredCandidate) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_hydra_v1_rendezvous_proto_msgTypes[3]
+	mi := &file_proto_irvio_v1_rendezvous_proto_msgTypes[3]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -510,7 +510,7 @@ func (x *BrokeredCandidate) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use BrokeredCandidate.ProtoReflect.Descriptor instead.
 func (*BrokeredCandidate) Descriptor() ([]byte, []int) {
-	return file_proto_hydra_v1_rendezvous_proto_rawDescGZIP(), []int{3}
+	return file_proto_irvio_v1_rendezvous_proto_rawDescGZIP(), []int{3}
 }
 
 func (x *BrokeredCandidate) GetSignedAnnouncement() []byte {
@@ -545,7 +545,7 @@ type RendezvousHello struct {
 
 func (x *RendezvousHello) Reset() {
 	*x = RendezvousHello{}
-	mi := &file_proto_hydra_v1_rendezvous_proto_msgTypes[4]
+	mi := &file_proto_irvio_v1_rendezvous_proto_msgTypes[4]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -557,7 +557,7 @@ func (x *RendezvousHello) String() string {
 func (*RendezvousHello) ProtoMessage() {}
 
 func (x *RendezvousHello) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_hydra_v1_rendezvous_proto_msgTypes[4]
+	mi := &file_proto_irvio_v1_rendezvous_proto_msgTypes[4]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -570,7 +570,7 @@ func (x *RendezvousHello) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use RendezvousHello.ProtoReflect.Descriptor instead.
 func (*RendezvousHello) Descriptor() ([]byte, []int) {
-	return file_proto_hydra_v1_rendezvous_proto_rawDescGZIP(), []int{4}
+	return file_proto_irvio_v1_rendezvous_proto_rawDescGZIP(), []int{4}
 }
 
 func (x *RendezvousHello) GetProtocolVersion() uint32 {
@@ -606,7 +606,7 @@ type RendezvousRegister struct {
 
 func (x *RendezvousRegister) Reset() {
 	*x = RendezvousRegister{}
-	mi := &file_proto_hydra_v1_rendezvous_proto_msgTypes[5]
+	mi := &file_proto_irvio_v1_rendezvous_proto_msgTypes[5]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -618,7 +618,7 @@ func (x *RendezvousRegister) String() string {
 func (*RendezvousRegister) ProtoMessage() {}
 
 func (x *RendezvousRegister) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_hydra_v1_rendezvous_proto_msgTypes[5]
+	mi := &file_proto_irvio_v1_rendezvous_proto_msgTypes[5]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -631,7 +631,7 @@ func (x *RendezvousRegister) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use RendezvousRegister.ProtoReflect.Descriptor instead.
 func (*RendezvousRegister) Descriptor() ([]byte, []int) {
-	return file_proto_hydra_v1_rendezvous_proto_rawDescGZIP(), []int{5}
+	return file_proto_irvio_v1_rendezvous_proto_rawDescGZIP(), []int{5}
 }
 
 func (x *RendezvousRegister) GetProtocolVersion() uint32 {
@@ -676,7 +676,7 @@ type RendezvousRegistered struct {
 
 func (x *RendezvousRegistered) Reset() {
 	*x = RendezvousRegistered{}
-	mi := &file_proto_hydra_v1_rendezvous_proto_msgTypes[6]
+	mi := &file_proto_irvio_v1_rendezvous_proto_msgTypes[6]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -688,7 +688,7 @@ func (x *RendezvousRegistered) String() string {
 func (*RendezvousRegistered) ProtoMessage() {}
 
 func (x *RendezvousRegistered) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_hydra_v1_rendezvous_proto_msgTypes[6]
+	mi := &file_proto_irvio_v1_rendezvous_proto_msgTypes[6]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -701,7 +701,7 @@ func (x *RendezvousRegistered) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use RendezvousRegistered.ProtoReflect.Descriptor instead.
 func (*RendezvousRegistered) Descriptor() ([]byte, []int) {
-	return file_proto_hydra_v1_rendezvous_proto_rawDescGZIP(), []int{6}
+	return file_proto_irvio_v1_rendezvous_proto_rawDescGZIP(), []int{6}
 }
 
 func (x *RendezvousRegistered) GetProtocolVersion() uint32 {
@@ -758,7 +758,7 @@ type RendezvousUpdate struct {
 
 func (x *RendezvousUpdate) Reset() {
 	*x = RendezvousUpdate{}
-	mi := &file_proto_hydra_v1_rendezvous_proto_msgTypes[7]
+	mi := &file_proto_irvio_v1_rendezvous_proto_msgTypes[7]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -770,7 +770,7 @@ func (x *RendezvousUpdate) String() string {
 func (*RendezvousUpdate) ProtoMessage() {}
 
 func (x *RendezvousUpdate) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_hydra_v1_rendezvous_proto_msgTypes[7]
+	mi := &file_proto_irvio_v1_rendezvous_proto_msgTypes[7]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -783,7 +783,7 @@ func (x *RendezvousUpdate) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use RendezvousUpdate.ProtoReflect.Descriptor instead.
 func (*RendezvousUpdate) Descriptor() ([]byte, []int) {
-	return file_proto_hydra_v1_rendezvous_proto_rawDescGZIP(), []int{7}
+	return file_proto_irvio_v1_rendezvous_proto_rawDescGZIP(), []int{7}
 }
 
 func (x *RendezvousUpdate) GetProtocolVersion() uint32 {
@@ -826,7 +826,7 @@ type RendezvousHeartbeat struct {
 
 func (x *RendezvousHeartbeat) Reset() {
 	*x = RendezvousHeartbeat{}
-	mi := &file_proto_hydra_v1_rendezvous_proto_msgTypes[8]
+	mi := &file_proto_irvio_v1_rendezvous_proto_msgTypes[8]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -838,7 +838,7 @@ func (x *RendezvousHeartbeat) String() string {
 func (*RendezvousHeartbeat) ProtoMessage() {}
 
 func (x *RendezvousHeartbeat) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_hydra_v1_rendezvous_proto_msgTypes[8]
+	mi := &file_proto_irvio_v1_rendezvous_proto_msgTypes[8]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -851,7 +851,7 @@ func (x *RendezvousHeartbeat) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use RendezvousHeartbeat.ProtoReflect.Descriptor instead.
 func (*RendezvousHeartbeat) Descriptor() ([]byte, []int) {
-	return file_proto_hydra_v1_rendezvous_proto_rawDescGZIP(), []int{8}
+	return file_proto_irvio_v1_rendezvous_proto_rawDescGZIP(), []int{8}
 }
 
 func (x *RendezvousHeartbeat) GetProtocolVersion() uint32 {
@@ -896,7 +896,7 @@ type RendezvousHeartbeatAck struct {
 
 func (x *RendezvousHeartbeatAck) Reset() {
 	*x = RendezvousHeartbeatAck{}
-	mi := &file_proto_hydra_v1_rendezvous_proto_msgTypes[9]
+	mi := &file_proto_irvio_v1_rendezvous_proto_msgTypes[9]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -908,7 +908,7 @@ func (x *RendezvousHeartbeatAck) String() string {
 func (*RendezvousHeartbeatAck) ProtoMessage() {}
 
 func (x *RendezvousHeartbeatAck) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_hydra_v1_rendezvous_proto_msgTypes[9]
+	mi := &file_proto_irvio_v1_rendezvous_proto_msgTypes[9]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -921,7 +921,7 @@ func (x *RendezvousHeartbeatAck) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use RendezvousHeartbeatAck.ProtoReflect.Descriptor instead.
 func (*RendezvousHeartbeatAck) Descriptor() ([]byte, []int) {
-	return file_proto_hydra_v1_rendezvous_proto_rawDescGZIP(), []int{9}
+	return file_proto_irvio_v1_rendezvous_proto_rawDescGZIP(), []int{9}
 }
 
 func (x *RendezvousHeartbeatAck) GetProtocolVersion() uint32 {
@@ -979,7 +979,7 @@ type RendezvousGetCandidates struct {
 
 func (x *RendezvousGetCandidates) Reset() {
 	*x = RendezvousGetCandidates{}
-	mi := &file_proto_hydra_v1_rendezvous_proto_msgTypes[10]
+	mi := &file_proto_irvio_v1_rendezvous_proto_msgTypes[10]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -991,7 +991,7 @@ func (x *RendezvousGetCandidates) String() string {
 func (*RendezvousGetCandidates) ProtoMessage() {}
 
 func (x *RendezvousGetCandidates) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_hydra_v1_rendezvous_proto_msgTypes[10]
+	mi := &file_proto_irvio_v1_rendezvous_proto_msgTypes[10]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1004,7 +1004,7 @@ func (x *RendezvousGetCandidates) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use RendezvousGetCandidates.ProtoReflect.Descriptor instead.
 func (*RendezvousGetCandidates) Descriptor() ([]byte, []int) {
-	return file_proto_hydra_v1_rendezvous_proto_rawDescGZIP(), []int{10}
+	return file_proto_irvio_v1_rendezvous_proto_rawDescGZIP(), []int{10}
 }
 
 func (x *RendezvousGetCandidates) GetProtocolVersion() uint32 {
@@ -1056,7 +1056,7 @@ type RendezvousCandidates struct {
 
 func (x *RendezvousCandidates) Reset() {
 	*x = RendezvousCandidates{}
-	mi := &file_proto_hydra_v1_rendezvous_proto_msgTypes[11]
+	mi := &file_proto_irvio_v1_rendezvous_proto_msgTypes[11]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1068,7 +1068,7 @@ func (x *RendezvousCandidates) String() string {
 func (*RendezvousCandidates) ProtoMessage() {}
 
 func (x *RendezvousCandidates) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_hydra_v1_rendezvous_proto_msgTypes[11]
+	mi := &file_proto_irvio_v1_rendezvous_proto_msgTypes[11]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1081,7 +1081,7 @@ func (x *RendezvousCandidates) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use RendezvousCandidates.ProtoReflect.Descriptor instead.
 func (*RendezvousCandidates) Descriptor() ([]byte, []int) {
-	return file_proto_hydra_v1_rendezvous_proto_rawDescGZIP(), []int{11}
+	return file_proto_irvio_v1_rendezvous_proto_rawDescGZIP(), []int{11}
 }
 
 func (x *RendezvousCandidates) GetProtocolVersion() uint32 {
@@ -1139,7 +1139,7 @@ type RendezvousSampleLocal struct {
 
 func (x *RendezvousSampleLocal) Reset() {
 	*x = RendezvousSampleLocal{}
-	mi := &file_proto_hydra_v1_rendezvous_proto_msgTypes[12]
+	mi := &file_proto_irvio_v1_rendezvous_proto_msgTypes[12]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1151,7 +1151,7 @@ func (x *RendezvousSampleLocal) String() string {
 func (*RendezvousSampleLocal) ProtoMessage() {}
 
 func (x *RendezvousSampleLocal) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_hydra_v1_rendezvous_proto_msgTypes[12]
+	mi := &file_proto_irvio_v1_rendezvous_proto_msgTypes[12]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1164,7 +1164,7 @@ func (x *RendezvousSampleLocal) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use RendezvousSampleLocal.ProtoReflect.Descriptor instead.
 func (*RendezvousSampleLocal) Descriptor() ([]byte, []int) {
-	return file_proto_hydra_v1_rendezvous_proto_rawDescGZIP(), []int{12}
+	return file_proto_irvio_v1_rendezvous_proto_rawDescGZIP(), []int{12}
 }
 
 func (x *RendezvousSampleLocal) GetProtocolVersion() uint32 {
@@ -1215,7 +1215,7 @@ type RendezvousSampleResult struct {
 
 func (x *RendezvousSampleResult) Reset() {
 	*x = RendezvousSampleResult{}
-	mi := &file_proto_hydra_v1_rendezvous_proto_msgTypes[13]
+	mi := &file_proto_irvio_v1_rendezvous_proto_msgTypes[13]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1227,7 +1227,7 @@ func (x *RendezvousSampleResult) String() string {
 func (*RendezvousSampleResult) ProtoMessage() {}
 
 func (x *RendezvousSampleResult) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_hydra_v1_rendezvous_proto_msgTypes[13]
+	mi := &file_proto_irvio_v1_rendezvous_proto_msgTypes[13]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1240,7 +1240,7 @@ func (x *RendezvousSampleResult) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use RendezvousSampleResult.ProtoReflect.Descriptor instead.
 func (*RendezvousSampleResult) Descriptor() ([]byte, []int) {
-	return file_proto_hydra_v1_rendezvous_proto_rawDescGZIP(), []int{13}
+	return file_proto_irvio_v1_rendezvous_proto_rawDescGZIP(), []int{13}
 }
 
 func (x *RendezvousSampleResult) GetProtocolVersion() uint32 {
@@ -1294,7 +1294,7 @@ type RendezvousSignal struct {
 
 func (x *RendezvousSignal) Reset() {
 	*x = RendezvousSignal{}
-	mi := &file_proto_hydra_v1_rendezvous_proto_msgTypes[14]
+	mi := &file_proto_irvio_v1_rendezvous_proto_msgTypes[14]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1306,7 +1306,7 @@ func (x *RendezvousSignal) String() string {
 func (*RendezvousSignal) ProtoMessage() {}
 
 func (x *RendezvousSignal) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_hydra_v1_rendezvous_proto_msgTypes[14]
+	mi := &file_proto_irvio_v1_rendezvous_proto_msgTypes[14]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1319,7 +1319,7 @@ func (x *RendezvousSignal) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use RendezvousSignal.ProtoReflect.Descriptor instead.
 func (*RendezvousSignal) Descriptor() ([]byte, []int) {
-	return file_proto_hydra_v1_rendezvous_proto_rawDescGZIP(), []int{14}
+	return file_proto_irvio_v1_rendezvous_proto_rawDescGZIP(), []int{14}
 }
 
 func (x *RendezvousSignal) GetProtocolVersion() uint32 {
@@ -1390,7 +1390,7 @@ type RendezvousUnregister struct {
 
 func (x *RendezvousUnregister) Reset() {
 	*x = RendezvousUnregister{}
-	mi := &file_proto_hydra_v1_rendezvous_proto_msgTypes[15]
+	mi := &file_proto_irvio_v1_rendezvous_proto_msgTypes[15]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1402,7 +1402,7 @@ func (x *RendezvousUnregister) String() string {
 func (*RendezvousUnregister) ProtoMessage() {}
 
 func (x *RendezvousUnregister) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_hydra_v1_rendezvous_proto_msgTypes[15]
+	mi := &file_proto_irvio_v1_rendezvous_proto_msgTypes[15]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1415,7 +1415,7 @@ func (x *RendezvousUnregister) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use RendezvousUnregister.ProtoReflect.Descriptor instead.
 func (*RendezvousUnregister) Descriptor() ([]byte, []int) {
-	return file_proto_hydra_v1_rendezvous_proto_rawDescGZIP(), []int{15}
+	return file_proto_irvio_v1_rendezvous_proto_rawDescGZIP(), []int{15}
 }
 
 func (x *RendezvousUnregister) GetProtocolVersion() uint32 {
@@ -1458,7 +1458,7 @@ type RendezvousError struct {
 
 func (x *RendezvousError) Reset() {
 	*x = RendezvousError{}
-	mi := &file_proto_hydra_v1_rendezvous_proto_msgTypes[16]
+	mi := &file_proto_irvio_v1_rendezvous_proto_msgTypes[16]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1470,7 +1470,7 @@ func (x *RendezvousError) String() string {
 func (*RendezvousError) ProtoMessage() {}
 
 func (x *RendezvousError) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_hydra_v1_rendezvous_proto_msgTypes[16]
+	mi := &file_proto_irvio_v1_rendezvous_proto_msgTypes[16]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1483,7 +1483,7 @@ func (x *RendezvousError) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use RendezvousError.ProtoReflect.Descriptor instead.
 func (*RendezvousError) Descriptor() ([]byte, []int) {
-	return file_proto_hydra_v1_rendezvous_proto_rawDescGZIP(), []int{16}
+	return file_proto_irvio_v1_rendezvous_proto_rawDescGZIP(), []int{16}
 }
 
 func (x *RendezvousError) GetProtocolVersion() uint32 {
@@ -1523,7 +1523,7 @@ type ListLocalAvailableCountriesRequest struct {
 
 func (x *ListLocalAvailableCountriesRequest) Reset() {
 	*x = ListLocalAvailableCountriesRequest{}
-	mi := &file_proto_hydra_v1_rendezvous_proto_msgTypes[17]
+	mi := &file_proto_irvio_v1_rendezvous_proto_msgTypes[17]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1535,7 +1535,7 @@ func (x *ListLocalAvailableCountriesRequest) String() string {
 func (*ListLocalAvailableCountriesRequest) ProtoMessage() {}
 
 func (x *ListLocalAvailableCountriesRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_hydra_v1_rendezvous_proto_msgTypes[17]
+	mi := &file_proto_irvio_v1_rendezvous_proto_msgTypes[17]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1548,7 +1548,7 @@ func (x *ListLocalAvailableCountriesRequest) ProtoReflect() protoreflect.Message
 
 // Deprecated: Use ListLocalAvailableCountriesRequest.ProtoReflect.Descriptor instead.
 func (*ListLocalAvailableCountriesRequest) Descriptor() ([]byte, []int) {
-	return file_proto_hydra_v1_rendezvous_proto_rawDescGZIP(), []int{17}
+	return file_proto_irvio_v1_rendezvous_proto_rawDescGZIP(), []int{17}
 }
 
 func (x *ListLocalAvailableCountriesRequest) GetProtocolVersion() uint32 {
@@ -1568,7 +1568,7 @@ type ListLocalAvailableCountriesResponse struct {
 
 func (x *ListLocalAvailableCountriesResponse) Reset() {
 	*x = ListLocalAvailableCountriesResponse{}
-	mi := &file_proto_hydra_v1_rendezvous_proto_msgTypes[18]
+	mi := &file_proto_irvio_v1_rendezvous_proto_msgTypes[18]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1580,7 +1580,7 @@ func (x *ListLocalAvailableCountriesResponse) String() string {
 func (*ListLocalAvailableCountriesResponse) ProtoMessage() {}
 
 func (x *ListLocalAvailableCountriesResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_hydra_v1_rendezvous_proto_msgTypes[18]
+	mi := &file_proto_irvio_v1_rendezvous_proto_msgTypes[18]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1593,7 +1593,7 @@ func (x *ListLocalAvailableCountriesResponse) ProtoReflect() protoreflect.Messag
 
 // Deprecated: Use ListLocalAvailableCountriesResponse.ProtoReflect.Descriptor instead.
 func (*ListLocalAvailableCountriesResponse) Descriptor() ([]byte, []int) {
-	return file_proto_hydra_v1_rendezvous_proto_rawDescGZIP(), []int{18}
+	return file_proto_irvio_v1_rendezvous_proto_rawDescGZIP(), []int{18}
 }
 
 func (x *ListLocalAvailableCountriesResponse) GetProtocolVersion() uint32 {
@@ -1624,7 +1624,7 @@ type AvailableCountriesFrame struct {
 
 func (x *AvailableCountriesFrame) Reset() {
 	*x = AvailableCountriesFrame{}
-	mi := &file_proto_hydra_v1_rendezvous_proto_msgTypes[19]
+	mi := &file_proto_irvio_v1_rendezvous_proto_msgTypes[19]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1636,7 +1636,7 @@ func (x *AvailableCountriesFrame) String() string {
 func (*AvailableCountriesFrame) ProtoMessage() {}
 
 func (x *AvailableCountriesFrame) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_hydra_v1_rendezvous_proto_msgTypes[19]
+	mi := &file_proto_irvio_v1_rendezvous_proto_msgTypes[19]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1649,7 +1649,7 @@ func (x *AvailableCountriesFrame) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use AvailableCountriesFrame.ProtoReflect.Descriptor instead.
 func (*AvailableCountriesFrame) Descriptor() ([]byte, []int) {
-	return file_proto_hydra_v1_rendezvous_proto_rawDescGZIP(), []int{19}
+	return file_proto_irvio_v1_rendezvous_proto_rawDescGZIP(), []int{19}
 }
 
 func (x *AvailableCountriesFrame) GetMessage() isAvailableCountriesFrame_Message {
@@ -1732,7 +1732,7 @@ type RendezvousFrame struct {
 
 func (x *RendezvousFrame) Reset() {
 	*x = RendezvousFrame{}
-	mi := &file_proto_hydra_v1_rendezvous_proto_msgTypes[20]
+	mi := &file_proto_irvio_v1_rendezvous_proto_msgTypes[20]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1744,7 +1744,7 @@ func (x *RendezvousFrame) String() string {
 func (*RendezvousFrame) ProtoMessage() {}
 
 func (x *RendezvousFrame) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_hydra_v1_rendezvous_proto_msgTypes[20]
+	mi := &file_proto_irvio_v1_rendezvous_proto_msgTypes[20]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1757,7 +1757,7 @@ func (x *RendezvousFrame) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use RendezvousFrame.ProtoReflect.Descriptor instead.
 func (*RendezvousFrame) Descriptor() ([]byte, []int) {
-	return file_proto_hydra_v1_rendezvous_proto_rawDescGZIP(), []int{20}
+	return file_proto_irvio_v1_rendezvous_proto_rawDescGZIP(), []int{20}
 }
 
 func (x *RendezvousFrame) GetMessage() isRendezvousFrame_Message {
@@ -1966,11 +1966,11 @@ func (*RendezvousFrame_Unregister) isRendezvousFrame_Message() {}
 
 func (*RendezvousFrame_Error) isRendezvousFrame_Message() {}
 
-var File_proto_hydra_v1_rendezvous_proto protoreflect.FileDescriptor
+var File_proto_irvio_v1_rendezvous_proto protoreflect.FileDescriptor
 
-const file_proto_hydra_v1_rendezvous_proto_rawDesc = "" +
+const file_proto_irvio_v1_rendezvous_proto_rawDesc = "" +
 	"\n" +
-	"\x1fproto/hydra/v1/rendezvous.proto\x12\bhydra.v1\x1a!proto/hydra/v1/reachability.proto\"\xbd\x02\n" +
+	"\x1fproto/irvio/v1/rendezvous.proto\x12\bhydra.v1\x1a!proto/irvio/v1/reachability.proto\"\xbd\x02\n" +
 	"\x12CountryObservation\x127\n" +
 	"\x05state\x18\x01 \x01(\x0e2!.hydra.v1.CountryObservationStateR\x05state\x12\x18\n" +
 	"\acountry\x18\x02 \x01(\tR\acountry\x12\x1f\n" +
@@ -2146,23 +2146,23 @@ const file_proto_hydra_v1_rendezvous_proto_rawDesc = "" +
 	"%COUNTRY_OBSERVATION_STATE_UNSPECIFIED\x10\x00\x12&\n" +
 	"\"COUNTRY_OBSERVATION_STATE_OBSERVED\x10\x01\x12%\n" +
 	"!COUNTRY_OBSERVATION_STATE_UNKNOWN\x10\x02\x12)\n" +
-	"%COUNTRY_OBSERVATION_STATE_CONFLICTING\x10\x03B+Z)hydra.local/hydra/proto/hydra/v1;irviova1b\x06proto3"
+	"%COUNTRY_OBSERVATION_STATE_CONFLICTING\x10\x03B6Z4github.com/Irviodotnet/Irvio/proto/irvio/v1;irviova1b\x06proto3"
 
 var (
-	file_proto_hydra_v1_rendezvous_proto_rawDescOnce sync.Once
-	file_proto_hydra_v1_rendezvous_proto_rawDescData []byte
+	file_proto_irvio_v1_rendezvous_proto_rawDescOnce sync.Once
+	file_proto_irvio_v1_rendezvous_proto_rawDescData []byte
 )
 
-func file_proto_hydra_v1_rendezvous_proto_rawDescGZIP() []byte {
-	file_proto_hydra_v1_rendezvous_proto_rawDescOnce.Do(func() {
-		file_proto_hydra_v1_rendezvous_proto_rawDescData = protoimpl.X.CompressGZIP(unsafe.Slice(unsafe.StringData(file_proto_hydra_v1_rendezvous_proto_rawDesc), len(file_proto_hydra_v1_rendezvous_proto_rawDesc)))
+func file_proto_irvio_v1_rendezvous_proto_rawDescGZIP() []byte {
+	file_proto_irvio_v1_rendezvous_proto_rawDescOnce.Do(func() {
+		file_proto_irvio_v1_rendezvous_proto_rawDescData = protoimpl.X.CompressGZIP(unsafe.Slice(unsafe.StringData(file_proto_irvio_v1_rendezvous_proto_rawDesc), len(file_proto_irvio_v1_rendezvous_proto_rawDesc)))
 	})
-	return file_proto_hydra_v1_rendezvous_proto_rawDescData
+	return file_proto_irvio_v1_rendezvous_proto_rawDescData
 }
 
-var file_proto_hydra_v1_rendezvous_proto_enumTypes = make([]protoimpl.EnumInfo, 2)
-var file_proto_hydra_v1_rendezvous_proto_msgTypes = make([]protoimpl.MessageInfo, 21)
-var file_proto_hydra_v1_rendezvous_proto_goTypes = []any{
+var file_proto_irvio_v1_rendezvous_proto_enumTypes = make([]protoimpl.EnumInfo, 2)
+var file_proto_irvio_v1_rendezvous_proto_msgTypes = make([]protoimpl.MessageInfo, 21)
+var file_proto_irvio_v1_rendezvous_proto_goTypes = []any{
 	(RendezvousErrorCode)(0),                    // 0: hydra.v1.RendezvousErrorCode
 	(CountryObservationState)(0),                // 1: hydra.v1.CountryObservationState
 	(*CountryObservation)(nil),                  // 2: hydra.v1.CountryObservation
@@ -2188,7 +2188,7 @@ var file_proto_hydra_v1_rendezvous_proto_goTypes = []any{
 	(*RendezvousFrame)(nil),                     // 22: hydra.v1.RendezvousFrame
 	(ReachabilityFamily)(0),                     // 23: hydra.v1.ReachabilityFamily
 }
-var file_proto_hydra_v1_rendezvous_proto_depIdxs = []int32{
+var file_proto_irvio_v1_rendezvous_proto_depIdxs = []int32{
 	1,  // 0: hydra.v1.CountryObservation.state:type_name -> hydra.v1.CountryObservationState
 	23, // 1: hydra.v1.CountryObservation.family:type_name -> hydra.v1.ReachabilityFamily
 	23, // 2: hydra.v1.RegistrationReceiptPayload.observed_family:type_name -> hydra.v1.ReachabilityFamily
@@ -2221,18 +2221,18 @@ var file_proto_hydra_v1_rendezvous_proto_depIdxs = []int32{
 	0,  // [0:25] is the sub-list for field type_name
 }
 
-func init() { file_proto_hydra_v1_rendezvous_proto_init() }
-func file_proto_hydra_v1_rendezvous_proto_init() {
-	if File_proto_hydra_v1_rendezvous_proto != nil {
+func init() { file_proto_irvio_v1_rendezvous_proto_init() }
+func file_proto_irvio_v1_rendezvous_proto_init() {
+	if File_proto_irvio_v1_rendezvous_proto != nil {
 		return
 	}
-	file_proto_hydra_v1_reachability_proto_init()
-	file_proto_hydra_v1_rendezvous_proto_msgTypes[19].OneofWrappers = []any{
+	file_proto_irvio_v1_reachability_proto_init()
+	file_proto_irvio_v1_rendezvous_proto_msgTypes[19].OneofWrappers = []any{
 		(*AvailableCountriesFrame_Request)(nil),
 		(*AvailableCountriesFrame_Response)(nil),
 		(*AvailableCountriesFrame_Error)(nil),
 	}
-	file_proto_hydra_v1_rendezvous_proto_msgTypes[20].OneofWrappers = []any{
+	file_proto_irvio_v1_rendezvous_proto_msgTypes[20].OneofWrappers = []any{
 		(*RendezvousFrame_Hello)(nil),
 		(*RendezvousFrame_Register)(nil),
 		(*RendezvousFrame_Registered)(nil),
@@ -2251,18 +2251,18 @@ func file_proto_hydra_v1_rendezvous_proto_init() {
 	out := protoimpl.TypeBuilder{
 		File: protoimpl.DescBuilder{
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
-			RawDescriptor: unsafe.Slice(unsafe.StringData(file_proto_hydra_v1_rendezvous_proto_rawDesc), len(file_proto_hydra_v1_rendezvous_proto_rawDesc)),
+			RawDescriptor: unsafe.Slice(unsafe.StringData(file_proto_irvio_v1_rendezvous_proto_rawDesc), len(file_proto_irvio_v1_rendezvous_proto_rawDesc)),
 			NumEnums:      2,
 			NumMessages:   21,
 			NumExtensions: 0,
 			NumServices:   0,
 		},
-		GoTypes:           file_proto_hydra_v1_rendezvous_proto_goTypes,
-		DependencyIndexes: file_proto_hydra_v1_rendezvous_proto_depIdxs,
-		EnumInfos:         file_proto_hydra_v1_rendezvous_proto_enumTypes,
-		MessageInfos:      file_proto_hydra_v1_rendezvous_proto_msgTypes,
+		GoTypes:           file_proto_irvio_v1_rendezvous_proto_goTypes,
+		DependencyIndexes: file_proto_irvio_v1_rendezvous_proto_depIdxs,
+		EnumInfos:         file_proto_irvio_v1_rendezvous_proto_enumTypes,
+		MessageInfos:      file_proto_irvio_v1_rendezvous_proto_msgTypes,
 	}.Build()
-	File_proto_hydra_v1_rendezvous_proto = out.File
-	file_proto_hydra_v1_rendezvous_proto_goTypes = nil
-	file_proto_hydra_v1_rendezvous_proto_depIdxs = nil
+	File_proto_irvio_v1_rendezvous_proto = out.File
+	file_proto_irvio_v1_rendezvous_proto_goTypes = nil
+	file_proto_irvio_v1_rendezvous_proto_depIdxs = nil
 }

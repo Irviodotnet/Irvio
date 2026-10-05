@@ -17,7 +17,7 @@ import (
 	"github.com/libp2p/go-libp2p/core/record"
 	"google.golang.org/protobuf/proto"
 
-	irviov1 "hydra.local/hydra/proto/hydra/v1"
+	irviov1 "github.com/Irviodotnet/Irvio/proto/irvio/v1"
 )
 
 const (

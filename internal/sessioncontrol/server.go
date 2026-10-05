@@ -20,9 +20,9 @@ import (
 	"github.com/libp2p/go-libp2p/p2p/security/noise"
 	"google.golang.org/protobuf/proto"
 
-	"hydra.local/hydra/internal/tunnellease"
-	"hydra.local/hydra/internal/tunnelsignal"
-	irviov1 "hydra.local/hydra/proto/hydra/v1"
+	"github.com/Irviodotnet/Irvio/internal/tunnellease"
+	"github.com/Irviodotnet/Irvio/internal/tunnelsignal"
+	irviov1 "github.com/Irviodotnet/Irvio/proto/irvio/v1"
 )
 
 type replayEntry struct {

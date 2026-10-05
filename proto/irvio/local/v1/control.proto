@@ -8,7 +8,7 @@ syntax = "proto3";
 
 package hydra.local.v1;
 
-option go_package = "hydra.local/hydra/proto/hydra/local/v1;localv1";
+option go_package = "github.com/Irviodotnet/Irvio/proto/irvio/local/v1;localv1";
 
 enum Method {
   METHOD_UNSPECIFIED = 0;

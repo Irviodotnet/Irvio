@@ -8,7 +8,7 @@
 // versions:
 // 	protoc-gen-go v1.36.12
 // 	protoc        v3.21.12
-// source: proto/hydra/v1/ice.proto
+// source: proto/irvio/v1/ice.proto
 
 package irviova1
 
@@ -60,11 +60,11 @@ func (x IceCandidateType) String() string {
 }
 
 func (IceCandidateType) Descriptor() protoreflect.EnumDescriptor {
-	return file_proto_hydra_v1_ice_proto_enumTypes[0].Descriptor()
+	return file_proto_irvio_v1_ice_proto_enumTypes[0].Descriptor()
 }
 
 func (IceCandidateType) Type() protoreflect.EnumType {
-	return &file_proto_hydra_v1_ice_proto_enumTypes[0]
+	return &file_proto_irvio_v1_ice_proto_enumTypes[0]
 }
 
 func (x IceCandidateType) Number() protoreflect.EnumNumber {
@@ -73,7 +73,7 @@ func (x IceCandidateType) Number() protoreflect.EnumNumber {
 
 // Deprecated: Use IceCandidateType.Descriptor instead.
 func (IceCandidateType) EnumDescriptor() ([]byte, []int) {
-	return file_proto_hydra_v1_ice_proto_rawDescGZIP(), []int{0}
+	return file_proto_irvio_v1_ice_proto_rawDescGZIP(), []int{0}
 }
 
 type IceNetworkType int32
@@ -109,11 +109,11 @@ func (x IceNetworkType) String() string {
 }
 
 func (IceNetworkType) Descriptor() protoreflect.EnumDescriptor {
-	return file_proto_hydra_v1_ice_proto_enumTypes[1].Descriptor()
+	return file_proto_irvio_v1_ice_proto_enumTypes[1].Descriptor()
 }
 
 func (IceNetworkType) Type() protoreflect.EnumType {
-	return &file_proto_hydra_v1_ice_proto_enumTypes[1]
+	return &file_proto_irvio_v1_ice_proto_enumTypes[1]
 }
 
 func (x IceNetworkType) Number() protoreflect.EnumNumber {
@@ -122,7 +122,7 @@ func (x IceNetworkType) Number() protoreflect.EnumNumber {
 
 // Deprecated: Use IceNetworkType.Descriptor instead.
 func (IceNetworkType) EnumDescriptor() ([]byte, []int) {
-	return file_proto_hydra_v1_ice_proto_rawDescGZIP(), []int{1}
+	return file_proto_irvio_v1_ice_proto_rawDescGZIP(), []int{1}
 }
 
 type IceSessionPurpose int32
@@ -155,11 +155,11 @@ func (x IceSessionPurpose) String() string {
 }
 
 func (IceSessionPurpose) Descriptor() protoreflect.EnumDescriptor {
-	return file_proto_hydra_v1_ice_proto_enumTypes[2].Descriptor()
+	return file_proto_irvio_v1_ice_proto_enumTypes[2].Descriptor()
 }
 
 func (IceSessionPurpose) Type() protoreflect.EnumType {
-	return &file_proto_hydra_v1_ice_proto_enumTypes[2]
+	return &file_proto_irvio_v1_ice_proto_enumTypes[2]
 }
 
 func (x IceSessionPurpose) Number() protoreflect.EnumNumber {
@@ -168,7 +168,7 @@ func (x IceSessionPurpose) Number() protoreflect.EnumNumber {
 
 // Deprecated: Use IceSessionPurpose.Descriptor instead.
 func (IceSessionPurpose) EnumDescriptor() ([]byte, []int) {
-	return file_proto_hydra_v1_ice_proto_rawDescGZIP(), []int{2}
+	return file_proto_irvio_v1_ice_proto_rawDescGZIP(), []int{2}
 }
 
 type IceRole int32
@@ -204,11 +204,11 @@ func (x IceRole) String() string {
 }
 
 func (IceRole) Descriptor() protoreflect.EnumDescriptor {
-	return file_proto_hydra_v1_ice_proto_enumTypes[3].Descriptor()
+	return file_proto_irvio_v1_ice_proto_enumTypes[3].Descriptor()
 }
 
 func (IceRole) Type() protoreflect.EnumType {
-	return &file_proto_hydra_v1_ice_proto_enumTypes[3]
+	return &file_proto_irvio_v1_ice_proto_enumTypes[3]
 }
 
 func (x IceRole) Number() protoreflect.EnumNumber {
@@ -217,7 +217,7 @@ func (x IceRole) Number() protoreflect.EnumNumber {
 
 // Deprecated: Use IceRole.Descriptor instead.
 func (IceRole) EnumDescriptor() ([]byte, []int) {
-	return file_proto_hydra_v1_ice_proto_rawDescGZIP(), []int{3}
+	return file_proto_irvio_v1_ice_proto_rawDescGZIP(), []int{3}
 }
 
 type IceSignalErrorCode int32
@@ -268,11 +268,11 @@ func (x IceSignalErrorCode) String() string {
 }
 
 func (IceSignalErrorCode) Descriptor() protoreflect.EnumDescriptor {
-	return file_proto_hydra_v1_ice_proto_enumTypes[4].Descriptor()
+	return file_proto_irvio_v1_ice_proto_enumTypes[4].Descriptor()
 }
 
 func (IceSignalErrorCode) Type() protoreflect.EnumType {
-	return &file_proto_hydra_v1_ice_proto_enumTypes[4]
+	return &file_proto_irvio_v1_ice_proto_enumTypes[4]
 }
 
 func (x IceSignalErrorCode) Number() protoreflect.EnumNumber {
@@ -281,7 +281,7 @@ func (x IceSignalErrorCode) Number() protoreflect.EnumNumber {
 
 // Deprecated: Use IceSignalErrorCode.Descriptor instead.
 func (IceSignalErrorCode) EnumDescriptor() ([]byte, []int) {
-	return file_proto_hydra_v1_ice_proto_rawDescGZIP(), []int{4}
+	return file_proto_irvio_v1_ice_proto_rawDescGZIP(), []int{4}
 }
 
 type IceCandidate struct {
@@ -301,7 +301,7 @@ type IceCandidate struct {
 
 func (x *IceCandidate) Reset() {
 	*x = IceCandidate{}
-	mi := &file_proto_hydra_v1_ice_proto_msgTypes[0]
+	mi := &file_proto_irvio_v1_ice_proto_msgTypes[0]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -313,7 +313,7 @@ func (x *IceCandidate) String() string {
 func (*IceCandidate) ProtoMessage() {}
 
 func (x *IceCandidate) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_hydra_v1_ice_proto_msgTypes[0]
+	mi := &file_proto_irvio_v1_ice_proto_msgTypes[0]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -326,7 +326,7 @@ func (x *IceCandidate) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use IceCandidate.ProtoReflect.Descriptor instead.
 func (*IceCandidate) Descriptor() ([]byte, []int) {
-	return file_proto_hydra_v1_ice_proto_rawDescGZIP(), []int{0}
+	return file_proto_irvio_v1_ice_proto_rawDescGZIP(), []int{0}
 }
 
 func (x *IceCandidate) GetType() IceCandidateType {
@@ -402,7 +402,7 @@ type IceCredentials struct {
 
 func (x *IceCredentials) Reset() {
 	*x = IceCredentials{}
-	mi := &file_proto_hydra_v1_ice_proto_msgTypes[1]
+	mi := &file_proto_irvio_v1_ice_proto_msgTypes[1]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -414,7 +414,7 @@ func (x *IceCredentials) String() string {
 func (*IceCredentials) ProtoMessage() {}
 
 func (x *IceCredentials) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_hydra_v1_ice_proto_msgTypes[1]
+	mi := &file_proto_irvio_v1_ice_proto_msgTypes[1]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -427,7 +427,7 @@ func (x *IceCredentials) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use IceCredentials.ProtoReflect.Descriptor instead.
 func (*IceCredentials) Descriptor() ([]byte, []int) {
-	return file_proto_hydra_v1_ice_proto_rawDescGZIP(), []int{1}
+	return file_proto_irvio_v1_ice_proto_rawDescGZIP(), []int{1}
 }
 
 func (x *IceCredentials) GetUfrag() string {
@@ -454,7 +454,7 @@ type IceDescription struct {
 
 func (x *IceDescription) Reset() {
 	*x = IceDescription{}
-	mi := &file_proto_hydra_v1_ice_proto_msgTypes[2]
+	mi := &file_proto_irvio_v1_ice_proto_msgTypes[2]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -466,7 +466,7 @@ func (x *IceDescription) String() string {
 func (*IceDescription) ProtoMessage() {}
 
 func (x *IceDescription) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_hydra_v1_ice_proto_msgTypes[2]
+	mi := &file_proto_irvio_v1_ice_proto_msgTypes[2]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -479,7 +479,7 @@ func (x *IceDescription) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use IceDescription.ProtoReflect.Descriptor instead.
 func (*IceDescription) Descriptor() ([]byte, []int) {
-	return file_proto_hydra_v1_ice_proto_rawDescGZIP(), []int{2}
+	return file_proto_irvio_v1_ice_proto_rawDescGZIP(), []int{2}
 }
 
 func (x *IceDescription) GetCredentials() *IceCredentials {
@@ -513,7 +513,7 @@ type IceOffer struct {
 
 func (x *IceOffer) Reset() {
 	*x = IceOffer{}
-	mi := &file_proto_hydra_v1_ice_proto_msgTypes[3]
+	mi := &file_proto_irvio_v1_ice_proto_msgTypes[3]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -525,7 +525,7 @@ func (x *IceOffer) String() string {
 func (*IceOffer) ProtoMessage() {}
 
 func (x *IceOffer) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_hydra_v1_ice_proto_msgTypes[3]
+	mi := &file_proto_irvio_v1_ice_proto_msgTypes[3]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -538,7 +538,7 @@ func (x *IceOffer) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use IceOffer.ProtoReflect.Descriptor instead.
 func (*IceOffer) Descriptor() ([]byte, []int) {
-	return file_proto_hydra_v1_ice_proto_rawDescGZIP(), []int{3}
+	return file_proto_irvio_v1_ice_proto_rawDescGZIP(), []int{3}
 }
 
 func (x *IceOffer) GetProtocolVersion() uint32 {
@@ -621,7 +621,7 @@ type IceAnswer struct {
 
 func (x *IceAnswer) Reset() {
 	*x = IceAnswer{}
-	mi := &file_proto_hydra_v1_ice_proto_msgTypes[4]
+	mi := &file_proto_irvio_v1_ice_proto_msgTypes[4]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -633,7 +633,7 @@ func (x *IceAnswer) String() string {
 func (*IceAnswer) ProtoMessage() {}
 
 func (x *IceAnswer) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_hydra_v1_ice_proto_msgTypes[4]
+	mi := &file_proto_irvio_v1_ice_proto_msgTypes[4]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -646,7 +646,7 @@ func (x *IceAnswer) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use IceAnswer.ProtoReflect.Descriptor instead.
 func (*IceAnswer) Descriptor() ([]byte, []int) {
-	return file_proto_hydra_v1_ice_proto_rawDescGZIP(), []int{4}
+	return file_proto_irvio_v1_ice_proto_rawDescGZIP(), []int{4}
 }
 
 func (x *IceAnswer) GetProtocolVersion() uint32 {
@@ -722,7 +722,7 @@ type IceSignalError struct {
 
 func (x *IceSignalError) Reset() {
 	*x = IceSignalError{}
-	mi := &file_proto_hydra_v1_ice_proto_msgTypes[5]
+	mi := &file_proto_irvio_v1_ice_proto_msgTypes[5]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -734,7 +734,7 @@ func (x *IceSignalError) String() string {
 func (*IceSignalError) ProtoMessage() {}
 
 func (x *IceSignalError) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_hydra_v1_ice_proto_msgTypes[5]
+	mi := &file_proto_irvio_v1_ice_proto_msgTypes[5]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -747,7 +747,7 @@ func (x *IceSignalError) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use IceSignalError.ProtoReflect.Descriptor instead.
 func (*IceSignalError) Descriptor() ([]byte, []int) {
-	return file_proto_hydra_v1_ice_proto_rawDescGZIP(), []int{5}
+	return file_proto_irvio_v1_ice_proto_rawDescGZIP(), []int{5}
 }
 
 func (x *IceSignalError) GetCode() IceSignalErrorCode {
@@ -777,7 +777,7 @@ type IceSignalResponse struct {
 
 func (x *IceSignalResponse) Reset() {
 	*x = IceSignalResponse{}
-	mi := &file_proto_hydra_v1_ice_proto_msgTypes[6]
+	mi := &file_proto_irvio_v1_ice_proto_msgTypes[6]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -789,7 +789,7 @@ func (x *IceSignalResponse) String() string {
 func (*IceSignalResponse) ProtoMessage() {}
 
 func (x *IceSignalResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_hydra_v1_ice_proto_msgTypes[6]
+	mi := &file_proto_irvio_v1_ice_proto_msgTypes[6]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -802,7 +802,7 @@ func (x *IceSignalResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use IceSignalResponse.ProtoReflect.Descriptor instead.
 func (*IceSignalResponse) Descriptor() ([]byte, []int) {
-	return file_proto_hydra_v1_ice_proto_rawDescGZIP(), []int{6}
+	return file_proto_irvio_v1_ice_proto_rawDescGZIP(), []int{6}
 }
 
 func (x *IceSignalResponse) GetResult() isIceSignalResponse_Result {
@@ -846,11 +846,11 @@ func (*IceSignalResponse_Answer) isIceSignalResponse_Result() {}
 
 func (*IceSignalResponse_Error) isIceSignalResponse_Result() {}
 
-var File_proto_hydra_v1_ice_proto protoreflect.FileDescriptor
+var File_proto_irvio_v1_ice_proto protoreflect.FileDescriptor
 
-const file_proto_hydra_v1_ice_proto_rawDesc = "" +
+const file_proto_irvio_v1_ice_proto_rawDesc = "" +
 	"\n" +
-	"\x18proto/hydra/v1/ice.proto\x12\bhydra.v1\"\xc6\x02\n" +
+	"\x18proto/irvio/v1/ice.proto\x12\bhydra.v1\"\xc6\x02\n" +
 	"\fIceCandidate\x12.\n" +
 	"\x04type\x18\x01 \x01(\x0e2\x1a.hydra.v1.IceCandidateTypeR\x04type\x122\n" +
 	"\anetwork\x18\x02 \x01(\x0e2\x18.hydra.v1.IceNetworkTypeR\anetwork\x12\x18\n" +
@@ -923,23 +923,23 @@ const file_proto_hydra_v1_ice_proto_rawDesc = "" +
 	"\"ICE_SIGNAL_ERROR_CODE_UNAUTHORIZED\x10\x04\x12\x1e\n" +
 	"\x1aICE_SIGNAL_ERROR_CODE_BUSY\x10\x05\x12*\n" +
 	"&ICE_SIGNAL_ERROR_CODE_SESSION_CONFLICT\x10\x06\x12(\n" +
-	"$ICE_SIGNAL_ERROR_CODE_INTERNAL_ERROR\x10\aB+Z)hydra.local/hydra/proto/hydra/v1;irviova1b\x06proto3"
+	"$ICE_SIGNAL_ERROR_CODE_INTERNAL_ERROR\x10\aB6Z4github.com/Irviodotnet/Irvio/proto/irvio/v1;irviova1b\x06proto3"
 
 var (
-	file_proto_hydra_v1_ice_proto_rawDescOnce sync.Once
-	file_proto_hydra_v1_ice_proto_rawDescData []byte
+	file_proto_irvio_v1_ice_proto_rawDescOnce sync.Once
+	file_proto_irvio_v1_ice_proto_rawDescData []byte
 )
 
-func file_proto_hydra_v1_ice_proto_rawDescGZIP() []byte {
-	file_proto_hydra_v1_ice_proto_rawDescOnce.Do(func() {
-		file_proto_hydra_v1_ice_proto_rawDescData = protoimpl.X.CompressGZIP(unsafe.Slice(unsafe.StringData(file_proto_hydra_v1_ice_proto_rawDesc), len(file_proto_hydra_v1_ice_proto_rawDesc)))
+func file_proto_irvio_v1_ice_proto_rawDescGZIP() []byte {
+	file_proto_irvio_v1_ice_proto_rawDescOnce.Do(func() {
+		file_proto_irvio_v1_ice_proto_rawDescData = protoimpl.X.CompressGZIP(unsafe.Slice(unsafe.StringData(file_proto_irvio_v1_ice_proto_rawDesc), len(file_proto_irvio_v1_ice_proto_rawDesc)))
 	})
-	return file_proto_hydra_v1_ice_proto_rawDescData
+	return file_proto_irvio_v1_ice_proto_rawDescData
 }
 
-var file_proto_hydra_v1_ice_proto_enumTypes = make([]protoimpl.EnumInfo, 5)
-var file_proto_hydra_v1_ice_proto_msgTypes = make([]protoimpl.MessageInfo, 7)
-var file_proto_hydra_v1_ice_proto_goTypes = []any{
+var file_proto_irvio_v1_ice_proto_enumTypes = make([]protoimpl.EnumInfo, 5)
+var file_proto_irvio_v1_ice_proto_msgTypes = make([]protoimpl.MessageInfo, 7)
+var file_proto_irvio_v1_ice_proto_goTypes = []any{
 	(IceCandidateType)(0),     // 0: hydra.v1.IceCandidateType
 	(IceNetworkType)(0),       // 1: hydra.v1.IceNetworkType
 	(IceSessionPurpose)(0),    // 2: hydra.v1.IceSessionPurpose
@@ -953,7 +953,7 @@ var file_proto_hydra_v1_ice_proto_goTypes = []any{
 	(*IceSignalError)(nil),    // 10: hydra.v1.IceSignalError
 	(*IceSignalResponse)(nil), // 11: hydra.v1.IceSignalResponse
 }
-var file_proto_hydra_v1_ice_proto_depIdxs = []int32{
+var file_proto_irvio_v1_ice_proto_depIdxs = []int32{
 	0,  // 0: hydra.v1.IceCandidate.type:type_name -> hydra.v1.IceCandidateType
 	1,  // 1: hydra.v1.IceCandidate.network:type_name -> hydra.v1.IceNetworkType
 	6,  // 2: hydra.v1.IceDescription.credentials:type_name -> hydra.v1.IceCredentials
@@ -974,12 +974,12 @@ var file_proto_hydra_v1_ice_proto_depIdxs = []int32{
 	0,  // [0:13] is the sub-list for field type_name
 }
 
-func init() { file_proto_hydra_v1_ice_proto_init() }
-func file_proto_hydra_v1_ice_proto_init() {
-	if File_proto_hydra_v1_ice_proto != nil {
+func init() { file_proto_irvio_v1_ice_proto_init() }
+func file_proto_irvio_v1_ice_proto_init() {
+	if File_proto_irvio_v1_ice_proto != nil {
 		return
 	}
-	file_proto_hydra_v1_ice_proto_msgTypes[6].OneofWrappers = []any{
+	file_proto_irvio_v1_ice_proto_msgTypes[6].OneofWrappers = []any{
 		(*IceSignalResponse_Answer)(nil),
 		(*IceSignalResponse_Error)(nil),
 	}
@@ -987,18 +987,18 @@ func file_proto_hydra_v1_ice_proto_init() {
 	out := protoimpl.TypeBuilder{
 		File: protoimpl.DescBuilder{
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
-			RawDescriptor: unsafe.Slice(unsafe.StringData(file_proto_hydra_v1_ice_proto_rawDesc), len(file_proto_hydra_v1_ice_proto_rawDesc)),
+			RawDescriptor: unsafe.Slice(unsafe.StringData(file_proto_irvio_v1_ice_proto_rawDesc), len(file_proto_irvio_v1_ice_proto_rawDesc)),
 			NumEnums:      5,
 			NumMessages:   7,
 			NumExtensions: 0,
 			NumServices:   0,
 		},
-		GoTypes:           file_proto_hydra_v1_ice_proto_goTypes,
-		DependencyIndexes: file_proto_hydra_v1_ice_proto_depIdxs,
-		EnumInfos:         file_proto_hydra_v1_ice_proto_enumTypes,
-		MessageInfos:      file_proto_hydra_v1_ice_proto_msgTypes,
+		GoTypes:           file_proto_irvio_v1_ice_proto_goTypes,
+		DependencyIndexes: file_proto_irvio_v1_ice_proto_depIdxs,
+		EnumInfos:         file_proto_irvio_v1_ice_proto_enumTypes,
+		MessageInfos:      file_proto_irvio_v1_ice_proto_msgTypes,
 	}.Build()
-	File_proto_hydra_v1_ice_proto = out.File
-	file_proto_hydra_v1_ice_proto_goTypes = nil
-	file_proto_hydra_v1_ice_proto_depIdxs = nil
+	File_proto_irvio_v1_ice_proto = out.File
+	file_proto_irvio_v1_ice_proto_goTypes = nil
+	file_proto_irvio_v1_ice_proto_depIdxs = nil
 }

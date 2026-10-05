@@ -12,8 +12,8 @@ import (
 	"log/slog"
 	"net/netip"
 
-	"hydra.local/hydra/internal/icesession"
-	"hydra.local/hydra/internal/socketmux"
+	"github.com/Irviodotnet/Irvio/internal/icesession"
+	"github.com/Irviodotnet/Irvio/internal/socketmux"
 )
 
 const (

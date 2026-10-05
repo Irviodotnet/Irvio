@@ -10,9 +10,9 @@ import (
 	"strings"
 	"time"
 
-	"hydra.local/hydra/internal/runtime"
-	"hydra.local/hydra/internal/underlay"
-	localv1 "hydra.local/hydra/proto/hydra/local/v1"
+	"github.com/Irviodotnet/Irvio/internal/runtime"
+	"github.com/Irviodotnet/Irvio/internal/underlay"
+	localv1 "github.com/Irviodotnet/Irvio/proto/irvio/local/v1"
 )
 
 func MapProductStatus(status runtime.Status) *localv1.Status {

@@ -17,9 +17,9 @@ import (
 	"github.com/libp2p/go-libp2p/core/peer"
 	"github.com/multiformats/go-multiaddr"
 
-	"hydra.local/hydra/internal/discovery"
-	"hydra.local/hydra/internal/exitselector"
-	"hydra.local/hydra/internal/protocol"
+	"github.com/Irviodotnet/Irvio/internal/discovery"
+	"github.com/Irviodotnet/Irvio/internal/exitselector"
+	"github.com/Irviodotnet/Irvio/internal/protocol"
 )
 
 // DiscoveryCandidateProvider adapts verified bounded Kademlia results to M9.

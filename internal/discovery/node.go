@@ -29,14 +29,14 @@ import (
 	"github.com/multiformats/go-multiaddr"
 	"google.golang.org/protobuf/proto"
 
-	"hydra.local/hydra/internal/bootstrap"
-	"hydra.local/hydra/internal/controlsocket"
-	"hydra.local/hydra/internal/identity"
-	"hydra.local/hydra/internal/peerstore"
-	irvioprotocol "hydra.local/hydra/internal/protocol"
-	"hydra.local/hydra/internal/reachability"
-	"hydra.local/hydra/internal/serviceindex"
-	irviov1 "hydra.local/hydra/proto/hydra/v1"
+	"github.com/Irviodotnet/Irvio/internal/bootstrap"
+	"github.com/Irviodotnet/Irvio/internal/controlsocket"
+	"github.com/Irviodotnet/Irvio/internal/identity"
+	"github.com/Irviodotnet/Irvio/internal/peerstore"
+	irvioprotocol "github.com/Irviodotnet/Irvio/internal/protocol"
+	"github.com/Irviodotnet/Irvio/internal/reachability"
+	"github.com/Irviodotnet/Irvio/internal/serviceindex"
+	irviov1 "github.com/Irviodotnet/Irvio/proto/irvio/v1"
 )
 
 const (

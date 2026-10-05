@@ -9,7 +9,7 @@ import 'dart:io';
 
 import 'package:fixnum/fixnum.dart';
 
-import 'generated/hydra/local/v1/control.pb.dart' as wire;
+import 'generated/irvio/local/v1/control.pb.dart' as wire;
 
 String createManualBootstrapCode({
   required String peerId,

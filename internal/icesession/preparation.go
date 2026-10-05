@@ -19,7 +19,7 @@ import (
 
 	"github.com/pion/ice/v4"
 
-	"hydra.local/hydra/internal/iceadapter"
+	"github.com/Irviodotnet/Irvio/internal/iceadapter"
 )
 
 const defaultGatherTimeout = 5 * time.Second

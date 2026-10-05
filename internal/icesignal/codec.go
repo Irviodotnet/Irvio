@@ -16,8 +16,8 @@ import (
 	"github.com/libp2p/go-libp2p/core/peer"
 	"google.golang.org/protobuf/proto"
 
-	"hydra.local/hydra/internal/icesession"
-	irviov1 "hydra.local/hydra/proto/hydra/v1"
+	"github.com/Irviodotnet/Irvio/internal/icesession"
+	irviov1 "github.com/Irviodotnet/Irvio/proto/irvio/v1"
 )
 
 func writeFrame(writer io.Writer, message proto.Message) error {

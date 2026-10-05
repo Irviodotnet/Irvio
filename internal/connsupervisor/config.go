@@ -10,8 +10,8 @@ import (
 	"fmt"
 	"time"
 
-	"hydra.local/hydra/internal/icesession"
-	"hydra.local/hydra/internal/networkstate"
+	"github.com/Irviodotnet/Irvio/internal/icesession"
+	"github.com/Irviodotnet/Irvio/internal/networkstate"
 )
 
 const (

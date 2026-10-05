@@ -23,12 +23,12 @@ import (
 	"github.com/libp2p/go-libp2p/core/peer"
 	libp2ppeerstore "github.com/libp2p/go-libp2p/core/peerstore"
 
-	"hydra.local/hydra/internal/bootstrap"
-	"hydra.local/hydra/internal/discovery"
-	"hydra.local/hydra/internal/exitselector"
-	"hydra.local/hydra/internal/protocol"
-	"hydra.local/hydra/internal/rendezvous"
-	irviov1 "hydra.local/hydra/proto/hydra/v1"
+	"github.com/Irviodotnet/Irvio/internal/bootstrap"
+	"github.com/Irviodotnet/Irvio/internal/discovery"
+	"github.com/Irviodotnet/Irvio/internal/exitselector"
+	"github.com/Irviodotnet/Irvio/internal/protocol"
+	"github.com/Irviodotnet/Irvio/internal/rendezvous"
+	irviov1 "github.com/Irviodotnet/Irvio/proto/irvio/v1"
 )
 
 type M12Config struct {

@@ -13,9 +13,9 @@ import (
 	"net/netip"
 	"sync"
 
-	"hydra.local/hydra/internal/iceadapter"
-	"hydra.local/hydra/internal/icesession"
-	"hydra.local/hydra/internal/socketmux"
+	"github.com/Irviodotnet/Irvio/internal/iceadapter"
+	"github.com/Irviodotnet/Irvio/internal/icesession"
+	"github.com/Irviodotnet/Irvio/internal/socketmux"
 )
 
 // Engine owns exactly one shared adapter and one ICE Control lease.

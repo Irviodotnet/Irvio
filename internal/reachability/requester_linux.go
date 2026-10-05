@@ -21,8 +21,8 @@ import (
 	libprotocol "github.com/libp2p/go-libp2p/core/protocol"
 	tcptransport "github.com/libp2p/go-libp2p/p2p/transport/tcp"
 	ma "github.com/multiformats/go-multiaddr"
-	"hydra.local/hydra/internal/controlsocket"
-	irviov1 "hydra.local/hydra/proto/hydra/v1"
+	"github.com/Irviodotnet/Irvio/internal/controlsocket"
+	irviov1 "github.com/Irviodotnet/Irvio/proto/irvio/v1"
 )
 
 // FamilyRequester uses a fresh authenticated host per request to prevent cross-family proof reuse.

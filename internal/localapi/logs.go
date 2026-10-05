@@ -22,7 +22,7 @@ import (
 
 	"google.golang.org/protobuf/proto"
 
-	localv1 "hydra.local/hydra/proto/hydra/local/v1"
+	localv1 "github.com/Irviodotnet/Irvio/proto/irvio/local/v1"
 )
 
 const (

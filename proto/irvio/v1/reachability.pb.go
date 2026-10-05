@@ -8,7 +8,7 @@
 // versions:
 // 	protoc-gen-go v1.36.12
 // 	protoc        v3.21.12
-// source: proto/hydra/v1/reachability.proto
+// source: proto/irvio/v1/reachability.proto
 
 package irviova1
 
@@ -60,11 +60,11 @@ func (x ReachabilityFamily) String() string {
 }
 
 func (ReachabilityFamily) Descriptor() protoreflect.EnumDescriptor {
-	return file_proto_hydra_v1_reachability_proto_enumTypes[0].Descriptor()
+	return file_proto_irvio_v1_reachability_proto_enumTypes[0].Descriptor()
 }
 
 func (ReachabilityFamily) Type() protoreflect.EnumType {
-	return &file_proto_hydra_v1_reachability_proto_enumTypes[0]
+	return &file_proto_irvio_v1_reachability_proto_enumTypes[0]
 }
 
 func (x ReachabilityFamily) Number() protoreflect.EnumNumber {
@@ -73,7 +73,7 @@ func (x ReachabilityFamily) Number() protoreflect.EnumNumber {
 
 // Deprecated: Use ReachabilityFamily.Descriptor instead.
 func (ReachabilityFamily) EnumDescriptor() ([]byte, []int) {
-	return file_proto_hydra_v1_reachability_proto_rawDescGZIP(), []int{0}
+	return file_proto_irvio_v1_reachability_proto_rawDescGZIP(), []int{0}
 }
 
 type ReachabilityErrorCode int32
@@ -121,11 +121,11 @@ func (x ReachabilityErrorCode) String() string {
 }
 
 func (ReachabilityErrorCode) Descriptor() protoreflect.EnumDescriptor {
-	return file_proto_hydra_v1_reachability_proto_enumTypes[1].Descriptor()
+	return file_proto_irvio_v1_reachability_proto_enumTypes[1].Descriptor()
 }
 
 func (ReachabilityErrorCode) Type() protoreflect.EnumType {
-	return &file_proto_hydra_v1_reachability_proto_enumTypes[1]
+	return &file_proto_irvio_v1_reachability_proto_enumTypes[1]
 }
 
 func (x ReachabilityErrorCode) Number() protoreflect.EnumNumber {
@@ -134,7 +134,7 @@ func (x ReachabilityErrorCode) Number() protoreflect.EnumNumber {
 
 // Deprecated: Use ReachabilityErrorCode.Descriptor instead.
 func (ReachabilityErrorCode) EnumDescriptor() ([]byte, []int) {
-	return file_proto_hydra_v1_reachability_proto_rawDescGZIP(), []int{1}
+	return file_proto_irvio_v1_reachability_proto_rawDescGZIP(), []int{1}
 }
 
 type ReachabilityRequest struct {
@@ -152,7 +152,7 @@ type ReachabilityRequest struct {
 
 func (x *ReachabilityRequest) Reset() {
 	*x = ReachabilityRequest{}
-	mi := &file_proto_hydra_v1_reachability_proto_msgTypes[0]
+	mi := &file_proto_irvio_v1_reachability_proto_msgTypes[0]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -164,7 +164,7 @@ func (x *ReachabilityRequest) String() string {
 func (*ReachabilityRequest) ProtoMessage() {}
 
 func (x *ReachabilityRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_hydra_v1_reachability_proto_msgTypes[0]
+	mi := &file_proto_irvio_v1_reachability_proto_msgTypes[0]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -177,7 +177,7 @@ func (x *ReachabilityRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ReachabilityRequest.ProtoReflect.Descriptor instead.
 func (*ReachabilityRequest) Descriptor() ([]byte, []int) {
-	return file_proto_hydra_v1_reachability_proto_rawDescGZIP(), []int{0}
+	return file_proto_irvio_v1_reachability_proto_rawDescGZIP(), []int{0}
 }
 
 func (x *ReachabilityRequest) GetProtocolVersion() uint32 {
@@ -248,7 +248,7 @@ type ReachabilityAttestation struct {
 
 func (x *ReachabilityAttestation) Reset() {
 	*x = ReachabilityAttestation{}
-	mi := &file_proto_hydra_v1_reachability_proto_msgTypes[1]
+	mi := &file_proto_irvio_v1_reachability_proto_msgTypes[1]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -260,7 +260,7 @@ func (x *ReachabilityAttestation) String() string {
 func (*ReachabilityAttestation) ProtoMessage() {}
 
 func (x *ReachabilityAttestation) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_hydra_v1_reachability_proto_msgTypes[1]
+	mi := &file_proto_irvio_v1_reachability_proto_msgTypes[1]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -273,7 +273,7 @@ func (x *ReachabilityAttestation) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ReachabilityAttestation.ProtoReflect.Descriptor instead.
 func (*ReachabilityAttestation) Descriptor() ([]byte, []int) {
-	return file_proto_hydra_v1_reachability_proto_rawDescGZIP(), []int{1}
+	return file_proto_irvio_v1_reachability_proto_rawDescGZIP(), []int{1}
 }
 
 func (x *ReachabilityAttestation) GetProtocolVersion() uint32 {
@@ -364,7 +364,7 @@ type SignedReachabilityAttestation struct {
 
 func (x *SignedReachabilityAttestation) Reset() {
 	*x = SignedReachabilityAttestation{}
-	mi := &file_proto_hydra_v1_reachability_proto_msgTypes[2]
+	mi := &file_proto_irvio_v1_reachability_proto_msgTypes[2]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -376,7 +376,7 @@ func (x *SignedReachabilityAttestation) String() string {
 func (*SignedReachabilityAttestation) ProtoMessage() {}
 
 func (x *SignedReachabilityAttestation) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_hydra_v1_reachability_proto_msgTypes[2]
+	mi := &file_proto_irvio_v1_reachability_proto_msgTypes[2]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -389,7 +389,7 @@ func (x *SignedReachabilityAttestation) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use SignedReachabilityAttestation.ProtoReflect.Descriptor instead.
 func (*SignedReachabilityAttestation) Descriptor() ([]byte, []int) {
-	return file_proto_hydra_v1_reachability_proto_rawDescGZIP(), []int{2}
+	return file_proto_irvio_v1_reachability_proto_rawDescGZIP(), []int{2}
 }
 
 func (x *SignedReachabilityAttestation) GetAttestation() []byte {
@@ -427,7 +427,7 @@ type ReachabilityResponse struct {
 
 func (x *ReachabilityResponse) Reset() {
 	*x = ReachabilityResponse{}
-	mi := &file_proto_hydra_v1_reachability_proto_msgTypes[3]
+	mi := &file_proto_irvio_v1_reachability_proto_msgTypes[3]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -439,7 +439,7 @@ func (x *ReachabilityResponse) String() string {
 func (*ReachabilityResponse) ProtoMessage() {}
 
 func (x *ReachabilityResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_hydra_v1_reachability_proto_msgTypes[3]
+	mi := &file_proto_irvio_v1_reachability_proto_msgTypes[3]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -452,7 +452,7 @@ func (x *ReachabilityResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ReachabilityResponse.ProtoReflect.Descriptor instead.
 func (*ReachabilityResponse) Descriptor() ([]byte, []int) {
-	return file_proto_hydra_v1_reachability_proto_rawDescGZIP(), []int{3}
+	return file_proto_irvio_v1_reachability_proto_rawDescGZIP(), []int{3}
 }
 
 func (x *ReachabilityResponse) GetProtocolVersion() uint32 {
@@ -515,7 +515,7 @@ type ReachabilityChallenge struct {
 
 func (x *ReachabilityChallenge) Reset() {
 	*x = ReachabilityChallenge{}
-	mi := &file_proto_hydra_v1_reachability_proto_msgTypes[4]
+	mi := &file_proto_irvio_v1_reachability_proto_msgTypes[4]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -527,7 +527,7 @@ func (x *ReachabilityChallenge) String() string {
 func (*ReachabilityChallenge) ProtoMessage() {}
 
 func (x *ReachabilityChallenge) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_hydra_v1_reachability_proto_msgTypes[4]
+	mi := &file_proto_irvio_v1_reachability_proto_msgTypes[4]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -540,7 +540,7 @@ func (x *ReachabilityChallenge) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ReachabilityChallenge.ProtoReflect.Descriptor instead.
 func (*ReachabilityChallenge) Descriptor() ([]byte, []int) {
-	return file_proto_hydra_v1_reachability_proto_rawDescGZIP(), []int{4}
+	return file_proto_irvio_v1_reachability_proto_rawDescGZIP(), []int{4}
 }
 
 func (x *ReachabilityChallenge) GetProtocolVersion() uint32 {
@@ -582,7 +582,7 @@ type ReachabilityChallengeResponse struct {
 
 func (x *ReachabilityChallengeResponse) Reset() {
 	*x = ReachabilityChallengeResponse{}
-	mi := &file_proto_hydra_v1_reachability_proto_msgTypes[5]
+	mi := &file_proto_irvio_v1_reachability_proto_msgTypes[5]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -594,7 +594,7 @@ func (x *ReachabilityChallengeResponse) String() string {
 func (*ReachabilityChallengeResponse) ProtoMessage() {}
 
 func (x *ReachabilityChallengeResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_hydra_v1_reachability_proto_msgTypes[5]
+	mi := &file_proto_irvio_v1_reachability_proto_msgTypes[5]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -607,7 +607,7 @@ func (x *ReachabilityChallengeResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ReachabilityChallengeResponse.ProtoReflect.Descriptor instead.
 func (*ReachabilityChallengeResponse) Descriptor() ([]byte, []int) {
-	return file_proto_hydra_v1_reachability_proto_rawDescGZIP(), []int{5}
+	return file_proto_irvio_v1_reachability_proto_rawDescGZIP(), []int{5}
 }
 
 func (x *ReachabilityChallengeResponse) GetProtocolVersion() uint32 {
@@ -640,7 +640,7 @@ type PublicReachabilityProof struct {
 
 func (x *PublicReachabilityProof) Reset() {
 	*x = PublicReachabilityProof{}
-	mi := &file_proto_hydra_v1_reachability_proto_msgTypes[6]
+	mi := &file_proto_irvio_v1_reachability_proto_msgTypes[6]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -652,7 +652,7 @@ func (x *PublicReachabilityProof) String() string {
 func (*PublicReachabilityProof) ProtoMessage() {}
 
 func (x *PublicReachabilityProof) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_hydra_v1_reachability_proto_msgTypes[6]
+	mi := &file_proto_irvio_v1_reachability_proto_msgTypes[6]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -665,7 +665,7 @@ func (x *PublicReachabilityProof) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use PublicReachabilityProof.ProtoReflect.Descriptor instead.
 func (*PublicReachabilityProof) Descriptor() ([]byte, []int) {
-	return file_proto_hydra_v1_reachability_proto_rawDescGZIP(), []int{6}
+	return file_proto_irvio_v1_reachability_proto_rawDescGZIP(), []int{6}
 }
 
 func (x *PublicReachabilityProof) GetAttestations() []*SignedReachabilityAttestation {
@@ -690,7 +690,7 @@ type PublicControlEndpoint struct {
 
 func (x *PublicControlEndpoint) Reset() {
 	*x = PublicControlEndpoint{}
-	mi := &file_proto_hydra_v1_reachability_proto_msgTypes[7]
+	mi := &file_proto_irvio_v1_reachability_proto_msgTypes[7]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -702,7 +702,7 @@ func (x *PublicControlEndpoint) String() string {
 func (*PublicControlEndpoint) ProtoMessage() {}
 
 func (x *PublicControlEndpoint) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_hydra_v1_reachability_proto_msgTypes[7]
+	mi := &file_proto_irvio_v1_reachability_proto_msgTypes[7]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -715,7 +715,7 @@ func (x *PublicControlEndpoint) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use PublicControlEndpoint.ProtoReflect.Descriptor instead.
 func (*PublicControlEndpoint) Descriptor() ([]byte, []int) {
-	return file_proto_hydra_v1_reachability_proto_rawDescGZIP(), []int{7}
+	return file_proto_irvio_v1_reachability_proto_rawDescGZIP(), []int{7}
 }
 
 func (x *PublicControlEndpoint) GetFamily() ReachabilityFamily {
@@ -767,11 +767,11 @@ func (x *PublicControlEndpoint) GetProof() *PublicReachabilityProof {
 	return nil
 }
 
-var File_proto_hydra_v1_reachability_proto protoreflect.FileDescriptor
+var File_proto_irvio_v1_reachability_proto protoreflect.FileDescriptor
 
-const file_proto_hydra_v1_reachability_proto_rawDesc = "" +
+const file_proto_irvio_v1_reachability_proto_rawDesc = "" +
 	"\n" +
-	"!proto/hydra/v1/reachability.proto\x12\bhydra.v1\"\xc3\x02\n" +
+	"!proto/irvio/v1/reachability.proto\x12\bhydra.v1\"\xc3\x02\n" +
 	"\x13ReachabilityRequest\x12)\n" +
 	"\x10protocol_version\x18\x01 \x01(\rR\x0fprotocolVersion\x12&\n" +
 	"\x0fsubject_peer_id\x18\x02 \x01(\fR\rsubjectPeerId\x12\x1d\n" +
@@ -838,23 +838,23 @@ const file_proto_hydra_v1_reachability_proto_rawDesc = "" +
 	"$REACHABILITY_ERROR_CODE_RATE_LIMITED\x10\x03\x12'\n" +
 	"#REACHABILITY_ERROR_CODE_UNREACHABLE\x10\x04\x12-\n" +
 	")REACHABILITY_ERROR_CODE_IDENTITY_MISMATCH\x10\x05\x12$\n" +
-	" REACHABILITY_ERROR_CODE_INTERNAL\x10\x06B+Z)hydra.local/hydra/proto/hydra/v1;irviova1b\x06proto3"
+	" REACHABILITY_ERROR_CODE_INTERNAL\x10\x06B6Z4github.com/Irviodotnet/Irvio/proto/irvio/v1;irviova1b\x06proto3"
 
 var (
-	file_proto_hydra_v1_reachability_proto_rawDescOnce sync.Once
-	file_proto_hydra_v1_reachability_proto_rawDescData []byte
+	file_proto_irvio_v1_reachability_proto_rawDescOnce sync.Once
+	file_proto_irvio_v1_reachability_proto_rawDescData []byte
 )
 
-func file_proto_hydra_v1_reachability_proto_rawDescGZIP() []byte {
-	file_proto_hydra_v1_reachability_proto_rawDescOnce.Do(func() {
-		file_proto_hydra_v1_reachability_proto_rawDescData = protoimpl.X.CompressGZIP(unsafe.Slice(unsafe.StringData(file_proto_hydra_v1_reachability_proto_rawDesc), len(file_proto_hydra_v1_reachability_proto_rawDesc)))
+func file_proto_irvio_v1_reachability_proto_rawDescGZIP() []byte {
+	file_proto_irvio_v1_reachability_proto_rawDescOnce.Do(func() {
+		file_proto_irvio_v1_reachability_proto_rawDescData = protoimpl.X.CompressGZIP(unsafe.Slice(unsafe.StringData(file_proto_irvio_v1_reachability_proto_rawDesc), len(file_proto_irvio_v1_reachability_proto_rawDesc)))
 	})
-	return file_proto_hydra_v1_reachability_proto_rawDescData
+	return file_proto_irvio_v1_reachability_proto_rawDescData
 }
 
-var file_proto_hydra_v1_reachability_proto_enumTypes = make([]protoimpl.EnumInfo, 2)
-var file_proto_hydra_v1_reachability_proto_msgTypes = make([]protoimpl.MessageInfo, 8)
-var file_proto_hydra_v1_reachability_proto_goTypes = []any{
+var file_proto_irvio_v1_reachability_proto_enumTypes = make([]protoimpl.EnumInfo, 2)
+var file_proto_irvio_v1_reachability_proto_msgTypes = make([]protoimpl.MessageInfo, 8)
+var file_proto_irvio_v1_reachability_proto_goTypes = []any{
 	(ReachabilityFamily)(0),               // 0: hydra.v1.ReachabilityFamily
 	(ReachabilityErrorCode)(0),            // 1: hydra.v1.ReachabilityErrorCode
 	(*ReachabilityRequest)(nil),           // 2: hydra.v1.ReachabilityRequest
@@ -866,7 +866,7 @@ var file_proto_hydra_v1_reachability_proto_goTypes = []any{
 	(*PublicReachabilityProof)(nil),       // 8: hydra.v1.PublicReachabilityProof
 	(*PublicControlEndpoint)(nil),         // 9: hydra.v1.PublicControlEndpoint
 }
-var file_proto_hydra_v1_reachability_proto_depIdxs = []int32{
+var file_proto_irvio_v1_reachability_proto_depIdxs = []int32{
 	0, // 0: hydra.v1.ReachabilityRequest.family:type_name -> hydra.v1.ReachabilityFamily
 	0, // 1: hydra.v1.ReachabilityAttestation.family:type_name -> hydra.v1.ReachabilityFamily
 	4, // 2: hydra.v1.ReachabilityResponse.attestation:type_name -> hydra.v1.SignedReachabilityAttestation
@@ -881,12 +881,12 @@ var file_proto_hydra_v1_reachability_proto_depIdxs = []int32{
 	0, // [0:7] is the sub-list for field type_name
 }
 
-func init() { file_proto_hydra_v1_reachability_proto_init() }
-func file_proto_hydra_v1_reachability_proto_init() {
-	if File_proto_hydra_v1_reachability_proto != nil {
+func init() { file_proto_irvio_v1_reachability_proto_init() }
+func file_proto_irvio_v1_reachability_proto_init() {
+	if File_proto_irvio_v1_reachability_proto != nil {
 		return
 	}
-	file_proto_hydra_v1_reachability_proto_msgTypes[3].OneofWrappers = []any{
+	file_proto_irvio_v1_reachability_proto_msgTypes[3].OneofWrappers = []any{
 		(*ReachabilityResponse_Attestation)(nil),
 		(*ReachabilityResponse_Error)(nil),
 	}
@@ -894,18 +894,18 @@ func file_proto_hydra_v1_reachability_proto_init() {
 	out := protoimpl.TypeBuilder{
 		File: protoimpl.DescBuilder{
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
-			RawDescriptor: unsafe.Slice(unsafe.StringData(file_proto_hydra_v1_reachability_proto_rawDesc), len(file_proto_hydra_v1_reachability_proto_rawDesc)),
+			RawDescriptor: unsafe.Slice(unsafe.StringData(file_proto_irvio_v1_reachability_proto_rawDesc), len(file_proto_irvio_v1_reachability_proto_rawDesc)),
 			NumEnums:      2,
 			NumMessages:   8,
 			NumExtensions: 0,
 			NumServices:   0,
 		},
-		GoTypes:           file_proto_hydra_v1_reachability_proto_goTypes,
-		DependencyIndexes: file_proto_hydra_v1_reachability_proto_depIdxs,
-		EnumInfos:         file_proto_hydra_v1_reachability_proto_enumTypes,
-		MessageInfos:      file_proto_hydra_v1_reachability_proto_msgTypes,
+		GoTypes:           file_proto_irvio_v1_reachability_proto_goTypes,
+		DependencyIndexes: file_proto_irvio_v1_reachability_proto_depIdxs,
+		EnumInfos:         file_proto_irvio_v1_reachability_proto_enumTypes,
+		MessageInfos:      file_proto_irvio_v1_reachability_proto_msgTypes,
 	}.Build()
-	File_proto_hydra_v1_reachability_proto = out.File
-	file_proto_hydra_v1_reachability_proto_goTypes = nil
-	file_proto_hydra_v1_reachability_proto_depIdxs = nil
+	File_proto_irvio_v1_reachability_proto = out.File
+	file_proto_irvio_v1_reachability_proto_goTypes = nil
+	file_proto_irvio_v1_reachability_proto_depIdxs = nil
 }

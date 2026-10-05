@@ -15,7 +15,7 @@ import (
 	"os"
 	"strings"
 
-	"hydra.local/hydra/internal/productbootstrap"
+	"github.com/Irviodotnet/Irvio/internal/productbootstrap"
 )
 
 const DefaultConfigPath = "/etc/irvio/config.json"

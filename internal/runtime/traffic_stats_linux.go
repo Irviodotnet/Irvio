@@ -12,7 +12,7 @@ import (
 	"time"
 
 	"github.com/libp2p/go-libp2p/core/peer"
-	"hydra.local/hydra/internal/trafficstats"
+	"github.com/Irviodotnet/Irvio/internal/trafficstats"
 )
 
 // TrafficSource captures owners after Start; sampling avoids mutable daemon fields and preserves final counts.

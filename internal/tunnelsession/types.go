@@ -14,10 +14,10 @@ import (
 
 	"github.com/libp2p/go-libp2p/core/peer"
 
-	"hydra.local/hydra/internal/networkstate"
-	"hydra.local/hydra/internal/socketmux"
-	"hydra.local/hydra/internal/tunnel"
-	"hydra.local/hydra/internal/tunnellease"
+	"github.com/Irviodotnet/Irvio/internal/networkstate"
+	"github.com/Irviodotnet/Irvio/internal/socketmux"
+	"github.com/Irviodotnet/Irvio/internal/tunnel"
+	"github.com/Irviodotnet/Irvio/internal/tunnellease"
 )
 
 // DNSPolicy describes tunnel resolvers; production applies per-link DNS after promotion.

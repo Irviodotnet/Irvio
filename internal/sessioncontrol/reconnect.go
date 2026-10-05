@@ -15,7 +15,7 @@ import (
 	"github.com/libp2p/go-libp2p/core/crypto"
 	"github.com/libp2p/go-libp2p/core/peer"
 
-	"hydra.local/hydra/internal/tunnellease"
+	"github.com/Irviodotnet/Irvio/internal/tunnellease"
 )
 
 type ReconnectingConfig struct {

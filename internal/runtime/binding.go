@@ -14,9 +14,9 @@ import (
 
 	"github.com/libp2p/go-libp2p/core/peer"
 
-	"hydra.local/hydra/internal/awg"
-	"hydra.local/hydra/internal/awgbinding"
-	"hydra.local/hydra/internal/peerstore"
+	"github.com/Irviodotnet/Irvio/internal/awg"
+	"github.com/Irviodotnet/Irvio/internal/awgbinding"
+	"github.com/Irviodotnet/Irvio/internal/peerstore"
 )
 
 type BindingDirectory interface {

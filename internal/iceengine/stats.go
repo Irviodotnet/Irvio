@@ -9,7 +9,7 @@ package iceengine
 import (
 	"sync/atomic"
 
-	"hydra.local/hydra/internal/iceadapter"
+	"github.com/Irviodotnet/Irvio/internal/iceadapter"
 )
 
 // Stats is a race-safe snapshot of engine and shared adapter activity.

@@ -20,12 +20,12 @@ import (
 	"github.com/libp2p/go-libp2p/core/peer"
 	ma "github.com/multiformats/go-multiaddr"
 
-	"hydra.local/hydra/internal/bootstrap"
-	"hydra.local/hydra/internal/discovery"
-	"hydra.local/hydra/internal/linuxroute"
-	"hydra.local/hydra/internal/networkstate"
-	"hydra.local/hydra/internal/reachability"
-	irviov1 "hydra.local/hydra/proto/hydra/v1"
+	"github.com/Irviodotnet/Irvio/internal/bootstrap"
+	"github.com/Irviodotnet/Irvio/internal/discovery"
+	"github.com/Irviodotnet/Irvio/internal/linuxroute"
+	"github.com/Irviodotnet/Irvio/internal/networkstate"
+	"github.com/Irviodotnet/Irvio/internal/reachability"
+	irviov1 "github.com/Irviodotnet/Irvio/proto/irvio/v1"
 )
 
 type PublicRoleConfig struct {

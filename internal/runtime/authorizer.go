@@ -14,9 +14,9 @@ import (
 
 	"github.com/libp2p/go-libp2p/core/peer"
 
-	"hydra.local/hydra/internal/discovery"
-	"hydra.local/hydra/internal/icesession"
-	"hydra.local/hydra/internal/protocol"
+	"github.com/Irviodotnet/Irvio/internal/discovery"
+	"github.com/Irviodotnet/Irvio/internal/icesession"
+	"github.com/Irviodotnet/Irvio/internal/protocol"
 )
 
 // CoreAuthorizer permits current authenticated EXIT requests, not token entitlement or reputation.

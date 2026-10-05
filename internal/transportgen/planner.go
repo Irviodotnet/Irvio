@@ -10,7 +10,7 @@ import (
 	"fmt"
 	"net/netip"
 
-	"hydra.local/hydra/internal/networkstate"
+	"github.com/Irviodotnet/Irvio/internal/networkstate"
 )
 
 // PreferredBindPlanner chooses the best normalized default route's first usable address per family.

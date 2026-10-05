@@ -14,7 +14,7 @@ import (
 	"path/filepath"
 	"syscall"
 
-	localv1 "hydra.local/hydra/proto/hydra/local/v1"
+	localv1 "github.com/Irviodotnet/Irvio/proto/irvio/local/v1"
 )
 
 const StoreFilename = "bootstrap-v1.pb"

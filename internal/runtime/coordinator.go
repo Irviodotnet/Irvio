@@ -14,10 +14,10 @@ import (
 	"sync"
 	"time"
 
-	"hydra.local/hydra/internal/exitselector"
-	"hydra.local/hydra/internal/killswitch"
-	"hydra.local/hydra/internal/networkstate"
-	"hydra.local/hydra/internal/underlay"
+	"github.com/Irviodotnet/Irvio/internal/exitselector"
+	"github.com/Irviodotnet/Irvio/internal/killswitch"
+	"github.com/Irviodotnet/Irvio/internal/networkstate"
+	"github.com/Irviodotnet/Irvio/internal/underlay"
 )
 
 type commandType uint8

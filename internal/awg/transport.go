@@ -21,7 +21,7 @@ import (
 	"github.com/amnezia-vpn/amneziawg-go/v3/device"
 	"github.com/libp2p/go-libp2p/core/peer"
 
-	"hydra.local/hydra/internal/connsupervisor"
+	"github.com/Irviodotnet/Irvio/internal/connsupervisor"
 )
 
 type peerState struct {

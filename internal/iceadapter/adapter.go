@@ -20,7 +20,7 @@ import (
 	"github.com/pion/ice/v4"
 	"github.com/pion/stun/v3"
 
-	"hydra.local/hydra/internal/socketmux"
+	"github.com/Irviodotnet/Irvio/internal/socketmux"
 )
 
 var _ ice.UDPMux = (*Adapter)(nil)

@@ -16,8 +16,8 @@ import (
 
 	"github.com/pion/stun/v3"
 
-	"hydra.local/hydra/internal/socketmux"
-	"hydra.local/hydra/internal/stunprobe"
+	"github.com/Irviodotnet/Irvio/internal/socketmux"
+	"github.com/Irviodotnet/Irvio/internal/stunprobe"
 )
 
 // BindingExchanger performs transaction-aware STUN Binding and must honor cancellation.

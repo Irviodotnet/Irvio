@@ -12,8 +12,8 @@ import (
 	"context"
 	"fmt"
 
-	"hydra.local/hydra/internal/rendezvous"
-	"hydra.local/hydra/internal/transportgen"
+	"github.com/Irviodotnet/Irvio/internal/rendezvous"
+	"github.com/Irviodotnet/Irvio/internal/transportgen"
 )
 
 func observedExitCountry(ctx context.Context, generation *transportgen.Generation, database string) (string, error) {

@@ -8,7 +8,7 @@
 // versions:
 // 	protoc-gen-go v1.36.12
 // 	protoc        v3.21.12
-// source: proto/hydra/local/v1/control.proto
+// source: proto/irvio/local/v1/control.proto
 
 package localv1
 
@@ -102,11 +102,11 @@ func (x Method) String() string {
 }
 
 func (Method) Descriptor() protoreflect.EnumDescriptor {
-	return file_proto_hydra_local_v1_control_proto_enumTypes[0].Descriptor()
+	return file_proto_irvio_local_v1_control_proto_enumTypes[0].Descriptor()
 }
 
 func (Method) Type() protoreflect.EnumType {
-	return &file_proto_hydra_local_v1_control_proto_enumTypes[0]
+	return &file_proto_irvio_local_v1_control_proto_enumTypes[0]
 }
 
 func (x Method) Number() protoreflect.EnumNumber {
@@ -115,7 +115,7 @@ func (x Method) Number() protoreflect.EnumNumber {
 
 // Deprecated: Use Method.Descriptor instead.
 func (Method) EnumDescriptor() ([]byte, []int) {
-	return file_proto_hydra_local_v1_control_proto_rawDescGZIP(), []int{0}
+	return file_proto_irvio_local_v1_control_proto_rawDescGZIP(), []int{0}
 }
 
 type ResultCode int32
@@ -169,11 +169,11 @@ func (x ResultCode) String() string {
 }
 
 func (ResultCode) Descriptor() protoreflect.EnumDescriptor {
-	return file_proto_hydra_local_v1_control_proto_enumTypes[1].Descriptor()
+	return file_proto_irvio_local_v1_control_proto_enumTypes[1].Descriptor()
 }
 
 func (ResultCode) Type() protoreflect.EnumType {
-	return &file_proto_hydra_local_v1_control_proto_enumTypes[1]
+	return &file_proto_irvio_local_v1_control_proto_enumTypes[1]
 }
 
 func (x ResultCode) Number() protoreflect.EnumNumber {
@@ -182,7 +182,7 @@ func (x ResultCode) Number() protoreflect.EnumNumber {
 
 // Deprecated: Use ResultCode.Descriptor instead.
 func (ResultCode) EnumDescriptor() ([]byte, []int) {
-	return file_proto_hydra_local_v1_control_proto_rawDescGZIP(), []int{1}
+	return file_proto_irvio_local_v1_control_proto_rawDescGZIP(), []int{1}
 }
 
 type ConnectionState int32
@@ -236,11 +236,11 @@ func (x ConnectionState) String() string {
 }
 
 func (ConnectionState) Descriptor() protoreflect.EnumDescriptor {
-	return file_proto_hydra_local_v1_control_proto_enumTypes[2].Descriptor()
+	return file_proto_irvio_local_v1_control_proto_enumTypes[2].Descriptor()
 }
 
 func (ConnectionState) Type() protoreflect.EnumType {
-	return &file_proto_hydra_local_v1_control_proto_enumTypes[2]
+	return &file_proto_irvio_local_v1_control_proto_enumTypes[2]
 }
 
 func (x ConnectionState) Number() protoreflect.EnumNumber {
@@ -249,7 +249,7 @@ func (x ConnectionState) Number() protoreflect.EnumNumber {
 
 // Deprecated: Use ConnectionState.Descriptor instead.
 func (ConnectionState) EnumDescriptor() ([]byte, []int) {
-	return file_proto_hydra_local_v1_control_proto_rawDescGZIP(), []int{2}
+	return file_proto_irvio_local_v1_control_proto_rawDescGZIP(), []int{2}
 }
 
 type LogSeverity int32
@@ -288,11 +288,11 @@ func (x LogSeverity) String() string {
 }
 
 func (LogSeverity) Descriptor() protoreflect.EnumDescriptor {
-	return file_proto_hydra_local_v1_control_proto_enumTypes[3].Descriptor()
+	return file_proto_irvio_local_v1_control_proto_enumTypes[3].Descriptor()
 }
 
 func (LogSeverity) Type() protoreflect.EnumType {
-	return &file_proto_hydra_local_v1_control_proto_enumTypes[3]
+	return &file_proto_irvio_local_v1_control_proto_enumTypes[3]
 }
 
 func (x LogSeverity) Number() protoreflect.EnumNumber {
@@ -301,7 +301,7 @@ func (x LogSeverity) Number() protoreflect.EnumNumber {
 
 // Deprecated: Use LogSeverity.Descriptor instead.
 func (LogSeverity) EnumDescriptor() ([]byte, []int) {
-	return file_proto_hydra_local_v1_control_proto_rawDescGZIP(), []int{3}
+	return file_proto_irvio_local_v1_control_proto_rawDescGZIP(), []int{3}
 }
 
 type BootstrapPhase int32
@@ -346,11 +346,11 @@ func (x BootstrapPhase) String() string {
 }
 
 func (BootstrapPhase) Descriptor() protoreflect.EnumDescriptor {
-	return file_proto_hydra_local_v1_control_proto_enumTypes[4].Descriptor()
+	return file_proto_irvio_local_v1_control_proto_enumTypes[4].Descriptor()
 }
 
 func (BootstrapPhase) Type() protoreflect.EnumType {
-	return &file_proto_hydra_local_v1_control_proto_enumTypes[4]
+	return &file_proto_irvio_local_v1_control_proto_enumTypes[4]
 }
 
 func (x BootstrapPhase) Number() protoreflect.EnumNumber {
@@ -359,7 +359,7 @@ func (x BootstrapPhase) Number() protoreflect.EnumNumber {
 
 // Deprecated: Use BootstrapPhase.Descriptor instead.
 func (BootstrapPhase) EnumDescriptor() ([]byte, []int) {
-	return file_proto_hydra_local_v1_control_proto_rawDescGZIP(), []int{4}
+	return file_proto_irvio_local_v1_control_proto_rawDescGZIP(), []int{4}
 }
 
 type AvailableCountriesStatus int32
@@ -401,11 +401,11 @@ func (x AvailableCountriesStatus) String() string {
 }
 
 func (AvailableCountriesStatus) Descriptor() protoreflect.EnumDescriptor {
-	return file_proto_hydra_local_v1_control_proto_enumTypes[5].Descriptor()
+	return file_proto_irvio_local_v1_control_proto_enumTypes[5].Descriptor()
 }
 
 func (AvailableCountriesStatus) Type() protoreflect.EnumType {
-	return &file_proto_hydra_local_v1_control_proto_enumTypes[5]
+	return &file_proto_irvio_local_v1_control_proto_enumTypes[5]
 }
 
 func (x AvailableCountriesStatus) Number() protoreflect.EnumNumber {
@@ -414,7 +414,7 @@ func (x AvailableCountriesStatus) Number() protoreflect.EnumNumber {
 
 // Deprecated: Use AvailableCountriesStatus.Descriptor instead.
 func (AvailableCountriesStatus) EnumDescriptor() ([]byte, []int) {
-	return file_proto_hydra_local_v1_control_proto_rawDescGZIP(), []int{5}
+	return file_proto_irvio_local_v1_control_proto_rawDescGZIP(), []int{5}
 }
 
 type Envelope struct {
@@ -434,7 +434,7 @@ type Envelope struct {
 
 func (x *Envelope) Reset() {
 	*x = Envelope{}
-	mi := &file_proto_hydra_local_v1_control_proto_msgTypes[0]
+	mi := &file_proto_irvio_local_v1_control_proto_msgTypes[0]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -446,7 +446,7 @@ func (x *Envelope) String() string {
 func (*Envelope) ProtoMessage() {}
 
 func (x *Envelope) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_hydra_local_v1_control_proto_msgTypes[0]
+	mi := &file_proto_irvio_local_v1_control_proto_msgTypes[0]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -459,7 +459,7 @@ func (x *Envelope) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use Envelope.ProtoReflect.Descriptor instead.
 func (*Envelope) Descriptor() ([]byte, []int) {
-	return file_proto_hydra_local_v1_control_proto_rawDescGZIP(), []int{0}
+	return file_proto_irvio_local_v1_control_proto_rawDescGZIP(), []int{0}
 }
 
 func (x *Envelope) GetApiMajor() uint32 {
@@ -556,7 +556,7 @@ type Request struct {
 
 func (x *Request) Reset() {
 	*x = Request{}
-	mi := &file_proto_hydra_local_v1_control_proto_msgTypes[1]
+	mi := &file_proto_irvio_local_v1_control_proto_msgTypes[1]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -568,7 +568,7 @@ func (x *Request) String() string {
 func (*Request) ProtoMessage() {}
 
 func (x *Request) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_hydra_local_v1_control_proto_msgTypes[1]
+	mi := &file_proto_irvio_local_v1_control_proto_msgTypes[1]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -581,7 +581,7 @@ func (x *Request) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use Request.ProtoReflect.Descriptor instead.
 func (*Request) Descriptor() ([]byte, []int) {
-	return file_proto_hydra_local_v1_control_proto_rawDescGZIP(), []int{1}
+	return file_proto_irvio_local_v1_control_proto_rawDescGZIP(), []int{1}
 }
 
 func (x *Request) GetMethod() Method {
@@ -660,7 +660,7 @@ type Hello struct {
 
 func (x *Hello) Reset() {
 	*x = Hello{}
-	mi := &file_proto_hydra_local_v1_control_proto_msgTypes[2]
+	mi := &file_proto_irvio_local_v1_control_proto_msgTypes[2]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -672,7 +672,7 @@ func (x *Hello) String() string {
 func (*Hello) ProtoMessage() {}
 
 func (x *Hello) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_hydra_local_v1_control_proto_msgTypes[2]
+	mi := &file_proto_irvio_local_v1_control_proto_msgTypes[2]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -685,7 +685,7 @@ func (x *Hello) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use Hello.ProtoReflect.Descriptor instead.
 func (*Hello) Descriptor() ([]byte, []int) {
-	return file_proto_hydra_local_v1_control_proto_rawDescGZIP(), []int{2}
+	return file_proto_irvio_local_v1_control_proto_rawDescGZIP(), []int{2}
 }
 
 func (x *Hello) GetServerApiMajor() uint32 {
@@ -745,7 +745,7 @@ type Response struct {
 
 func (x *Response) Reset() {
 	*x = Response{}
-	mi := &file_proto_hydra_local_v1_control_proto_msgTypes[3]
+	mi := &file_proto_irvio_local_v1_control_proto_msgTypes[3]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -757,7 +757,7 @@ func (x *Response) String() string {
 func (*Response) ProtoMessage() {}
 
 func (x *Response) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_hydra_local_v1_control_proto_msgTypes[3]
+	mi := &file_proto_irvio_local_v1_control_proto_msgTypes[3]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -770,7 +770,7 @@ func (x *Response) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use Response.ProtoReflect.Descriptor instead.
 func (*Response) Descriptor() ([]byte, []int) {
-	return file_proto_hydra_local_v1_control_proto_rawDescGZIP(), []int{3}
+	return file_proto_irvio_local_v1_control_proto_rawDescGZIP(), []int{3}
 }
 
 func (x *Response) GetCode() ResultCode {
@@ -942,7 +942,7 @@ type TrafficStats struct {
 
 func (x *TrafficStats) Reset() {
 	*x = TrafficStats{}
-	mi := &file_proto_hydra_local_v1_control_proto_msgTypes[4]
+	mi := &file_proto_irvio_local_v1_control_proto_msgTypes[4]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -954,7 +954,7 @@ func (x *TrafficStats) String() string {
 func (*TrafficStats) ProtoMessage() {}
 
 func (x *TrafficStats) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_hydra_local_v1_control_proto_msgTypes[4]
+	mi := &file_proto_irvio_local_v1_control_proto_msgTypes[4]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -967,7 +967,7 @@ func (x *TrafficStats) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use TrafficStats.ProtoReflect.Descriptor instead.
 func (*TrafficStats) Descriptor() ([]byte, []int) {
-	return file_proto_hydra_local_v1_control_proto_rawDescGZIP(), []int{4}
+	return file_proto_irvio_local_v1_control_proto_rawDescGZIP(), []int{4}
 }
 
 func (x *TrafficStats) GetSessionId() uint64 {
@@ -1039,7 +1039,7 @@ type Status struct {
 
 func (x *Status) Reset() {
 	*x = Status{}
-	mi := &file_proto_hydra_local_v1_control_proto_msgTypes[5]
+	mi := &file_proto_irvio_local_v1_control_proto_msgTypes[5]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1051,7 +1051,7 @@ func (x *Status) String() string {
 func (*Status) ProtoMessage() {}
 
 func (x *Status) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_hydra_local_v1_control_proto_msgTypes[5]
+	mi := &file_proto_irvio_local_v1_control_proto_msgTypes[5]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1064,7 +1064,7 @@ func (x *Status) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use Status.ProtoReflect.Descriptor instead.
 func (*Status) Descriptor() ([]byte, []int) {
-	return file_proto_hydra_local_v1_control_proto_rawDescGZIP(), []int{5}
+	return file_proto_irvio_local_v1_control_proto_rawDescGZIP(), []int{5}
 }
 
 func (x *Status) GetState() ConnectionState {
@@ -1113,7 +1113,7 @@ type ConnectionInfo struct {
 
 func (x *ConnectionInfo) Reset() {
 	*x = ConnectionInfo{}
-	mi := &file_proto_hydra_local_v1_control_proto_msgTypes[6]
+	mi := &file_proto_irvio_local_v1_control_proto_msgTypes[6]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1125,7 +1125,7 @@ func (x *ConnectionInfo) String() string {
 func (*ConnectionInfo) ProtoMessage() {}
 
 func (x *ConnectionInfo) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_hydra_local_v1_control_proto_msgTypes[6]
+	mi := &file_proto_irvio_local_v1_control_proto_msgTypes[6]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1138,7 +1138,7 @@ func (x *ConnectionInfo) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ConnectionInfo.ProtoReflect.Descriptor instead.
 func (*ConnectionInfo) Descriptor() ([]byte, []int) {
-	return file_proto_hydra_local_v1_control_proto_rawDescGZIP(), []int{6}
+	return file_proto_irvio_local_v1_control_proto_rawDescGZIP(), []int{6}
 }
 
 func (x *ConnectionInfo) GetExitCountryCode() string {
@@ -1172,7 +1172,7 @@ type UserVisibleError struct {
 
 func (x *UserVisibleError) Reset() {
 	*x = UserVisibleError{}
-	mi := &file_proto_hydra_local_v1_control_proto_msgTypes[7]
+	mi := &file_proto_irvio_local_v1_control_proto_msgTypes[7]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1184,7 +1184,7 @@ func (x *UserVisibleError) String() string {
 func (*UserVisibleError) ProtoMessage() {}
 
 func (x *UserVisibleError) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_hydra_local_v1_control_proto_msgTypes[7]
+	mi := &file_proto_irvio_local_v1_control_proto_msgTypes[7]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1197,7 +1197,7 @@ func (x *UserVisibleError) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use UserVisibleError.ProtoReflect.Descriptor instead.
 func (*UserVisibleError) Descriptor() ([]byte, []int) {
-	return file_proto_hydra_local_v1_control_proto_rawDescGZIP(), []int{7}
+	return file_proto_irvio_local_v1_control_proto_rawDescGZIP(), []int{7}
 }
 
 func (x *UserVisibleError) GetCode() ResultCode {
@@ -1224,7 +1224,7 @@ type Contribution struct {
 
 func (x *Contribution) Reset() {
 	*x = Contribution{}
-	mi := &file_proto_hydra_local_v1_control_proto_msgTypes[8]
+	mi := &file_proto_irvio_local_v1_control_proto_msgTypes[8]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1236,7 +1236,7 @@ func (x *Contribution) String() string {
 func (*Contribution) ProtoMessage() {}
 
 func (x *Contribution) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_hydra_local_v1_control_proto_msgTypes[8]
+	mi := &file_proto_irvio_local_v1_control_proto_msgTypes[8]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1249,7 +1249,7 @@ func (x *Contribution) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use Contribution.ProtoReflect.Descriptor instead.
 func (*Contribution) Descriptor() ([]byte, []int) {
-	return file_proto_hydra_local_v1_control_proto_rawDescGZIP(), []int{8}
+	return file_proto_irvio_local_v1_control_proto_rawDescGZIP(), []int{8}
 }
 
 func (x *Contribution) GetEnabled() bool {
@@ -1275,7 +1275,7 @@ type GetRecentLogsRequest struct {
 
 func (x *GetRecentLogsRequest) Reset() {
 	*x = GetRecentLogsRequest{}
-	mi := &file_proto_hydra_local_v1_control_proto_msgTypes[9]
+	mi := &file_proto_irvio_local_v1_control_proto_msgTypes[9]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1287,7 +1287,7 @@ func (x *GetRecentLogsRequest) String() string {
 func (*GetRecentLogsRequest) ProtoMessage() {}
 
 func (x *GetRecentLogsRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_hydra_local_v1_control_proto_msgTypes[9]
+	mi := &file_proto_irvio_local_v1_control_proto_msgTypes[9]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1300,7 +1300,7 @@ func (x *GetRecentLogsRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GetRecentLogsRequest.ProtoReflect.Descriptor instead.
 func (*GetRecentLogsRequest) Descriptor() ([]byte, []int) {
-	return file_proto_hydra_local_v1_control_proto_rawDescGZIP(), []int{9}
+	return file_proto_irvio_local_v1_control_proto_rawDescGZIP(), []int{9}
 }
 
 func (x *GetRecentLogsRequest) GetLimit() uint32 {
@@ -1320,7 +1320,7 @@ type SubscribeLogsRequest struct {
 
 func (x *SubscribeLogsRequest) Reset() {
 	*x = SubscribeLogsRequest{}
-	mi := &file_proto_hydra_local_v1_control_proto_msgTypes[10]
+	mi := &file_proto_irvio_local_v1_control_proto_msgTypes[10]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1332,7 +1332,7 @@ func (x *SubscribeLogsRequest) String() string {
 func (*SubscribeLogsRequest) ProtoMessage() {}
 
 func (x *SubscribeLogsRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_hydra_local_v1_control_proto_msgTypes[10]
+	mi := &file_proto_irvio_local_v1_control_proto_msgTypes[10]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1345,7 +1345,7 @@ func (x *SubscribeLogsRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use SubscribeLogsRequest.ProtoReflect.Descriptor instead.
 func (*SubscribeLogsRequest) Descriptor() ([]byte, []int) {
-	return file_proto_hydra_local_v1_control_proto_rawDescGZIP(), []int{10}
+	return file_proto_irvio_local_v1_control_proto_rawDescGZIP(), []int{10}
 }
 
 func (x *SubscribeLogsRequest) GetDaemonIncarnation() []byte {
@@ -1375,7 +1375,7 @@ type LogRecord struct {
 
 func (x *LogRecord) Reset() {
 	*x = LogRecord{}
-	mi := &file_proto_hydra_local_v1_control_proto_msgTypes[11]
+	mi := &file_proto_irvio_local_v1_control_proto_msgTypes[11]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1387,7 +1387,7 @@ func (x *LogRecord) String() string {
 func (*LogRecord) ProtoMessage() {}
 
 func (x *LogRecord) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_hydra_local_v1_control_proto_msgTypes[11]
+	mi := &file_proto_irvio_local_v1_control_proto_msgTypes[11]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1400,7 +1400,7 @@ func (x *LogRecord) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use LogRecord.ProtoReflect.Descriptor instead.
 func (*LogRecord) Descriptor() ([]byte, []int) {
-	return file_proto_hydra_local_v1_control_proto_rawDescGZIP(), []int{11}
+	return file_proto_irvio_local_v1_control_proto_rawDescGZIP(), []int{11}
 }
 
 func (x *LogRecord) GetSequence() uint64 {
@@ -1450,7 +1450,7 @@ type LogTail struct {
 
 func (x *LogTail) Reset() {
 	*x = LogTail{}
-	mi := &file_proto_hydra_local_v1_control_proto_msgTypes[12]
+	mi := &file_proto_irvio_local_v1_control_proto_msgTypes[12]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1462,7 +1462,7 @@ func (x *LogTail) String() string {
 func (*LogTail) ProtoMessage() {}
 
 func (x *LogTail) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_hydra_local_v1_control_proto_msgTypes[12]
+	mi := &file_proto_irvio_local_v1_control_proto_msgTypes[12]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1475,7 +1475,7 @@ func (x *LogTail) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use LogTail.ProtoReflect.Descriptor instead.
 func (*LogTail) Descriptor() ([]byte, []int) {
-	return file_proto_hydra_local_v1_control_proto_rawDescGZIP(), []int{12}
+	return file_proto_irvio_local_v1_control_proto_rawDescGZIP(), []int{12}
 }
 
 func (x *LogTail) GetRecords() []*LogRecord {
@@ -1516,7 +1516,7 @@ type BootstrapEndpoint struct {
 
 func (x *BootstrapEndpoint) Reset() {
 	*x = BootstrapEndpoint{}
-	mi := &file_proto_hydra_local_v1_control_proto_msgTypes[13]
+	mi := &file_proto_irvio_local_v1_control_proto_msgTypes[13]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1528,7 +1528,7 @@ func (x *BootstrapEndpoint) String() string {
 func (*BootstrapEndpoint) ProtoMessage() {}
 
 func (x *BootstrapEndpoint) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_hydra_local_v1_control_proto_msgTypes[13]
+	mi := &file_proto_irvio_local_v1_control_proto_msgTypes[13]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1541,7 +1541,7 @@ func (x *BootstrapEndpoint) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use BootstrapEndpoint.ProtoReflect.Descriptor instead.
 func (*BootstrapEndpoint) Descriptor() ([]byte, []int) {
-	return file_proto_hydra_local_v1_control_proto_rawDescGZIP(), []int{13}
+	return file_proto_irvio_local_v1_control_proto_rawDescGZIP(), []int{13}
 }
 
 func (x *BootstrapEndpoint) GetIp() []byte {
@@ -1568,7 +1568,7 @@ type BootstrapNode struct {
 
 func (x *BootstrapNode) Reset() {
 	*x = BootstrapNode{}
-	mi := &file_proto_hydra_local_v1_control_proto_msgTypes[14]
+	mi := &file_proto_irvio_local_v1_control_proto_msgTypes[14]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1580,7 +1580,7 @@ func (x *BootstrapNode) String() string {
 func (*BootstrapNode) ProtoMessage() {}
 
 func (x *BootstrapNode) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_hydra_local_v1_control_proto_msgTypes[14]
+	mi := &file_proto_irvio_local_v1_control_proto_msgTypes[14]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1593,7 +1593,7 @@ func (x *BootstrapNode) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use BootstrapNode.ProtoReflect.Descriptor instead.
 func (*BootstrapNode) Descriptor() ([]byte, []int) {
-	return file_proto_hydra_local_v1_control_proto_rawDescGZIP(), []int{14}
+	return file_proto_irvio_local_v1_control_proto_rawDescGZIP(), []int{14}
 }
 
 func (x *BootstrapNode) GetPeerId() string {
@@ -1621,7 +1621,7 @@ type BootstrapBundle struct {
 
 func (x *BootstrapBundle) Reset() {
 	*x = BootstrapBundle{}
-	mi := &file_proto_hydra_local_v1_control_proto_msgTypes[15]
+	mi := &file_proto_irvio_local_v1_control_proto_msgTypes[15]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1633,7 +1633,7 @@ func (x *BootstrapBundle) String() string {
 func (*BootstrapBundle) ProtoMessage() {}
 
 func (x *BootstrapBundle) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_hydra_local_v1_control_proto_msgTypes[15]
+	mi := &file_proto_irvio_local_v1_control_proto_msgTypes[15]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1646,7 +1646,7 @@ func (x *BootstrapBundle) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use BootstrapBundle.ProtoReflect.Descriptor instead.
 func (*BootstrapBundle) Descriptor() ([]byte, []int) {
-	return file_proto_hydra_local_v1_control_proto_rawDescGZIP(), []int{15}
+	return file_proto_irvio_local_v1_control_proto_rawDescGZIP(), []int{15}
 }
 
 func (x *BootstrapBundle) GetFormatVersion() uint32 {
@@ -1683,7 +1683,7 @@ type BootstrapState struct {
 
 func (x *BootstrapState) Reset() {
 	*x = BootstrapState{}
-	mi := &file_proto_hydra_local_v1_control_proto_msgTypes[16]
+	mi := &file_proto_irvio_local_v1_control_proto_msgTypes[16]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1695,7 +1695,7 @@ func (x *BootstrapState) String() string {
 func (*BootstrapState) ProtoMessage() {}
 
 func (x *BootstrapState) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_hydra_local_v1_control_proto_msgTypes[16]
+	mi := &file_proto_irvio_local_v1_control_proto_msgTypes[16]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1708,7 +1708,7 @@ func (x *BootstrapState) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use BootstrapState.ProtoReflect.Descriptor instead.
 func (*BootstrapState) Descriptor() ([]byte, []int) {
-	return file_proto_hydra_local_v1_control_proto_rawDescGZIP(), []int{16}
+	return file_proto_irvio_local_v1_control_proto_rawDescGZIP(), []int{16}
 }
 
 func (x *BootstrapState) GetPhase() BootstrapPhase {
@@ -1755,7 +1755,7 @@ type ImportBootstrapBundleRequest struct {
 
 func (x *ImportBootstrapBundleRequest) Reset() {
 	*x = ImportBootstrapBundleRequest{}
-	mi := &file_proto_hydra_local_v1_control_proto_msgTypes[17]
+	mi := &file_proto_irvio_local_v1_control_proto_msgTypes[17]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1767,7 +1767,7 @@ func (x *ImportBootstrapBundleRequest) String() string {
 func (*ImportBootstrapBundleRequest) ProtoMessage() {}
 
 func (x *ImportBootstrapBundleRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_hydra_local_v1_control_proto_msgTypes[17]
+	mi := &file_proto_irvio_local_v1_control_proto_msgTypes[17]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1780,7 +1780,7 @@ func (x *ImportBootstrapBundleRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ImportBootstrapBundleRequest.ProtoReflect.Descriptor instead.
 func (*ImportBootstrapBundleRequest) Descriptor() ([]byte, []int) {
-	return file_proto_hydra_local_v1_control_proto_rawDescGZIP(), []int{17}
+	return file_proto_irvio_local_v1_control_proto_rawDescGZIP(), []int{17}
 }
 
 func (x *ImportBootstrapBundleRequest) GetCode() string {
@@ -1799,7 +1799,7 @@ type GenerateBootstrapBundleRequest struct {
 
 func (x *GenerateBootstrapBundleRequest) Reset() {
 	*x = GenerateBootstrapBundleRequest{}
-	mi := &file_proto_hydra_local_v1_control_proto_msgTypes[18]
+	mi := &file_proto_irvio_local_v1_control_proto_msgTypes[18]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1811,7 +1811,7 @@ func (x *GenerateBootstrapBundleRequest) String() string {
 func (*GenerateBootstrapBundleRequest) ProtoMessage() {}
 
 func (x *GenerateBootstrapBundleRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_hydra_local_v1_control_proto_msgTypes[18]
+	mi := &file_proto_irvio_local_v1_control_proto_msgTypes[18]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1824,7 +1824,7 @@ func (x *GenerateBootstrapBundleRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GenerateBootstrapBundleRequest.ProtoReflect.Descriptor instead.
 func (*GenerateBootstrapBundleRequest) Descriptor() ([]byte, []int) {
-	return file_proto_hydra_local_v1_control_proto_rawDescGZIP(), []int{18}
+	return file_proto_irvio_local_v1_control_proto_rawDescGZIP(), []int{18}
 }
 
 func (x *GenerateBootstrapBundleRequest) GetPreferredNodeCount() uint32 {
@@ -1845,7 +1845,7 @@ type GeneratedBootstrapBundle struct {
 
 func (x *GeneratedBootstrapBundle) Reset() {
 	*x = GeneratedBootstrapBundle{}
-	mi := &file_proto_hydra_local_v1_control_proto_msgTypes[19]
+	mi := &file_proto_irvio_local_v1_control_proto_msgTypes[19]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1857,7 +1857,7 @@ func (x *GeneratedBootstrapBundle) String() string {
 func (*GeneratedBootstrapBundle) ProtoMessage() {}
 
 func (x *GeneratedBootstrapBundle) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_hydra_local_v1_control_proto_msgTypes[19]
+	mi := &file_proto_irvio_local_v1_control_proto_msgTypes[19]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1870,7 +1870,7 @@ func (x *GeneratedBootstrapBundle) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GeneratedBootstrapBundle.ProtoReflect.Descriptor instead.
 func (*GeneratedBootstrapBundle) Descriptor() ([]byte, []int) {
-	return file_proto_hydra_local_v1_control_proto_rawDescGZIP(), []int{19}
+	return file_proto_irvio_local_v1_control_proto_rawDescGZIP(), []int{19}
 }
 
 func (x *GeneratedBootstrapBundle) GetCode() string {
@@ -1903,7 +1903,7 @@ type DeleteProfileRequest struct {
 
 func (x *DeleteProfileRequest) Reset() {
 	*x = DeleteProfileRequest{}
-	mi := &file_proto_hydra_local_v1_control_proto_msgTypes[20]
+	mi := &file_proto_irvio_local_v1_control_proto_msgTypes[20]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1915,7 +1915,7 @@ func (x *DeleteProfileRequest) String() string {
 func (*DeleteProfileRequest) ProtoMessage() {}
 
 func (x *DeleteProfileRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_hydra_local_v1_control_proto_msgTypes[20]
+	mi := &file_proto_irvio_local_v1_control_proto_msgTypes[20]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1928,7 +1928,7 @@ func (x *DeleteProfileRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use DeleteProfileRequest.ProtoReflect.Descriptor instead.
 func (*DeleteProfileRequest) Descriptor() ([]byte, []int) {
-	return file_proto_hydra_local_v1_control_proto_rawDescGZIP(), []int{20}
+	return file_proto_irvio_local_v1_control_proto_rawDescGZIP(), []int{20}
 }
 
 func (x *DeleteProfileRequest) GetConfirm() bool {
@@ -1947,7 +1947,7 @@ type GetAvailableCountriesRequest struct {
 
 func (x *GetAvailableCountriesRequest) Reset() {
 	*x = GetAvailableCountriesRequest{}
-	mi := &file_proto_hydra_local_v1_control_proto_msgTypes[21]
+	mi := &file_proto_irvio_local_v1_control_proto_msgTypes[21]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1959,7 +1959,7 @@ func (x *GetAvailableCountriesRequest) String() string {
 func (*GetAvailableCountriesRequest) ProtoMessage() {}
 
 func (x *GetAvailableCountriesRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_hydra_local_v1_control_proto_msgTypes[21]
+	mi := &file_proto_irvio_local_v1_control_proto_msgTypes[21]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1972,7 +1972,7 @@ func (x *GetAvailableCountriesRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GetAvailableCountriesRequest.ProtoReflect.Descriptor instead.
 func (*GetAvailableCountriesRequest) Descriptor() ([]byte, []int) {
-	return file_proto_hydra_local_v1_control_proto_rawDescGZIP(), []int{21}
+	return file_proto_irvio_local_v1_control_proto_rawDescGZIP(), []int{21}
 }
 
 func (x *GetAvailableCountriesRequest) GetRefresh() bool {
@@ -1993,7 +1993,7 @@ type AvailableCountries struct {
 
 func (x *AvailableCountries) Reset() {
 	*x = AvailableCountries{}
-	mi := &file_proto_hydra_local_v1_control_proto_msgTypes[22]
+	mi := &file_proto_irvio_local_v1_control_proto_msgTypes[22]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -2005,7 +2005,7 @@ func (x *AvailableCountries) String() string {
 func (*AvailableCountries) ProtoMessage() {}
 
 func (x *AvailableCountries) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_hydra_local_v1_control_proto_msgTypes[22]
+	mi := &file_proto_irvio_local_v1_control_proto_msgTypes[22]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2018,7 +2018,7 @@ func (x *AvailableCountries) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use AvailableCountries.ProtoReflect.Descriptor instead.
 func (*AvailableCountries) Descriptor() ([]byte, []int) {
-	return file_proto_hydra_local_v1_control_proto_rawDescGZIP(), []int{22}
+	return file_proto_irvio_local_v1_control_proto_rawDescGZIP(), []int{22}
 }
 
 func (x *AvailableCountries) GetStatus() AvailableCountriesStatus {
@@ -2057,7 +2057,7 @@ type Event struct {
 
 func (x *Event) Reset() {
 	*x = Event{}
-	mi := &file_proto_hydra_local_v1_control_proto_msgTypes[23]
+	mi := &file_proto_irvio_local_v1_control_proto_msgTypes[23]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -2069,7 +2069,7 @@ func (x *Event) String() string {
 func (*Event) ProtoMessage() {}
 
 func (x *Event) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_hydra_local_v1_control_proto_msgTypes[23]
+	mi := &file_proto_irvio_local_v1_control_proto_msgTypes[23]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2082,7 +2082,7 @@ func (x *Event) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use Event.ProtoReflect.Descriptor instead.
 func (*Event) Descriptor() ([]byte, []int) {
-	return file_proto_hydra_local_v1_control_proto_rawDescGZIP(), []int{23}
+	return file_proto_irvio_local_v1_control_proto_rawDescGZIP(), []int{23}
 }
 
 func (x *Event) GetSequence() uint64 {
@@ -2157,7 +2157,7 @@ type StatusChanged struct {
 
 func (x *StatusChanged) Reset() {
 	*x = StatusChanged{}
-	mi := &file_proto_hydra_local_v1_control_proto_msgTypes[24]
+	mi := &file_proto_irvio_local_v1_control_proto_msgTypes[24]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -2169,7 +2169,7 @@ func (x *StatusChanged) String() string {
 func (*StatusChanged) ProtoMessage() {}
 
 func (x *StatusChanged) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_hydra_local_v1_control_proto_msgTypes[24]
+	mi := &file_proto_irvio_local_v1_control_proto_msgTypes[24]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2182,7 +2182,7 @@ func (x *StatusChanged) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use StatusChanged.ProtoReflect.Descriptor instead.
 func (*StatusChanged) Descriptor() ([]byte, []int) {
-	return file_proto_hydra_local_v1_control_proto_rawDescGZIP(), []int{24}
+	return file_proto_irvio_local_v1_control_proto_rawDescGZIP(), []int{24}
 }
 
 func (x *StatusChanged) GetStatus() *Status {
@@ -2201,7 +2201,7 @@ type ContributionChanged struct {
 
 func (x *ContributionChanged) Reset() {
 	*x = ContributionChanged{}
-	mi := &file_proto_hydra_local_v1_control_proto_msgTypes[25]
+	mi := &file_proto_irvio_local_v1_control_proto_msgTypes[25]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -2213,7 +2213,7 @@ func (x *ContributionChanged) String() string {
 func (*ContributionChanged) ProtoMessage() {}
 
 func (x *ContributionChanged) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_hydra_local_v1_control_proto_msgTypes[25]
+	mi := &file_proto_irvio_local_v1_control_proto_msgTypes[25]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2226,7 +2226,7 @@ func (x *ContributionChanged) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ContributionChanged.ProtoReflect.Descriptor instead.
 func (*ContributionChanged) Descriptor() ([]byte, []int) {
-	return file_proto_hydra_local_v1_control_proto_rawDescGZIP(), []int{25}
+	return file_proto_irvio_local_v1_control_proto_rawDescGZIP(), []int{25}
 }
 
 func (x *ContributionChanged) GetContribution() *Contribution {
@@ -2246,7 +2246,7 @@ type LogRecordAdded struct {
 
 func (x *LogRecordAdded) Reset() {
 	*x = LogRecordAdded{}
-	mi := &file_proto_hydra_local_v1_control_proto_msgTypes[26]
+	mi := &file_proto_irvio_local_v1_control_proto_msgTypes[26]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -2258,7 +2258,7 @@ func (x *LogRecordAdded) String() string {
 func (*LogRecordAdded) ProtoMessage() {}
 
 func (x *LogRecordAdded) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_hydra_local_v1_control_proto_msgTypes[26]
+	mi := &file_proto_irvio_local_v1_control_proto_msgTypes[26]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2271,7 +2271,7 @@ func (x *LogRecordAdded) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use LogRecordAdded.ProtoReflect.Descriptor instead.
 func (*LogRecordAdded) Descriptor() ([]byte, []int) {
-	return file_proto_hydra_local_v1_control_proto_rawDescGZIP(), []int{26}
+	return file_proto_irvio_local_v1_control_proto_rawDescGZIP(), []int{26}
 }
 
 func (x *LogRecordAdded) GetDaemonIncarnation() []byte {
@@ -2288,11 +2288,11 @@ func (x *LogRecordAdded) GetRecord() *LogRecord {
 	return nil
 }
 
-var File_proto_hydra_local_v1_control_proto protoreflect.FileDescriptor
+var File_proto_irvio_local_v1_control_proto protoreflect.FileDescriptor
 
-const file_proto_hydra_local_v1_control_proto_rawDesc = "" +
+const file_proto_irvio_local_v1_control_proto_rawDesc = "" +
 	"\n" +
-	"\"proto/hydra/local/v1/control.proto\x12\x0ehydra.local.v1\"\x8a\x02\n" +
+	"\"proto/irvio/local/v1/control.proto\x12\x0ehydra.local.v1\"\x8a\x02\n" +
 	"\bEnvelope\x12\x1b\n" +
 	"\tapi_major\x18\x01 \x01(\rR\bapiMajor\x12\x1b\n" +
 	"\tapi_minor\x18\x02 \x01(\rR\bapiMinor\x12\x1d\n" +
@@ -2492,23 +2492,23 @@ const file_proto_hydra_local_v1_control_proto_rawDesc = "" +
 	" AVAILABLE_COUNTRIES_STATUS_READY\x10\x01\x12&\n" +
 	"\"AVAILABLE_COUNTRIES_STATUS_PARTIAL\x10\x02\x12$\n" +
 	" AVAILABLE_COUNTRIES_STATUS_EMPTY\x10\x03\x12*\n" +
-	"&AVAILABLE_COUNTRIES_STATUS_UNAVAILABLE\x10\x04B0Z.hydra.local/hydra/proto/hydra/local/v1;localv1b\x06proto3"
+	"&AVAILABLE_COUNTRIES_STATUS_UNAVAILABLE\x10\x04B;Z9github.com/Irviodotnet/Irvio/proto/irvio/local/v1;localv1b\x06proto3"
 
 var (
-	file_proto_hydra_local_v1_control_proto_rawDescOnce sync.Once
-	file_proto_hydra_local_v1_control_proto_rawDescData []byte
+	file_proto_irvio_local_v1_control_proto_rawDescOnce sync.Once
+	file_proto_irvio_local_v1_control_proto_rawDescData []byte
 )
 
-func file_proto_hydra_local_v1_control_proto_rawDescGZIP() []byte {
-	file_proto_hydra_local_v1_control_proto_rawDescOnce.Do(func() {
-		file_proto_hydra_local_v1_control_proto_rawDescData = protoimpl.X.CompressGZIP(unsafe.Slice(unsafe.StringData(file_proto_hydra_local_v1_control_proto_rawDesc), len(file_proto_hydra_local_v1_control_proto_rawDesc)))
+func file_proto_irvio_local_v1_control_proto_rawDescGZIP() []byte {
+	file_proto_irvio_local_v1_control_proto_rawDescOnce.Do(func() {
+		file_proto_irvio_local_v1_control_proto_rawDescData = protoimpl.X.CompressGZIP(unsafe.Slice(unsafe.StringData(file_proto_irvio_local_v1_control_proto_rawDesc), len(file_proto_irvio_local_v1_control_proto_rawDesc)))
 	})
-	return file_proto_hydra_local_v1_control_proto_rawDescData
+	return file_proto_irvio_local_v1_control_proto_rawDescData
 }
 
-var file_proto_hydra_local_v1_control_proto_enumTypes = make([]protoimpl.EnumInfo, 6)
-var file_proto_hydra_local_v1_control_proto_msgTypes = make([]protoimpl.MessageInfo, 28)
-var file_proto_hydra_local_v1_control_proto_goTypes = []any{
+var file_proto_irvio_local_v1_control_proto_enumTypes = make([]protoimpl.EnumInfo, 6)
+var file_proto_irvio_local_v1_control_proto_msgTypes = make([]protoimpl.MessageInfo, 28)
+var file_proto_irvio_local_v1_control_proto_goTypes = []any{
 	(Method)(0),                            // 0: hydra.local.v1.Method
 	(ResultCode)(0),                        // 1: hydra.local.v1.ResultCode
 	(ConnectionState)(0),                   // 2: hydra.local.v1.ConnectionState
@@ -2544,7 +2544,7 @@ var file_proto_hydra_local_v1_control_proto_goTypes = []any{
 	(*LogRecordAdded)(nil),                 // 32: hydra.local.v1.LogRecordAdded
 	nil,                                    // 33: hydra.local.v1.LogRecord.FieldsEntry
 }
-var file_proto_hydra_local_v1_control_proto_depIdxs = []int32{
+var file_proto_irvio_local_v1_control_proto_depIdxs = []int32{
 	7,  // 0: hydra.local.v1.Envelope.request:type_name -> hydra.local.v1.Request
 	9,  // 1: hydra.local.v1.Envelope.response:type_name -> hydra.local.v1.Response
 	29, // 2: hydra.local.v1.Envelope.event:type_name -> hydra.local.v1.Event
@@ -2589,17 +2589,17 @@ var file_proto_hydra_local_v1_control_proto_depIdxs = []int32{
 	0,  // [0:37] is the sub-list for field type_name
 }
 
-func init() { file_proto_hydra_local_v1_control_proto_init() }
-func file_proto_hydra_local_v1_control_proto_init() {
-	if File_proto_hydra_local_v1_control_proto != nil {
+func init() { file_proto_irvio_local_v1_control_proto_init() }
+func file_proto_irvio_local_v1_control_proto_init() {
+	if File_proto_irvio_local_v1_control_proto != nil {
 		return
 	}
-	file_proto_hydra_local_v1_control_proto_msgTypes[0].OneofWrappers = []any{
+	file_proto_irvio_local_v1_control_proto_msgTypes[0].OneofWrappers = []any{
 		(*Envelope_Request)(nil),
 		(*Envelope_Response)(nil),
 		(*Envelope_Event)(nil),
 	}
-	file_proto_hydra_local_v1_control_proto_msgTypes[3].OneofWrappers = []any{
+	file_proto_irvio_local_v1_control_proto_msgTypes[3].OneofWrappers = []any{
 		(*Response_Hello)(nil),
 		(*Response_Status)(nil),
 		(*Response_Contribution)(nil),
@@ -2609,9 +2609,9 @@ func file_proto_hydra_local_v1_control_proto_init() {
 		(*Response_AvailableCountries)(nil),
 		(*Response_TrafficStats)(nil),
 	}
-	file_proto_hydra_local_v1_control_proto_msgTypes[4].OneofWrappers = []any{}
-	file_proto_hydra_local_v1_control_proto_msgTypes[6].OneofWrappers = []any{}
-	file_proto_hydra_local_v1_control_proto_msgTypes[23].OneofWrappers = []any{
+	file_proto_irvio_local_v1_control_proto_msgTypes[4].OneofWrappers = []any{}
+	file_proto_irvio_local_v1_control_proto_msgTypes[6].OneofWrappers = []any{}
+	file_proto_irvio_local_v1_control_proto_msgTypes[23].OneofWrappers = []any{
 		(*Event_StatusChanged)(nil),
 		(*Event_ContributionChanged)(nil),
 		(*Event_LogRecordAdded)(nil),
@@ -2620,18 +2620,18 @@ func file_proto_hydra_local_v1_control_proto_init() {
 	out := protoimpl.TypeBuilder{
 		File: protoimpl.DescBuilder{
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
-			RawDescriptor: unsafe.Slice(unsafe.StringData(file_proto_hydra_local_v1_control_proto_rawDesc), len(file_proto_hydra_local_v1_control_proto_rawDesc)),
+			RawDescriptor: unsafe.Slice(unsafe.StringData(file_proto_irvio_local_v1_control_proto_rawDesc), len(file_proto_irvio_local_v1_control_proto_rawDesc)),
 			NumEnums:      6,
 			NumMessages:   28,
 			NumExtensions: 0,
 			NumServices:   0,
 		},
-		GoTypes:           file_proto_hydra_local_v1_control_proto_goTypes,
-		DependencyIndexes: file_proto_hydra_local_v1_control_proto_depIdxs,
-		EnumInfos:         file_proto_hydra_local_v1_control_proto_enumTypes,
-		MessageInfos:      file_proto_hydra_local_v1_control_proto_msgTypes,
+		GoTypes:           file_proto_irvio_local_v1_control_proto_goTypes,
+		DependencyIndexes: file_proto_irvio_local_v1_control_proto_depIdxs,
+		EnumInfos:         file_proto_irvio_local_v1_control_proto_enumTypes,
+		MessageInfos:      file_proto_irvio_local_v1_control_proto_msgTypes,
 	}.Build()
-	File_proto_hydra_local_v1_control_proto = out.File
-	file_proto_hydra_local_v1_control_proto_goTypes = nil
-	file_proto_hydra_local_v1_control_proto_depIdxs = nil
+	File_proto_irvio_local_v1_control_proto = out.File
+	file_proto_irvio_local_v1_control_proto_goTypes = nil
+	file_proto_irvio_local_v1_control_proto_depIdxs = nil
 }

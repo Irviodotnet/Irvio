@@ -25,15 +25,15 @@ import (
 	"github.com/libp2p/go-libp2p/core/peer"
 	ma "github.com/multiformats/go-multiaddr"
 
-	"hydra.local/hydra/internal/exitselector"
-	"hydra.local/hydra/internal/localapi"
-	"hydra.local/hydra/internal/productbootstrap"
-	"hydra.local/hydra/internal/productprofile"
-	"hydra.local/hydra/internal/productruntime"
-	"hydra.local/hydra/internal/rendezvous"
-	irvioruntime "hydra.local/hydra/internal/runtime"
-	"hydra.local/hydra/internal/tunnellease"
-	"hydra.local/hydra/internal/underlay"
+	"github.com/Irviodotnet/Irvio/internal/exitselector"
+	"github.com/Irviodotnet/Irvio/internal/localapi"
+	"github.com/Irviodotnet/Irvio/internal/productbootstrap"
+	"github.com/Irviodotnet/Irvio/internal/productprofile"
+	"github.com/Irviodotnet/Irvio/internal/productruntime"
+	"github.com/Irviodotnet/Irvio/internal/rendezvous"
+	irvioruntime "github.com/Irviodotnet/Irvio/internal/runtime"
+	"github.com/Irviodotnet/Irvio/internal/tunnellease"
+	"github.com/Irviodotnet/Irvio/internal/underlay"
 )
 
 type stringList []string

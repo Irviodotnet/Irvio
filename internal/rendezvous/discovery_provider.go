@@ -15,7 +15,7 @@ import (
 
 	"github.com/libp2p/go-libp2p/core/peer"
 
-	"hydra.local/hydra/internal/discovery"
+	"github.com/Irviodotnet/Irvio/internal/discovery"
 )
 
 const (

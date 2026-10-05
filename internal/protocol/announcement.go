@@ -22,8 +22,8 @@ import (
 	"github.com/multiformats/go-multiaddr"
 	"google.golang.org/protobuf/proto"
 
-	"hydra.local/hydra/internal/reachability"
-	irviov1 "hydra.local/hydra/proto/hydra/v1"
+	"github.com/Irviodotnet/Irvio/internal/reachability"
+	irviov1 "github.com/Irviodotnet/Irvio/proto/irvio/v1"
 )
 
 const (

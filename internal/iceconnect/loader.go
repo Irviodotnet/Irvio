@@ -14,7 +14,7 @@ import (
 
 	"github.com/pion/ice/v4"
 
-	"hydra.local/hydra/internal/icesession"
+	"github.com/Irviodotnet/Irvio/internal/icesession"
 )
 
 // LoadRemoteCandidates validates and loads the full non-trickle set exactly once.

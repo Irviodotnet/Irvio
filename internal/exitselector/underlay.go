@@ -6,7 +6,7 @@
 
 package exitselector
 
-import "hydra.local/hydra/internal/networkstate"
+import "github.com/Irviodotnet/Irvio/internal/networkstate"
 
 // UnderlayFromNetworkState uses only authoritative normalized network snapshots.
 func UnderlayFromNetworkState(state networkstate.State) UnderlayState {

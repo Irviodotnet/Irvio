@@ -12,7 +12,7 @@ import (
 
 	"github.com/pion/ice/v4"
 
-	"hydra.local/hydra/internal/networkstate"
+	"github.com/Irviodotnet/Irvio/internal/networkstate"
 )
 
 const maxHandshakeRetrySeconds = 30

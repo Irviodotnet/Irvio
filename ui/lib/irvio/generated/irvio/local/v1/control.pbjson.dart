@@ -5,7 +5,7 @@
 // irvio@proton.me
 // This is a generated file - do not edit.
 //
-// Generated from hydra/local/v1/control.proto.
+// Generated from irvio/local/v1/control.proto.
 
 // @dart = 3.3
 

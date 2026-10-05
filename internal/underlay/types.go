@@ -14,7 +14,7 @@ import (
 
 	"github.com/libp2p/go-libp2p/core/peer"
 
-	"hydra.local/hydra/internal/networkstate"
+	"github.com/Irviodotnet/Irvio/internal/networkstate"
 )
 
 type Reachability uint8

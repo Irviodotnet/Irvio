@@ -12,8 +12,8 @@ import (
 	"log/slog"
 	"sync"
 
-	"hydra.local/hydra/internal/killswitch"
-	irvioruntime "hydra.local/hydra/internal/runtime"
+	"github.com/Irviodotnet/Irvio/internal/killswitch"
+	irvioruntime "github.com/Irviodotnet/Irvio/internal/runtime"
 )
 
 // Exit socket-activated daemons cleanly for reactivation; only manually launched daemons may exec.

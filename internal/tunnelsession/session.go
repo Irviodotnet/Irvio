@@ -15,11 +15,11 @@ import (
 	"sync"
 	"time"
 
-	"hydra.local/hydra/internal/linuxroute"
-	"hydra.local/hydra/internal/networkstate"
-	"hydra.local/hydra/internal/socketmux"
-	"hydra.local/hydra/internal/tunnel"
-	"hydra.local/hydra/internal/tunnellease"
+	"github.com/Irviodotnet/Irvio/internal/linuxroute"
+	"github.com/Irviodotnet/Irvio/internal/networkstate"
+	"github.com/Irviodotnet/Irvio/internal/socketmux"
+	"github.com/Irviodotnet/Irvio/internal/tunnel"
+	"github.com/Irviodotnet/Irvio/internal/tunnellease"
 )
 
 // Session owns the long-lived TUN and lease above transport generations.

@@ -10,7 +10,7 @@ import (
 	"net/netip"
 	"time"
 
-	"hydra.local/hydra/internal/socketmux"
+	"github.com/Irviodotnet/Irvio/internal/socketmux"
 )
 
 // Profile is one bounded diagnostic snapshot for an active mux socket and path.

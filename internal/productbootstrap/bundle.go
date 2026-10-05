@@ -19,8 +19,8 @@ import (
 	ma "github.com/multiformats/go-multiaddr"
 	"google.golang.org/protobuf/proto"
 
-	"hydra.local/hydra/internal/bootstrap"
-	localv1 "hydra.local/hydra/proto/hydra/local/v1"
+	"github.com/Irviodotnet/Irvio/internal/bootstrap"
+	localv1 "github.com/Irviodotnet/Irvio/proto/irvio/local/v1"
 )
 
 const (

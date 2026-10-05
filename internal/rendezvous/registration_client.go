@@ -21,7 +21,7 @@ import (
 	"github.com/libp2p/go-libp2p/core/peer"
 	libprotocol "github.com/libp2p/go-libp2p/core/protocol"
 
-	irviov1 "hydra.local/hydra/proto/hydra/v1"
+	irviov1 "github.com/Irviodotnet/Irvio/proto/irvio/v1"
 )
 
 type IncomingSignalHandler interface {

@@ -17,11 +17,11 @@ import (
 	"github.com/amnezia-vpn/amneziawg-go/v3/tun"
 	"github.com/libp2p/go-libp2p/core/peer"
 
-	"hydra.local/hydra/internal/connsupervisor"
-	"hydra.local/hydra/internal/iceconnect"
-	"hydra.local/hydra/internal/icesession"
-	"hydra.local/hydra/internal/networkstate"
-	"hydra.local/hydra/internal/socketmux"
+	"github.com/Irviodotnet/Irvio/internal/connsupervisor"
+	"github.com/Irviodotnet/Irvio/internal/iceconnect"
+	"github.com/Irviodotnet/Irvio/internal/icesession"
+	"github.com/Irviodotnet/Irvio/internal/networkstate"
+	"github.com/Irviodotnet/Irvio/internal/socketmux"
 )
 
 const (

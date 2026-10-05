@@ -21,17 +21,17 @@ import (
 
 	"github.com/multiformats/go-multiaddr"
 
-	"hydra.local/hydra/internal/awgbinding"
-	"hydra.local/hydra/internal/awgidentity"
-	"hydra.local/hydra/internal/controlbypass"
-	"hydra.local/hydra/internal/discovery"
-	"hydra.local/hydra/internal/exitselector"
-	"hydra.local/hydra/internal/killswitch"
-	"hydra.local/hydra/internal/linuxroute"
-	"hydra.local/hydra/internal/networkstate"
-	"hydra.local/hydra/internal/rendezvous"
-	"hydra.local/hydra/internal/stunserver"
-	"hydra.local/hydra/internal/underlay"
+	"github.com/Irviodotnet/Irvio/internal/awgbinding"
+	"github.com/Irviodotnet/Irvio/internal/awgidentity"
+	"github.com/Irviodotnet/Irvio/internal/controlbypass"
+	"github.com/Irviodotnet/Irvio/internal/discovery"
+	"github.com/Irviodotnet/Irvio/internal/exitselector"
+	"github.com/Irviodotnet/Irvio/internal/killswitch"
+	"github.com/Irviodotnet/Irvio/internal/linuxroute"
+	"github.com/Irviodotnet/Irvio/internal/networkstate"
+	"github.com/Irviodotnet/Irvio/internal/rendezvous"
+	"github.com/Irviodotnet/Irvio/internal/stunserver"
+	"github.com/Irviodotnet/Irvio/internal/underlay"
 )
 
 type DaemonConfig struct {

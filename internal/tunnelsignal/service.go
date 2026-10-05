@@ -15,8 +15,8 @@ import (
 	"github.com/libp2p/go-libp2p/core/host"
 	"github.com/libp2p/go-libp2p/core/network"
 	"github.com/libp2p/go-libp2p/core/peer"
-	"hydra.local/hydra/internal/tunnellease"
-	irviov1 "hydra.local/hydra/proto/hydra/v1"
+	"github.com/Irviodotnet/Irvio/internal/tunnellease"
+	irviov1 "github.com/Irviodotnet/Irvio/proto/irvio/v1"
 )
 
 // Service issues and releases leases only for the authenticated RemotePeer.

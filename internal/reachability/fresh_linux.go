@@ -17,8 +17,8 @@ import (
 	"github.com/libp2p/go-libp2p/core/crypto"
 	"github.com/libp2p/go-libp2p/core/peer"
 	tcptransport "github.com/libp2p/go-libp2p/p2p/transport/tcp"
-	"hydra.local/hydra/internal/controlsocket"
-	irviov1 "hydra.local/hydra/proto/hydra/v1"
+	"github.com/Irviodotnet/Irvio/internal/controlsocket"
+	irviov1 "github.com/Irviodotnet/Irvio/proto/irvio/v1"
 )
 
 type FreshDialer struct {

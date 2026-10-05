@@ -13,7 +13,7 @@ import (
 
 	"github.com/libp2p/go-libp2p/core/peer"
 
-	"hydra.local/hydra/internal/icesession"
+	"github.com/Irviodotnet/Irvio/internal/icesession"
 )
 
 // ConnectionKey identifies one long-lived logical peer relationship.

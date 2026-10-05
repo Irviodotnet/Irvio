@@ -4,7 +4,7 @@
 // https://irvio.net
 // irvio@proton.me
 
-module hydra.local/hydra
+module github.com/Irviodotnet/Irvio
 
 go 1.27.1
 

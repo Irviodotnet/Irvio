@@ -8,7 +8,7 @@
 // versions:
 // 	protoc-gen-go v1.36.12
 // 	protoc        v3.21.12
-// source: proto/hydra/v1/tunnel.proto
+// source: proto/irvio/v1/tunnel.proto
 
 package irviova1
 
@@ -63,11 +63,11 @@ func (x TunnelLeaseOperation) String() string {
 }
 
 func (TunnelLeaseOperation) Descriptor() protoreflect.EnumDescriptor {
-	return file_proto_hydra_v1_tunnel_proto_enumTypes[0].Descriptor()
+	return file_proto_irvio_v1_tunnel_proto_enumTypes[0].Descriptor()
 }
 
 func (TunnelLeaseOperation) Type() protoreflect.EnumType {
-	return &file_proto_hydra_v1_tunnel_proto_enumTypes[0]
+	return &file_proto_irvio_v1_tunnel_proto_enumTypes[0]
 }
 
 func (x TunnelLeaseOperation) Number() protoreflect.EnumNumber {
@@ -76,7 +76,7 @@ func (x TunnelLeaseOperation) Number() protoreflect.EnumNumber {
 
 // Deprecated: Use TunnelLeaseOperation.Descriptor instead.
 func (TunnelLeaseOperation) EnumDescriptor() ([]byte, []int) {
-	return file_proto_hydra_v1_tunnel_proto_rawDescGZIP(), []int{0}
+	return file_proto_irvio_v1_tunnel_proto_rawDescGZIP(), []int{0}
 }
 
 type TunnelLeaseErrorCode int32
@@ -130,11 +130,11 @@ func (x TunnelLeaseErrorCode) String() string {
 }
 
 func (TunnelLeaseErrorCode) Descriptor() protoreflect.EnumDescriptor {
-	return file_proto_hydra_v1_tunnel_proto_enumTypes[1].Descriptor()
+	return file_proto_irvio_v1_tunnel_proto_enumTypes[1].Descriptor()
 }
 
 func (TunnelLeaseErrorCode) Type() protoreflect.EnumType {
-	return &file_proto_hydra_v1_tunnel_proto_enumTypes[1]
+	return &file_proto_irvio_v1_tunnel_proto_enumTypes[1]
 }
 
 func (x TunnelLeaseErrorCode) Number() protoreflect.EnumNumber {
@@ -143,7 +143,7 @@ func (x TunnelLeaseErrorCode) Number() protoreflect.EnumNumber {
 
 // Deprecated: Use TunnelLeaseErrorCode.Descriptor instead.
 func (TunnelLeaseErrorCode) EnumDescriptor() ([]byte, []int) {
-	return file_proto_hydra_v1_tunnel_proto_rawDescGZIP(), []int{1}
+	return file_proto_irvio_v1_tunnel_proto_rawDescGZIP(), []int{1}
 }
 
 type TunnelLeaseRequest struct {
@@ -161,7 +161,7 @@ type TunnelLeaseRequest struct {
 
 func (x *TunnelLeaseRequest) Reset() {
 	*x = TunnelLeaseRequest{}
-	mi := &file_proto_hydra_v1_tunnel_proto_msgTypes[0]
+	mi := &file_proto_irvio_v1_tunnel_proto_msgTypes[0]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -173,7 +173,7 @@ func (x *TunnelLeaseRequest) String() string {
 func (*TunnelLeaseRequest) ProtoMessage() {}
 
 func (x *TunnelLeaseRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_hydra_v1_tunnel_proto_msgTypes[0]
+	mi := &file_proto_irvio_v1_tunnel_proto_msgTypes[0]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -186,7 +186,7 @@ func (x *TunnelLeaseRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use TunnelLeaseRequest.ProtoReflect.Descriptor instead.
 func (*TunnelLeaseRequest) Descriptor() ([]byte, []int) {
-	return file_proto_hydra_v1_tunnel_proto_rawDescGZIP(), []int{0}
+	return file_proto_irvio_v1_tunnel_proto_rawDescGZIP(), []int{0}
 }
 
 func (x *TunnelLeaseRequest) GetProtocolVersion() uint32 {
@@ -256,7 +256,7 @@ type TunnelLease struct {
 
 func (x *TunnelLease) Reset() {
 	*x = TunnelLease{}
-	mi := &file_proto_hydra_v1_tunnel_proto_msgTypes[1]
+	mi := &file_proto_irvio_v1_tunnel_proto_msgTypes[1]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -268,7 +268,7 @@ func (x *TunnelLease) String() string {
 func (*TunnelLease) ProtoMessage() {}
 
 func (x *TunnelLease) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_hydra_v1_tunnel_proto_msgTypes[1]
+	mi := &file_proto_irvio_v1_tunnel_proto_msgTypes[1]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -281,7 +281,7 @@ func (x *TunnelLease) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use TunnelLease.ProtoReflect.Descriptor instead.
 func (*TunnelLease) Descriptor() ([]byte, []int) {
-	return file_proto_hydra_v1_tunnel_proto_rawDescGZIP(), []int{1}
+	return file_proto_irvio_v1_tunnel_proto_rawDescGZIP(), []int{1}
 }
 
 func (x *TunnelLease) GetLeaseId() []byte {
@@ -363,7 +363,7 @@ type TunnelLeaseError struct {
 
 func (x *TunnelLeaseError) Reset() {
 	*x = TunnelLeaseError{}
-	mi := &file_proto_hydra_v1_tunnel_proto_msgTypes[2]
+	mi := &file_proto_irvio_v1_tunnel_proto_msgTypes[2]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -375,7 +375,7 @@ func (x *TunnelLeaseError) String() string {
 func (*TunnelLeaseError) ProtoMessage() {}
 
 func (x *TunnelLeaseError) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_hydra_v1_tunnel_proto_msgTypes[2]
+	mi := &file_proto_irvio_v1_tunnel_proto_msgTypes[2]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -388,7 +388,7 @@ func (x *TunnelLeaseError) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use TunnelLeaseError.ProtoReflect.Descriptor instead.
 func (*TunnelLeaseError) Descriptor() ([]byte, []int) {
-	return file_proto_hydra_v1_tunnel_proto_rawDescGZIP(), []int{2}
+	return file_proto_irvio_v1_tunnel_proto_rawDescGZIP(), []int{2}
 }
 
 func (x *TunnelLeaseError) GetCode() TunnelLeaseErrorCode {
@@ -412,7 +412,7 @@ type TunnelLeaseResponse struct {
 
 func (x *TunnelLeaseResponse) Reset() {
 	*x = TunnelLeaseResponse{}
-	mi := &file_proto_hydra_v1_tunnel_proto_msgTypes[3]
+	mi := &file_proto_irvio_v1_tunnel_proto_msgTypes[3]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -424,7 +424,7 @@ func (x *TunnelLeaseResponse) String() string {
 func (*TunnelLeaseResponse) ProtoMessage() {}
 
 func (x *TunnelLeaseResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_hydra_v1_tunnel_proto_msgTypes[3]
+	mi := &file_proto_irvio_v1_tunnel_proto_msgTypes[3]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -437,7 +437,7 @@ func (x *TunnelLeaseResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use TunnelLeaseResponse.ProtoReflect.Descriptor instead.
 func (*TunnelLeaseResponse) Descriptor() ([]byte, []int) {
-	return file_proto_hydra_v1_tunnel_proto_rawDescGZIP(), []int{3}
+	return file_proto_irvio_v1_tunnel_proto_rawDescGZIP(), []int{3}
 }
 
 func (x *TunnelLeaseResponse) GetProtocolVersion() uint32 {
@@ -488,11 +488,11 @@ func (*TunnelLeaseResponse_Lease) isTunnelLeaseResponse_Result() {}
 
 func (*TunnelLeaseResponse_Error) isTunnelLeaseResponse_Result() {}
 
-var File_proto_hydra_v1_tunnel_proto protoreflect.FileDescriptor
+var File_proto_irvio_v1_tunnel_proto protoreflect.FileDescriptor
 
-const file_proto_hydra_v1_tunnel_proto_rawDesc = "" +
+const file_proto_irvio_v1_tunnel_proto_rawDesc = "" +
 	"\n" +
-	"\x1bproto/hydra/v1/tunnel.proto\x12\bhydra.v1\"\xb0\x02\n" +
+	"\x1bproto/irvio/v1/tunnel.proto\x12\bhydra.v1\"\xb0\x02\n" +
 	"\x12TunnelLeaseRequest\x12)\n" +
 	"\x10protocol_version\x18\x01 \x01(\rR\x0fprotocolVersion\x12<\n" +
 	"\toperation\x18\x02 \x01(\x0e2\x1e.hydra.v1.TunnelLeaseOperationR\toperation\x12 \n" +
@@ -538,23 +538,23 @@ const file_proto_hydra_v1_tunnel_proto_rawDesc = "" +
 	" TUNNEL_LEASE_ERROR_CODE_INTERNAL\x10\x05\x12!\n" +
 	"\x1dTUNNEL_LEASE_ERROR_CODE_STALE\x10\x06\x12#\n" +
 	"\x1fTUNNEL_LEASE_ERROR_CODE_EXPIRED\x10\a\x12.\n" +
-	"*TUNNEL_LEASE_ERROR_CODE_REVOCATION_PENDING\x10\bB+Z)hydra.local/hydra/proto/hydra/v1;irviova1b\x06proto3"
+	"*TUNNEL_LEASE_ERROR_CODE_REVOCATION_PENDING\x10\bB6Z4github.com/Irviodotnet/Irvio/proto/irvio/v1;irviova1b\x06proto3"
 
 var (
-	file_proto_hydra_v1_tunnel_proto_rawDescOnce sync.Once
-	file_proto_hydra_v1_tunnel_proto_rawDescData []byte
+	file_proto_irvio_v1_tunnel_proto_rawDescOnce sync.Once
+	file_proto_irvio_v1_tunnel_proto_rawDescData []byte
 )
 
-func file_proto_hydra_v1_tunnel_proto_rawDescGZIP() []byte {
-	file_proto_hydra_v1_tunnel_proto_rawDescOnce.Do(func() {
-		file_proto_hydra_v1_tunnel_proto_rawDescData = protoimpl.X.CompressGZIP(unsafe.Slice(unsafe.StringData(file_proto_hydra_v1_tunnel_proto_rawDesc), len(file_proto_hydra_v1_tunnel_proto_rawDesc)))
+func file_proto_irvio_v1_tunnel_proto_rawDescGZIP() []byte {
+	file_proto_irvio_v1_tunnel_proto_rawDescOnce.Do(func() {
+		file_proto_irvio_v1_tunnel_proto_rawDescData = protoimpl.X.CompressGZIP(unsafe.Slice(unsafe.StringData(file_proto_irvio_v1_tunnel_proto_rawDesc), len(file_proto_irvio_v1_tunnel_proto_rawDesc)))
 	})
-	return file_proto_hydra_v1_tunnel_proto_rawDescData
+	return file_proto_irvio_v1_tunnel_proto_rawDescData
 }
 
-var file_proto_hydra_v1_tunnel_proto_enumTypes = make([]protoimpl.EnumInfo, 2)
-var file_proto_hydra_v1_tunnel_proto_msgTypes = make([]protoimpl.MessageInfo, 4)
-var file_proto_hydra_v1_tunnel_proto_goTypes = []any{
+var file_proto_irvio_v1_tunnel_proto_enumTypes = make([]protoimpl.EnumInfo, 2)
+var file_proto_irvio_v1_tunnel_proto_msgTypes = make([]protoimpl.MessageInfo, 4)
+var file_proto_irvio_v1_tunnel_proto_goTypes = []any{
 	(TunnelLeaseOperation)(0),   // 0: hydra.v1.TunnelLeaseOperation
 	(TunnelLeaseErrorCode)(0),   // 1: hydra.v1.TunnelLeaseErrorCode
 	(*TunnelLeaseRequest)(nil),  // 2: hydra.v1.TunnelLeaseRequest
@@ -562,7 +562,7 @@ var file_proto_hydra_v1_tunnel_proto_goTypes = []any{
 	(*TunnelLeaseError)(nil),    // 4: hydra.v1.TunnelLeaseError
 	(*TunnelLeaseResponse)(nil), // 5: hydra.v1.TunnelLeaseResponse
 }
-var file_proto_hydra_v1_tunnel_proto_depIdxs = []int32{
+var file_proto_irvio_v1_tunnel_proto_depIdxs = []int32{
 	0, // 0: hydra.v1.TunnelLeaseRequest.operation:type_name -> hydra.v1.TunnelLeaseOperation
 	1, // 1: hydra.v1.TunnelLeaseError.code:type_name -> hydra.v1.TunnelLeaseErrorCode
 	3, // 2: hydra.v1.TunnelLeaseResponse.lease:type_name -> hydra.v1.TunnelLease
@@ -574,12 +574,12 @@ var file_proto_hydra_v1_tunnel_proto_depIdxs = []int32{
 	0, // [0:4] is the sub-list for field type_name
 }
 
-func init() { file_proto_hydra_v1_tunnel_proto_init() }
-func file_proto_hydra_v1_tunnel_proto_init() {
-	if File_proto_hydra_v1_tunnel_proto != nil {
+func init() { file_proto_irvio_v1_tunnel_proto_init() }
+func file_proto_irvio_v1_tunnel_proto_init() {
+	if File_proto_irvio_v1_tunnel_proto != nil {
 		return
 	}
-	file_proto_hydra_v1_tunnel_proto_msgTypes[3].OneofWrappers = []any{
+	file_proto_irvio_v1_tunnel_proto_msgTypes[3].OneofWrappers = []any{
 		(*TunnelLeaseResponse_Lease)(nil),
 		(*TunnelLeaseResponse_Error)(nil),
 	}
@@ -587,18 +587,18 @@ func file_proto_hydra_v1_tunnel_proto_init() {
 	out := protoimpl.TypeBuilder{
 		File: protoimpl.DescBuilder{
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
-			RawDescriptor: unsafe.Slice(unsafe.StringData(file_proto_hydra_v1_tunnel_proto_rawDesc), len(file_proto_hydra_v1_tunnel_proto_rawDesc)),
+			RawDescriptor: unsafe.Slice(unsafe.StringData(file_proto_irvio_v1_tunnel_proto_rawDesc), len(file_proto_irvio_v1_tunnel_proto_rawDesc)),
 			NumEnums:      2,
 			NumMessages:   4,
 			NumExtensions: 0,
 			NumServices:   0,
 		},
-		GoTypes:           file_proto_hydra_v1_tunnel_proto_goTypes,
-		DependencyIndexes: file_proto_hydra_v1_tunnel_proto_depIdxs,
-		EnumInfos:         file_proto_hydra_v1_tunnel_proto_enumTypes,
-		MessageInfos:      file_proto_hydra_v1_tunnel_proto_msgTypes,
+		GoTypes:           file_proto_irvio_v1_tunnel_proto_goTypes,
+		DependencyIndexes: file_proto_irvio_v1_tunnel_proto_depIdxs,
+		EnumInfos:         file_proto_irvio_v1_tunnel_proto_enumTypes,
+		MessageInfos:      file_proto_irvio_v1_tunnel_proto_msgTypes,
 	}.Build()
-	File_proto_hydra_v1_tunnel_proto = out.File
-	file_proto_hydra_v1_tunnel_proto_goTypes = nil
-	file_proto_hydra_v1_tunnel_proto_depIdxs = nil
+	File_proto_irvio_v1_tunnel_proto = out.File
+	file_proto_irvio_v1_tunnel_proto_goTypes = nil
+	file_proto_irvio_v1_tunnel_proto_depIdxs = nil
 }

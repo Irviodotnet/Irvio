@@ -20,15 +20,15 @@ import (
 	"github.com/libp2p/go-libp2p/core/peer"
 	"github.com/pion/ice/v4"
 
-	"hydra.local/hydra/internal/awg"
-	"hydra.local/hydra/internal/connsupervisor"
-	"hydra.local/hydra/internal/exitselector"
-	"hydra.local/hydra/internal/iceconnect"
-	"hydra.local/hydra/internal/icesession"
-	"hydra.local/hydra/internal/icesignal"
-	"hydra.local/hydra/internal/transportgen"
-	"hydra.local/hydra/internal/tunnellease"
-	"hydra.local/hydra/internal/tunnelsignal"
+	"github.com/Irviodotnet/Irvio/internal/awg"
+	"github.com/Irviodotnet/Irvio/internal/connsupervisor"
+	"github.com/Irviodotnet/Irvio/internal/exitselector"
+	"github.com/Irviodotnet/Irvio/internal/iceconnect"
+	"github.com/Irviodotnet/Irvio/internal/icesession"
+	"github.com/Irviodotnet/Irvio/internal/icesignal"
+	"github.com/Irviodotnet/Irvio/internal/transportgen"
+	"github.com/Irviodotnet/Irvio/internal/tunnellease"
+	"github.com/Irviodotnet/Irvio/internal/tunnelsignal"
 )
 
 type GenerationSource func() *transportgen.Generation

@@ -13,7 +13,7 @@ import (
 
 	"github.com/pion/ice/v4"
 
-	"hydra.local/hydra/internal/icesession"
+	"github.com/Irviodotnet/Irvio/internal/icesession"
 )
 
 // Connect performs exactly one blocking Pion Dial or Accept operation.

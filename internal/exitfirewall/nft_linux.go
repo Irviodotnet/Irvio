@@ -25,9 +25,9 @@ import (
 	"github.com/google/nftables/userdata"
 	"golang.org/x/sys/unix"
 
-	"hydra.local/hydra/internal/linuxroute"
-	"hydra.local/hydra/internal/safetypolicy"
-	"hydra.local/hydra/internal/trafficstats"
+	"github.com/Irviodotnet/Irvio/internal/linuxroute"
+	"github.com/Irviodotnet/Irvio/internal/safetypolicy"
+	"github.com/Irviodotnet/Irvio/internal/trafficstats"
 )
 
 const (

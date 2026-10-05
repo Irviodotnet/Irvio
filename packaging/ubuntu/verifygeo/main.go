@@ -14,7 +14,7 @@ import (
 	"os"
 	"strings"
 
-	"hydra.local/hydra/internal/rendezvous"
+	"github.com/Irviodotnet/Irvio/internal/rendezvous"
 )
 
 func main() {

@@ -10,8 +10,8 @@ import (
 	"fmt"
 	"net/netip"
 
-	"hydra.local/hydra/internal/socketmux"
-	"hydra.local/hydra/internal/stunprobe"
+	"github.com/Irviodotnet/Irvio/internal/socketmux"
+	"github.com/Irviodotnet/Irvio/internal/stunprobe"
 )
 
 // Topology is the validated two-address, two-port RFC 5780 server layout.

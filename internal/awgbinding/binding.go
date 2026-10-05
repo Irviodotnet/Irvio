@@ -15,8 +15,8 @@ import (
 
 	"github.com/libp2p/go-libp2p/core/peer"
 
-	"hydra.local/hydra/internal/awg"
-	"hydra.local/hydra/internal/protocol"
+	"github.com/Irviodotnet/Irvio/internal/awg"
+	"github.com/Irviodotnet/Irvio/internal/protocol"
 )
 
 // Binding is an authenticated public AWG key claim from the expected PeerID.

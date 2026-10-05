@@ -19,8 +19,8 @@ import (
 	"syscall"
 	"time"
 
-	"hydra.local/hydra/internal/controlsocket"
-	"hydra.local/hydra/internal/linuxroute"
+	"github.com/Irviodotnet/Irvio/internal/controlsocket"
+	"github.com/Irviodotnet/Irvio/internal/linuxroute"
 )
 
 const challengeSize = 32

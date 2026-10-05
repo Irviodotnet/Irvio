@@ -10,7 +10,7 @@ import (
 	"fmt"
 	"time"
 
-	"hydra.local/hydra/internal/icesession"
+	"github.com/Irviodotnet/Irvio/internal/icesession"
 )
 
 const (

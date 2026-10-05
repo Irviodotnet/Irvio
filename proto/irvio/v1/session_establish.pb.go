@@ -8,7 +8,7 @@
 // versions:
 // 	protoc-gen-go v1.36.12
 // 	protoc        v3.21.12
-// source: proto/hydra/v1/session_establish.proto
+// source: proto/irvio/v1/session_establish.proto
 
 package irviova1
 
@@ -72,11 +72,11 @@ func (x SessionEstablishKind) String() string {
 }
 
 func (SessionEstablishKind) Descriptor() protoreflect.EnumDescriptor {
-	return file_proto_hydra_v1_session_establish_proto_enumTypes[0].Descriptor()
+	return file_proto_irvio_v1_session_establish_proto_enumTypes[0].Descriptor()
 }
 
 func (SessionEstablishKind) Type() protoreflect.EnumType {
-	return &file_proto_hydra_v1_session_establish_proto_enumTypes[0]
+	return &file_proto_irvio_v1_session_establish_proto_enumTypes[0]
 }
 
 func (x SessionEstablishKind) Number() protoreflect.EnumNumber {
@@ -85,7 +85,7 @@ func (x SessionEstablishKind) Number() protoreflect.EnumNumber {
 
 // Deprecated: Use SessionEstablishKind.Descriptor instead.
 func (SessionEstablishKind) EnumDescriptor() ([]byte, []int) {
-	return file_proto_hydra_v1_session_establish_proto_rawDescGZIP(), []int{0}
+	return file_proto_irvio_v1_session_establish_proto_rawDescGZIP(), []int{0}
 }
 
 type SessionPrepare struct {
@@ -103,7 +103,7 @@ type SessionPrepare struct {
 
 func (x *SessionPrepare) Reset() {
 	*x = SessionPrepare{}
-	mi := &file_proto_hydra_v1_session_establish_proto_msgTypes[0]
+	mi := &file_proto_irvio_v1_session_establish_proto_msgTypes[0]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -115,7 +115,7 @@ func (x *SessionPrepare) String() string {
 func (*SessionPrepare) ProtoMessage() {}
 
 func (x *SessionPrepare) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_hydra_v1_session_establish_proto_msgTypes[0]
+	mi := &file_proto_irvio_v1_session_establish_proto_msgTypes[0]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -128,7 +128,7 @@ func (x *SessionPrepare) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use SessionPrepare.ProtoReflect.Descriptor instead.
 func (*SessionPrepare) Descriptor() ([]byte, []int) {
-	return file_proto_hydra_v1_session_establish_proto_rawDescGZIP(), []int{0}
+	return file_proto_irvio_v1_session_establish_proto_rawDescGZIP(), []int{0}
 }
 
 func (x *SessionPrepare) GetCountryIntent() string {
@@ -193,7 +193,7 @@ type SessionReady struct {
 
 func (x *SessionReady) Reset() {
 	*x = SessionReady{}
-	mi := &file_proto_hydra_v1_session_establish_proto_msgTypes[1]
+	mi := &file_proto_irvio_v1_session_establish_proto_msgTypes[1]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -205,7 +205,7 @@ func (x *SessionReady) String() string {
 func (*SessionReady) ProtoMessage() {}
 
 func (x *SessionReady) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_hydra_v1_session_establish_proto_msgTypes[1]
+	mi := &file_proto_irvio_v1_session_establish_proto_msgTypes[1]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -218,7 +218,7 @@ func (x *SessionReady) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use SessionReady.ProtoReflect.Descriptor instead.
 func (*SessionReady) Descriptor() ([]byte, []int) {
-	return file_proto_hydra_v1_session_establish_proto_rawDescGZIP(), []int{1}
+	return file_proto_irvio_v1_session_establish_proto_rawDescGZIP(), []int{1}
 }
 
 func (x *SessionReady) GetPrepareHash() []byte {
@@ -273,7 +273,7 @@ type SessionOffer struct {
 
 func (x *SessionOffer) Reset() {
 	*x = SessionOffer{}
-	mi := &file_proto_hydra_v1_session_establish_proto_msgTypes[2]
+	mi := &file_proto_irvio_v1_session_establish_proto_msgTypes[2]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -285,7 +285,7 @@ func (x *SessionOffer) String() string {
 func (*SessionOffer) ProtoMessage() {}
 
 func (x *SessionOffer) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_hydra_v1_session_establish_proto_msgTypes[2]
+	mi := &file_proto_irvio_v1_session_establish_proto_msgTypes[2]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -298,7 +298,7 @@ func (x *SessionOffer) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use SessionOffer.ProtoReflect.Descriptor instead.
 func (*SessionOffer) Descriptor() ([]byte, []int) {
-	return file_proto_hydra_v1_session_establish_proto_rawDescGZIP(), []int{2}
+	return file_proto_irvio_v1_session_establish_proto_rawDescGZIP(), []int{2}
 }
 
 func (x *SessionOffer) GetReadyHash() []byte {
@@ -379,7 +379,7 @@ type SessionAnswer struct {
 
 func (x *SessionAnswer) Reset() {
 	*x = SessionAnswer{}
-	mi := &file_proto_hydra_v1_session_establish_proto_msgTypes[3]
+	mi := &file_proto_irvio_v1_session_establish_proto_msgTypes[3]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -391,7 +391,7 @@ func (x *SessionAnswer) String() string {
 func (*SessionAnswer) ProtoMessage() {}
 
 func (x *SessionAnswer) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_hydra_v1_session_establish_proto_msgTypes[3]
+	mi := &file_proto_irvio_v1_session_establish_proto_msgTypes[3]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -404,7 +404,7 @@ func (x *SessionAnswer) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use SessionAnswer.ProtoReflect.Descriptor instead.
 func (*SessionAnswer) Descriptor() ([]byte, []int) {
-	return file_proto_hydra_v1_session_establish_proto_rawDescGZIP(), []int{3}
+	return file_proto_irvio_v1_session_establish_proto_rawDescGZIP(), []int{3}
 }
 
 func (x *SessionAnswer) GetOfferHash() []byte {
@@ -465,7 +465,7 @@ type SessionDecline struct {
 
 func (x *SessionDecline) Reset() {
 	*x = SessionDecline{}
-	mi := &file_proto_hydra_v1_session_establish_proto_msgTypes[4]
+	mi := &file_proto_irvio_v1_session_establish_proto_msgTypes[4]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -477,7 +477,7 @@ func (x *SessionDecline) String() string {
 func (*SessionDecline) ProtoMessage() {}
 
 func (x *SessionDecline) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_hydra_v1_session_establish_proto_msgTypes[4]
+	mi := &file_proto_irvio_v1_session_establish_proto_msgTypes[4]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -490,7 +490,7 @@ func (x *SessionDecline) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use SessionDecline.ProtoReflect.Descriptor instead.
 func (*SessionDecline) Descriptor() ([]byte, []int) {
-	return file_proto_hydra_v1_session_establish_proto_rawDescGZIP(), []int{4}
+	return file_proto_irvio_v1_session_establish_proto_rawDescGZIP(), []int{4}
 }
 
 func (x *SessionDecline) GetReason() uint32 {
@@ -509,7 +509,7 @@ type SessionCancel struct {
 
 func (x *SessionCancel) Reset() {
 	*x = SessionCancel{}
-	mi := &file_proto_hydra_v1_session_establish_proto_msgTypes[5]
+	mi := &file_proto_irvio_v1_session_establish_proto_msgTypes[5]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -521,7 +521,7 @@ func (x *SessionCancel) String() string {
 func (*SessionCancel) ProtoMessage() {}
 
 func (x *SessionCancel) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_hydra_v1_session_establish_proto_msgTypes[5]
+	mi := &file_proto_irvio_v1_session_establish_proto_msgTypes[5]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -534,7 +534,7 @@ func (x *SessionCancel) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use SessionCancel.ProtoReflect.Descriptor instead.
 func (*SessionCancel) Descriptor() ([]byte, []int) {
-	return file_proto_hydra_v1_session_establish_proto_rawDescGZIP(), []int{5}
+	return file_proto_irvio_v1_session_establish_proto_rawDescGZIP(), []int{5}
 }
 
 func (x *SessionCancel) GetReason() uint32 {
@@ -570,7 +570,7 @@ type SessionEstablishPayload struct {
 
 func (x *SessionEstablishPayload) Reset() {
 	*x = SessionEstablishPayload{}
-	mi := &file_proto_hydra_v1_session_establish_proto_msgTypes[6]
+	mi := &file_proto_irvio_v1_session_establish_proto_msgTypes[6]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -582,7 +582,7 @@ func (x *SessionEstablishPayload) String() string {
 func (*SessionEstablishPayload) ProtoMessage() {}
 
 func (x *SessionEstablishPayload) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_hydra_v1_session_establish_proto_msgTypes[6]
+	mi := &file_proto_irvio_v1_session_establish_proto_msgTypes[6]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -595,7 +595,7 @@ func (x *SessionEstablishPayload) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use SessionEstablishPayload.ProtoReflect.Descriptor instead.
 func (*SessionEstablishPayload) Descriptor() ([]byte, []int) {
-	return file_proto_hydra_v1_session_establish_proto_rawDescGZIP(), []int{6}
+	return file_proto_irvio_v1_session_establish_proto_rawDescGZIP(), []int{6}
 }
 
 func (x *SessionEstablishPayload) GetProtocolVersion() uint32 {
@@ -773,7 +773,7 @@ type SignedSessionEstablish struct {
 
 func (x *SignedSessionEstablish) Reset() {
 	*x = SignedSessionEstablish{}
-	mi := &file_proto_hydra_v1_session_establish_proto_msgTypes[7]
+	mi := &file_proto_irvio_v1_session_establish_proto_msgTypes[7]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -785,7 +785,7 @@ func (x *SignedSessionEstablish) String() string {
 func (*SignedSessionEstablish) ProtoMessage() {}
 
 func (x *SignedSessionEstablish) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_hydra_v1_session_establish_proto_msgTypes[7]
+	mi := &file_proto_irvio_v1_session_establish_proto_msgTypes[7]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -798,7 +798,7 @@ func (x *SignedSessionEstablish) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use SignedSessionEstablish.ProtoReflect.Descriptor instead.
 func (*SignedSessionEstablish) Descriptor() ([]byte, []int) {
-	return file_proto_hydra_v1_session_establish_proto_rawDescGZIP(), []int{7}
+	return file_proto_irvio_v1_session_establish_proto_rawDescGZIP(), []int{7}
 }
 
 func (x *SignedSessionEstablish) GetPayload() []byte {
@@ -822,11 +822,11 @@ func (x *SignedSessionEstablish) GetSignature() []byte {
 	return nil
 }
 
-var File_proto_hydra_v1_session_establish_proto protoreflect.FileDescriptor
+var File_proto_irvio_v1_session_establish_proto protoreflect.FileDescriptor
 
-const file_proto_hydra_v1_session_establish_proto_rawDesc = "" +
+const file_proto_irvio_v1_session_establish_proto_rawDesc = "" +
 	"\n" +
-	"&proto/hydra/v1/session_establish.proto\x12\bhydra.v1\x1a\x18proto/hydra/v1/ice.proto\x1a\x1bproto/hydra/v1/tunnel.proto\"\xd9\x02\n" +
+	"&proto/irvio/v1/session_establish.proto\x12\bhydra.v1\x1a\x18proto/irvio/v1/ice.proto\x1a\x1bproto/irvio/v1/tunnel.proto\"\xd9\x02\n" +
 	"\x0eSessionPrepare\x12%\n" +
 	"\x0ecountry_intent\x18\x01 \x01(\tR\rcountryIntent\x12#\n" +
 	"\rdescriptor_id\x18\x02 \x01(\fR\fdescriptorId\x125\n" +
@@ -897,23 +897,23 @@ const file_proto_hydra_v1_session_establish_proto_rawDesc = "" +
 	"\x1eSESSION_ESTABLISH_KIND_DECLINE\x10\x03\x12 \n" +
 	"\x1cSESSION_ESTABLISH_KIND_OFFER\x10\x04\x12!\n" +
 	"\x1dSESSION_ESTABLISH_KIND_ANSWER\x10\x05\x12!\n" +
-	"\x1dSESSION_ESTABLISH_KIND_CANCEL\x10\x06B+Z)hydra.local/hydra/proto/hydra/v1;irviova1b\x06proto3"
+	"\x1dSESSION_ESTABLISH_KIND_CANCEL\x10\x06B6Z4github.com/Irviodotnet/Irvio/proto/irvio/v1;irviova1b\x06proto3"
 
 var (
-	file_proto_hydra_v1_session_establish_proto_rawDescOnce sync.Once
-	file_proto_hydra_v1_session_establish_proto_rawDescData []byte
+	file_proto_irvio_v1_session_establish_proto_rawDescOnce sync.Once
+	file_proto_irvio_v1_session_establish_proto_rawDescData []byte
 )
 
-func file_proto_hydra_v1_session_establish_proto_rawDescGZIP() []byte {
-	file_proto_hydra_v1_session_establish_proto_rawDescOnce.Do(func() {
-		file_proto_hydra_v1_session_establish_proto_rawDescData = protoimpl.X.CompressGZIP(unsafe.Slice(unsafe.StringData(file_proto_hydra_v1_session_establish_proto_rawDesc), len(file_proto_hydra_v1_session_establish_proto_rawDesc)))
+func file_proto_irvio_v1_session_establish_proto_rawDescGZIP() []byte {
+	file_proto_irvio_v1_session_establish_proto_rawDescOnce.Do(func() {
+		file_proto_irvio_v1_session_establish_proto_rawDescData = protoimpl.X.CompressGZIP(unsafe.Slice(unsafe.StringData(file_proto_irvio_v1_session_establish_proto_rawDesc), len(file_proto_irvio_v1_session_establish_proto_rawDesc)))
 	})
-	return file_proto_hydra_v1_session_establish_proto_rawDescData
+	return file_proto_irvio_v1_session_establish_proto_rawDescData
 }
 
-var file_proto_hydra_v1_session_establish_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
-var file_proto_hydra_v1_session_establish_proto_msgTypes = make([]protoimpl.MessageInfo, 8)
-var file_proto_hydra_v1_session_establish_proto_goTypes = []any{
+var file_proto_irvio_v1_session_establish_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
+var file_proto_irvio_v1_session_establish_proto_msgTypes = make([]protoimpl.MessageInfo, 8)
+var file_proto_irvio_v1_session_establish_proto_goTypes = []any{
 	(SessionEstablishKind)(0),       // 0: hydra.v1.SessionEstablishKind
 	(*SessionPrepare)(nil),          // 1: hydra.v1.SessionPrepare
 	(*SessionReady)(nil),            // 2: hydra.v1.SessionReady
@@ -928,7 +928,7 @@ var file_proto_hydra_v1_session_establish_proto_goTypes = []any{
 	(*IceAnswer)(nil),               // 11: hydra.v1.IceAnswer
 	(*TunnelLease)(nil),             // 12: hydra.v1.TunnelLease
 }
-var file_proto_hydra_v1_session_establish_proto_depIdxs = []int32{
+var file_proto_irvio_v1_session_establish_proto_depIdxs = []int32{
 	9,  // 0: hydra.v1.SessionPrepare.purpose:type_name -> hydra.v1.IceSessionPurpose
 	10, // 1: hydra.v1.SessionOffer.ice_offer:type_name -> hydra.v1.IceOffer
 	11, // 2: hydra.v1.SessionAnswer.ice_answer:type_name -> hydra.v1.IceAnswer
@@ -947,14 +947,14 @@ var file_proto_hydra_v1_session_establish_proto_depIdxs = []int32{
 	0,  // [0:11] is the sub-list for field type_name
 }
 
-func init() { file_proto_hydra_v1_session_establish_proto_init() }
-func file_proto_hydra_v1_session_establish_proto_init() {
-	if File_proto_hydra_v1_session_establish_proto != nil {
+func init() { file_proto_irvio_v1_session_establish_proto_init() }
+func file_proto_irvio_v1_session_establish_proto_init() {
+	if File_proto_irvio_v1_session_establish_proto != nil {
 		return
 	}
-	file_proto_hydra_v1_ice_proto_init()
-	file_proto_hydra_v1_tunnel_proto_init()
-	file_proto_hydra_v1_session_establish_proto_msgTypes[6].OneofWrappers = []any{
+	file_proto_irvio_v1_ice_proto_init()
+	file_proto_irvio_v1_tunnel_proto_init()
+	file_proto_irvio_v1_session_establish_proto_msgTypes[6].OneofWrappers = []any{
 		(*SessionEstablishPayload_Prepare)(nil),
 		(*SessionEstablishPayload_Ready)(nil),
 		(*SessionEstablishPayload_Decline)(nil),
@@ -966,18 +966,18 @@ func file_proto_hydra_v1_session_establish_proto_init() {
 	out := protoimpl.TypeBuilder{
 		File: protoimpl.DescBuilder{
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
-			RawDescriptor: unsafe.Slice(unsafe.StringData(file_proto_hydra_v1_session_establish_proto_rawDesc), len(file_proto_hydra_v1_session_establish_proto_rawDesc)),
+			RawDescriptor: unsafe.Slice(unsafe.StringData(file_proto_irvio_v1_session_establish_proto_rawDesc), len(file_proto_irvio_v1_session_establish_proto_rawDesc)),
 			NumEnums:      1,
 			NumMessages:   8,
 			NumExtensions: 0,
 			NumServices:   0,
 		},
-		GoTypes:           file_proto_hydra_v1_session_establish_proto_goTypes,
-		DependencyIndexes: file_proto_hydra_v1_session_establish_proto_depIdxs,
-		EnumInfos:         file_proto_hydra_v1_session_establish_proto_enumTypes,
-		MessageInfos:      file_proto_hydra_v1_session_establish_proto_msgTypes,
+		GoTypes:           file_proto_irvio_v1_session_establish_proto_goTypes,
+		DependencyIndexes: file_proto_irvio_v1_session_establish_proto_depIdxs,
+		EnumInfos:         file_proto_irvio_v1_session_establish_proto_enumTypes,
+		MessageInfos:      file_proto_irvio_v1_session_establish_proto_msgTypes,
 	}.Build()
-	File_proto_hydra_v1_session_establish_proto = out.File
-	file_proto_hydra_v1_session_establish_proto_goTypes = nil
-	file_proto_hydra_v1_session_establish_proto_depIdxs = nil
+	File_proto_irvio_v1_session_establish_proto = out.File
+	file_proto_irvio_v1_session_establish_proto_goTypes = nil
+	file_proto_irvio_v1_session_establish_proto_depIdxs = nil
 }

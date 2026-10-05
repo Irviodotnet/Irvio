@@ -13,8 +13,8 @@ import (
 	"sync"
 	"syscall"
 
-	"hydra.local/hydra/internal/networkstate"
-	"hydra.local/hydra/internal/transportgen"
+	"github.com/Irviodotnet/Irvio/internal/networkstate"
+	"github.com/Irviodotnet/Irvio/internal/transportgen"
 )
 
 // TransportLifecycle may retain a predecessor until the replacement session commits.

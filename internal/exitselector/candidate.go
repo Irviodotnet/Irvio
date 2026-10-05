@@ -15,8 +15,8 @@ import (
 
 	"github.com/libp2p/go-libp2p/core/peer"
 
-	"hydra.local/hydra/internal/protocol"
-	"hydra.local/hydra/internal/serviceindex"
+	"github.com/Irviodotnet/Irvio/internal/protocol"
+	"github.com/Irviodotnet/Irvio/internal/serviceindex"
 )
 
 const maxCandidateLifetime = 24 * time.Hour

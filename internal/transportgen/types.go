@@ -13,8 +13,8 @@ import (
 	"net/netip"
 	"time"
 
-	"hydra.local/hydra/internal/networkstate"
-	"hydra.local/hydra/internal/socketmux"
+	"github.com/Irviodotnet/Irvio/internal/networkstate"
+	"github.com/Irviodotnet/Irvio/internal/socketmux"
 )
 
 // Lifecycle is the one-way state of a transport generation.

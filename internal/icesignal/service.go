@@ -19,8 +19,8 @@ import (
 	"github.com/libp2p/go-libp2p/core/network"
 	"github.com/libp2p/go-libp2p/core/peer"
 
-	"hydra.local/hydra/internal/icesession"
-	irviov1 "hydra.local/hydra/proto/hydra/v1"
+	"github.com/Irviodotnet/Irvio/internal/icesession"
+	irviov1 "github.com/Irviodotnet/Irvio/proto/irvio/v1"
 )
 
 // Service serves authenticated, bounded ICE offers on a libp2p host.

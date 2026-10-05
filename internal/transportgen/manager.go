@@ -13,7 +13,7 @@ import (
 	"sync"
 	"time"
 
-	"hydra.local/hydra/internal/networkstate"
+	"github.com/Irviodotnet/Irvio/internal/networkstate"
 )
 
 // Transport is the lifecycle boundary required by Manager.

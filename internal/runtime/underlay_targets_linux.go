@@ -18,10 +18,10 @@ import (
 	"github.com/libp2p/go-libp2p/core/peer"
 	multiaddr "github.com/multiformats/go-multiaddr"
 
-	"hydra.local/hydra/internal/discovery"
-	"hydra.local/hydra/internal/networkstate"
-	"hydra.local/hydra/internal/protocol"
-	"hydra.local/hydra/internal/underlay"
+	"github.com/Irviodotnet/Irvio/internal/discovery"
+	"github.com/Irviodotnet/Irvio/internal/networkstate"
+	"github.com/Irviodotnet/Irvio/internal/protocol"
+	"github.com/Irviodotnet/Irvio/internal/underlay"
 )
 
 // DiscoveryUnderlayTargets uses only literal endpoints from locally verified signed announcements.

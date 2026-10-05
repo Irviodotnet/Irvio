@@ -24,12 +24,12 @@ import (
 
 	"google.golang.org/protobuf/proto"
 
-	"hydra.local/hydra/internal/exitselector"
-	"hydra.local/hydra/internal/productbootstrap"
-	"hydra.local/hydra/internal/rendezvous"
-	"hydra.local/hydra/internal/runtime"
-	"hydra.local/hydra/internal/trafficstats"
-	localv1 "hydra.local/hydra/proto/hydra/local/v1"
+	"github.com/Irviodotnet/Irvio/internal/exitselector"
+	"github.com/Irviodotnet/Irvio/internal/productbootstrap"
+	"github.com/Irviodotnet/Irvio/internal/rendezvous"
+	"github.com/Irviodotnet/Irvio/internal/runtime"
+	"github.com/Irviodotnet/Irvio/internal/trafficstats"
+	localv1 "github.com/Irviodotnet/Irvio/proto/irvio/local/v1"
 )
 
 const (

@@ -22,11 +22,11 @@ import (
 	libprotocol "github.com/libp2p/go-libp2p/core/protocol"
 	"google.golang.org/protobuf/proto"
 
-	"hydra.local/hydra/internal/bootstrap"
-	"hydra.local/hydra/internal/discovery"
-	irvioprotocol "hydra.local/hydra/internal/protocol"
-	localv1 "hydra.local/hydra/proto/hydra/local/v1"
-	irviov1 "hydra.local/hydra/proto/hydra/v1"
+	"github.com/Irviodotnet/Irvio/internal/bootstrap"
+	"github.com/Irviodotnet/Irvio/internal/discovery"
+	irvioprotocol "github.com/Irviodotnet/Irvio/internal/protocol"
+	localv1 "github.com/Irviodotnet/Irvio/proto/irvio/local/v1"
+	irviov1 "github.com/Irviodotnet/Irvio/proto/irvio/v1"
 )
 
 const (

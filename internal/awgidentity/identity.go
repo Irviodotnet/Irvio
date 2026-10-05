@@ -19,7 +19,7 @@ import (
 
 	"golang.org/x/crypto/curve25519"
 
-	"hydra.local/hydra/internal/awg"
+	"github.com/Irviodotnet/Irvio/internal/awg"
 )
 
 const (

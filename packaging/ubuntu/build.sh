@@ -25,7 +25,7 @@ cd "$REPO"
 go run ./packaging/ubuntu/verifygeo "$MMDB"
 [[ $(sha256sum "$MMDB" | cut -d ' ' -f1) == d284ae2e7427fe33d83465e1506b2b21aae47eb8a9b099f8f4dac6a98c99f041 ]] ||
     { echo 'This dated package expects the verified September 2026 DB-IP Country Lite database.' >&2; exit 1; }
-CGO_ENABLED=0 go build -trimpath -o "$bundle/payload/bin/irviod" ./cmd/hydrad
+CGO_ENABLED=0 go build -trimpath -o "$bundle/payload/bin/irviod" ./cmd/irviod
 ui_source=$work/ui-source
 mkdir -p "$ui_source"
 # Never rebuild over a workstation UI that may currently be running.
@@ -57,10 +57,10 @@ for unit in irviod.service irvio.socket irvio-boot-recover.service; do
 done
 
 # Preserve notices for linked Go modules and Dart/Flutter/native plugins.
-go list -deps -f '{{if .Module}}{{.Module.Path}}|{{.Module.Version}}|{{.Module.Dir}}{{end}}' ./cmd/hydrad | sort -u > "$work/go-modules.txt"
+go list -deps -f '{{if .Module}}{{.Module.Path}}|{{.Module.Version}}|{{.Module.Dir}}{{end}}' ./cmd/irviod | sort -u > "$work/go-modules.txt"
 cut -d '|' -f 1,2 "$work/go-modules.txt" > "$bundle/licenses/GO-MODULES.txt"
 while IFS='|' read -r module version directory; do
-    [[ -n $directory && $module != hydra.local/hydra ]] || continue
+    [[ -n $directory && $module != github.com/Irviodotnet/Irvio ]] || continue
     dest=$bundle/licenses/go/$module@$version
     for notice in "$directory"/LICENSE* "$directory"/COPYING* "$directory"/NOTICE*; do
         [[ -f $notice ]] || continue
@@ -101,7 +101,7 @@ jq -n \
     '{package:$package, target:"Desktop: Ubuntu 24.04 amd64; server: Ubuntu 24.04/26.04 amd64", source_head:$head, source_branch:$branch,
       source_state:$source_state,
       tracked_diff_sha256:$diff_sha256, built_at_utc:$built_at, go:$go, flutter:$flutter,
-      daemon_build:"CGO_ENABLED=0 go build -trimpath ./cmd/hydrad", ui_build:"flutter build linux --release --no-pub",
+      daemon_build:"CGO_ENABLED=0 go build -trimpath ./cmd/irviod", ui_build:"flutter build linux --release --no-pub",
       irviod_sha256:$irviod_sha256, ui_library_sha256:$ui_library_sha256, geoip_sha256:$geoip_sha256,
       geoip_source:"https://download.db-ip.com/free/dbip-country-lite-2026-09.mmdb.gz"}' > "$bundle/BUILD_INFO.json"
 chmod -R go-w "$bundle"
