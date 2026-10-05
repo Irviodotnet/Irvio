@@ -12,10 +12,6 @@
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-AGPL--3.0-2F855A?style=flat-square" alt="AGPL-3.0"></a>
 </p>
 
-<p align="center">
-  <strong>English</strong> ·
-  <a href="README.ru.md">Русский</a>
-</p>
 
 <p align="center">
   An open, distributed network where participants provide internet access to one another - without a central VPN gateway.
