@@ -1,0 +1,16 @@
+#!/bin/sh
+# GUI and console use the same daemon through the Local API.
+if [ "$#" -eq 1 ] && { [ "$1" = --help ] || [ "$1" = -h ]; }; then
+    exec /opt/irvio/bin/irvio "$@"
+fi
+if [ "$(id -u)" = 0 ]; then
+    echo 'Open IRVIO as the desktop user, not with sudo.' >&2
+    exit 1
+fi
+for argument in "$@"; do
+    case "$argument" in
+        status|stop|--persistent|--persistent=*|--mode|--mode=*|--bootstrap|--bootstrap=*|--help|-h)
+            exec /opt/irvio/bin/irvio "$@" ;;
+    esac
+done
+exec /opt/irvio/ui/irvio "$@"

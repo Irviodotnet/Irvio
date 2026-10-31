@@ -1,0 +1,18 @@
+{
+  "package": "irvio-1.1.0-alpha.20261031.2-ubuntu-amd64",
+  "target": "Desktop and server: Ubuntu 24.04/26.04 amd64",
+  "source_head": "04e0a0cadaddf26f71266273c9cc30105fdce382",
+  "source_branch": "windows-port",
+  "source_state": "working-tree snapshot; not a tagged release",
+  "tracked_diff_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "built_at_utc": "2026-10-31T18:32:00Z",
+  "go": "go version go1.27.1 linux/amd64",
+  "flutter": "Flutter 3.47.4 • channel stable • https://github.com/flutter/flutter.git",
+  "daemon_build": "CGO_ENABLED=0 go build -trimpath ./cmd/irviod",
+  "ui_build": "flutter build linux --release --no-pub",
+  "irviod_sha256": "35be415e04a414674e2225ea75eb8284006aded2687a044abe4415db2de00859",
+  "console_sha256": "04d3a0c0791f5efde5dc632e5a05aec3c07d9a8a0bbad100802da623c1bc3771",
+  "ui_library_sha256": "5e4b61c613d868c2e1824b0215528b34f923ede6d56825d325d6d45975c5adc9",
+  "geoip_sha256": "d284ae2e7427fe33d83465e1506b2b21aae47eb8a9b099f8f4dac6a98c99f041",
+  "geoip_source": "https://download.db-ip.com/free/dbip-country-lite-2026-09.mmdb.gz"
+}

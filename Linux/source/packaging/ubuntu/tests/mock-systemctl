@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+# IRVIO Project
+# Copyright (C) 2026 IRVIO Project contributors
+# SPDX-License-Identifier: AGPL-3.0-only
+# https://irvio.net
+# irvio@proton.me
+
+# Only used inside the disposable packaging-test container, never shipped.
+set -euo pipefail
+[[ -f /.dockerenv && ${IRVIO_PACKAGING_TEST:-} == 1 ]] || exit 90
+mkdir -p /run/irvio-package-test
+printf '%s\n' "$*" >> /run/irvio-package-test/systemctl.log
+case $1 in
+    show)
+        if [[ -f /etc/systemd/system/$2 ]]; then echo loaded; else echo not-found; fi ;;
+    is-active)
+        unit=${!#}
+        [[ $unit == systemd-resolved.service || ( $unit == irvio.socket && -e /run/irvio-package-test/socket ) ]] ;;
+    enable) : ;;
+    disable)
+        if [[ "$*" == *irvio.socket* ]]; then rm -f /run/irvio-package-test/socket; fi ;;
+    start)
+        [[ ${2:-} == irvio.socket ]] || { echo 'Unexpected daemon start in packaging test' >&2; exit 91; }
+        touch /run/irvio-package-test/socket ;;
+    daemon-reload|reset-failed) : ;;
+    *) echo "Unexpected systemctl operation: $*" >&2; exit 92 ;;
+esac

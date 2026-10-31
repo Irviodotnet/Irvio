@@ -1,0 +1,18 @@
+# IRVIO Project
+# Copyright (C) 2026 IRVIO Project contributors
+# SPDX-License-Identifier: AGPL-3.0-only
+# https://irvio.net
+# irvio@proton.me
+
+[Unit]
+Description=Resume explicitly enabled IRVIO private sharing
+Wants=network-online.target irvio.socket
+After=network-online.target irvio.socket
+ConditionPathExists=/var/lib/irvio/profile/persistent-sharing-v1.json
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/systemctl --no-block start irviod.service
+
+[Install]
+WantedBy=multi-user.target

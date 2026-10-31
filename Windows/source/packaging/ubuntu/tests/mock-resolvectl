@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# IRVIO Project
+# Copyright (C) 2026 IRVIO Project contributors
+# SPDX-License-Identifier: AGPL-3.0-only
+# https://irvio.net
+# irvio@proton.me
+
+set -euo pipefail
+[[ -f /.dockerenv && ${IRVIO_PACKAGING_TEST:-} == 1 && "$*" == status ]] || exit 90
+echo 'Packaging fixture: no real DNS service used.'

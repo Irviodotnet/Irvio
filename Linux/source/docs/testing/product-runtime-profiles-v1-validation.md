@@ -1,0 +1,65 @@
+# Product Runtime Profiles v1 — validation checkpoint
+
+This historical checkpoint is superseded for Alpha acceptance by [product-runtime-profiles-v1-alpha-acceptance.md](product-runtime-profiles-v1-alpha-acceptance.md). Its open-gate list reflects the earlier validation state.
+
+Status: **focused product-path lifecycle proof, not full Alpha acceptance**. Privileged desktop/server integration and 100 same-process desktop cycles now pass. Host-namespace DNS, package assets, boot/crash adoption and the remaining product-path matrix are still open. No installed production deployment was restarted by this task.
+
+## Frozen baseline
+
+- Branch `feat/egress-safety-policy-v0`; HEAD `e2046c8a3e29273c2719e30710e3a70a315688ca`; Go `go1.27.1`.
+- Pre-change `bin/hydrad` SHA-256: `918cc5b2b3825bee8563f54353c1bb1e4c04e0ace1f484754b14e56ae4532dc5`.
+- Current changes are uncommitted; HEAD remains the baseline. Final normal `hydrad` SHA-256: `b998484661829ca683e87526d0667fdfe896a8a338f8c79d2a51cffdd5d4cfd1`; trimpath SHA-256: `e5c5a439b08867f4e16b79f97c92ee5d1259cbfec427a6f93aec2472c8e529f6`. Flutter Linux release `hydra_ui` SHA-256: `89b1508958fce0c94d0146b8554767bb8215b8e1a33af73733aff9c191765bc0`.
+
+## Implementation
+
+- All baseline startup flags were inventoried before implementation. The product CLI now accepts zero-argument desktop and `--role server --bootstrap <v1 bundle>`; the legacy engineering CLI remains available. Optional `/etc/hydra/config.json` is strict, versioned and role-only.
+- Desktop starts idle with Local API/bootstrap storage and no permanent DHT or tunnel. Import while idle is durable and does not join the network. Connect starts a production CLIENT+EXIT daemon. Disconnect stops new Exit admissions, withdraws M12 registrations, closes own session and downstream leases, leaves DHT and releases ProtectedMode before reporting idle.
+- Server preset requests DHT server, Public Control, M11 verifier capability, Rendezvous, Exit and UDP/3478 STUN. Signed public Rendezvous peers are selected first, with independent direct IPv4 bootstrap peers as a fallback when the Rendezvous set is still forming. Selected PeerIDs and IPv4 addresses are distinct; M11's two-attestation quorum is unchanged. Fewer than two candidates produce a startup error, and unusable candidates cannot produce a valid proof.
+- All eligible direct public IPv4 bootstrap entries derive STUN seeds on UDP/3478. Binding transactions share HydraSocketMux and race within the bounded registry, so dead early seeds do not exhaust the startup budget before a healthy later seed. The public-server STUN listener is a separate infrastructure service socket.
+- Linux kernel route lookup resolves WAN/source. A per-profile randomized, locally conflict-checked private Exit pool is persisted. The initial deterministic first-free selection assigned `10.201.1.0/24` to every clean node: the real product test showed authenticated ICE and Exit lease activation, followed by `peer id mismatch` at tunnel-control BIND because the dual-role desktop routed the server's inner address to itself. Randomized selection across 65,024 private /24 choices fixed the focused test without wire/Data Plane changes, but does not guarantee global uniqueness. WAN route-change reconciliation updates only WAN-dependent forwarding/NAT rules in one nft transaction, retaining safety and anti-multihop order.
+- Exit country comes from current STUN-observed public IPv4 through the existing MMDB CountryResolver at `/var/lib/hydra/geo/country.mmdb`. Missing/unknown country prevents country Exit advertisement; desktop Connect fails rather than silently dropping mandatory contribution.
+- A new real-netns product-server regression first exposed premature country Exit publication before M11 verification. Server country publication and Rendezvous registration are now armed only after local Exit readiness, then activated by the existing M12/M11 observer after verified Public Control and Rendezvous service activation. The legacy desktop/non-public Exit path is unchanged. The same test exposed an expired-proof descriptor that could not shed its dependent Rendezvous capability and an empty Kademlia routing table after verifier loss. Public-proof removal now atomically clears dependent Rendezvous capability; M12 withdraws Exit registration and signed CAP_EXIT on M11 loss, then uses a bounded five-second re-bootstrap from the persisted bundle when routing is empty before re-advertising. No wire format or M11 quorum changed.
+- Product status now projects contribution from the node's actual signed Exit activation. GET_STATUS no longer reports contribution disabled while desktop is connected as CLIENT+EXIT; after full Disconnect it reports disabled.
+
+## Gates completed
+
+| Gate | Result |
+| --- | --- |
+| Focused product config, idle API/bootstrap, STUN pool, Exit country and WAN reconciliation tests | PASS |
+| `gofmt`, `git diff --check`, `go vet ./...`, `go test ./...`, `go test -race ./...` | PASS on latest changes |
+| `go test -shuffle=on -count=10 ./...` | PASS on latest changes; an earlier attempt hit the timing-sensitive `internal/iceadapter` `/proc` socket snapshot anomaly |
+| `go test -race -shuffle=on -count=5 ./...` | PASS on latest changes; an earlier attempt hit the `internal/exitselector` event/snapshot ordering anomaly |
+| Changed Go packages: shuffle×10 and race+shuffle×5 | PASS after M11 bootstrap verifier fallback |
+| Flutter analyze and Linux release build | PASS |
+| Flutter tests | PASS with proxy variables removed for localhost test runner; initial proxy HTTP 502 was environmental |
+| Isolated privileged nft WAN migration/order test | PASS; initial replace-by-handle failed and was corrected to atomic delete/insert |
+| Test namespace cleanup | PASS; `ip netns list` empty after deletion |
+| Normal and trimpath hydrad builds | PASS; SHA-256 values above |
+| Existing M11 privileged netns suite | PASS; `/tmp/hydra-m4b-9cb32c6f`, `host_integrity=true` |
+| Existing M12 privileged netns suite | PASS; `/tmp/hydra-m4b-f04060f6`, `host_integrity=true`; repeated NAT remap 10/10, client FD 29→29 |
+| Existing P1 privileged netns suite | PASS; `/tmp/hydra-m4b-3c86f1f3`, `host_integrity=true` |
+| Product server preset in real netns | PASS 5/5 on final binary; 3 bootstrap/verifier identities on separate /24 networks, real bundle and STUN pool, M11 proof, Rendezvous, GeoIP NL, Exit publication ordered after both gates, Safety Policy nft rules, independent UDP/3478 Binding probe, M11 quorum loss → signed Exit suspension → verifier return → DHT re-bootstrap → Rendezvous/Exit resume, missing-MMDB non-advertisement; `/tmp/hydra-m4b-389e4e2a` and `/tmp/hydra-m4b-345d2d6e`, host integrity PASS |
+| Product server repeat after final pool/status changes | PASS 5/5; `/tmp/hydra-m4b-f32bb899` |
+| Product desktop in real netns | PASS: empty profile/IDLE Local API → bundle import → DHT/Rendezvous → NL candidates → authenticated ICE/AWG/lease → user HTTP observed from NL Exit IP → full Disconnect, no `hydra0`, direct WAN observed from client IP; `/tmp/hydra-m4b-7884b80a` |
+| Desktop 100 same-process Connect/Disconnect cycles | PASS 100/100 with 8 s inter-cycle pause; 893.23 s, FD `7→7`, pipe endpoints `2→2`, max idle FD 7, threads `8→34` after warmup and plateau at 34 from cycle 60 onward; sampled user probes traversed Exit, final direct WAN worked; host snapshots byte-identical; `/tmp/hydra-m4b-28402f6f` |
+| Overcompressed desktop stress without pause | FAIL at cycle 34/100 after repeated Rendezvous `rate_limited` responses and all bootstrap security handshakes returning EOF. The exact handshake EOF mechanism was not proved; this is a high-frequency reconnect observation, neither a clean lifecycle PASS nor a confirmed Core defect. The paced 100/100 run retained unchanged production admission policy. |
+| Post-change M11 privileged suite | PASS; `/tmp/hydra-m4b-0cfab461`, `host_integrity=true` |
+| Post-change full M12 privileged suite | PASS; `/tmp/hydra-m4b-a4179653`, `host_integrity=true`; client-side repeated NAT remap 10/10, Exit-side remap PASS, client FD 29→29 |
+| M12 focused netns invocation correction | First invocation lacked the required `HYDRA_M8_KILLSWITCH` test-helper variable and failed before that helper ran; corrected focused invocation and subsequent full suite both PASS |
+| Final privileged M11/M12/P1 suite | PASS all selected tests on final binary; includes M11 quorum/IPv6/dual-role, M12 failover, PRFLX, client NAT remap 10/10 and Exit-side NAT remap, brokered renewal, P1 Local API; client FD `29→29`; `/tmp/hydra-m4b-31c94985`, host snapshots byte-identical |
+| Final focused privileged M6–M10 suite | PASS: direct encrypted data plane, IPv4/IPv6 Internet Exit, NetworkGeneration migration, Safety Policy v0, ProtectedMode/crash adoption, RESERVE/COLD/fresh failover, production daemon lifecycle; `/tmp/hydra-m4b-8edb484f`, host snapshots byte-identical |
+
+## Open acceptance gates and limitations
+
+- Earlier gate anomaly: parallel shuffle seed `1790178015799104955` failed `TestM5A_PionAgentHostCandidatesUseHydraMux` because the test's `/proc/self/net/udp` snapshot omitted the just-created UDP4 mux socket while UDP6 was present. Isolated package and whole-tree serial replay with that seed passed; the latest full shuffle×10 passed. This looks timing-sensitive but has not been proved to be a pure lab artifact.
+- Earlier gate anomaly: race+shuffle seed `1790178607675062052` intermittently failed `TestSelectorProviderFailureIsIndependentFromHealthyActive` (also an exhausted-budget test in one run). `selector.go` sets `providerAvailable=false`, publishes `EventProviderUnavailable`, and only then updates the snapshot; an immediate `Current()` can therefore see the prior value. The unchanged package reproduced the failure in a 100-iteration isolated run. The latest full race+shuffle×5 passed, but that does not close this pre-existing intermittent ordering defect; handle it separately.
+
+- A product-server netns proof now covers the preset, M11 quorum loss/recovery, STUN, GeoIP, Exit publication ordering and Safety Policy. It uses lab-only `--data-dir`, `--geoip-db`, `--allow-test-public-ip` and accelerated M11 timing overrides for isolation/synthetic MMDB; a literal two-flag production deployment with real MMDB, independently observable registration and user traffic has not yet been proved. The first isolated server still needs the separate internal genesis mechanism or existing verified peers; M11 is not weakened.
+- The first desktop lab bundle contained only legacy verifier peers. They accepted libp2p bootstrap but did not serve the production underlay challenge, so the client correctly reported `NO_NETWORK`; the final fixture includes full product-server bootstrap peers and does not pass a separate Rendezvous or Exit shortcut. The desktop lifecycle stress records FD, pipe endpoints and OS threads, but not per-cycle RSS or Go goroutine counts. No monotonic FD/pipe growth was observed; a stronger memory/goroutine proof remains an acceptance item.
+- A privileged desktop path and 100-cycle same-process resource stress now pass, but real reboot/SIGKILL adoption, a multi-route product netns matrix, downstream leases during desktop Disconnect, normal host-namespace DNS promotion, and the complete M6–M10/P2 netns campaign have not run for the **new product commands**. Focused M6–M10 and full M11/M12/P1 privileged regressions pass through the legacy engineering CLI and remain complementary evidence. The desktop netns test bind-mounts `/usr/bin/true` over `/usr/bin/resolvectl` only inside a private child mount namespace to avoid the unsupported netns/host-resolved D-Bus mismatch; it does not prove production DNS.
+- The product CLI accepts a narrow `--geoip-db` engineering/test override, but rejects most other low-level flags alongside `--role`; they remain usable through the separate legacy engineering CLI. Complete engineering override precedence inside the product resolver is unfinished.
+- Server verifier discovery is a startup snapshot; the netns test proves re-verification with the same peer identities after their restart, not selection of entirely new verifiers. STUN UDP/3478 was independently probed inside netns; external Internet reachability still depends on deployment firewall/NAT. Server logs `PRODUCT_RUNTIME_STARTED`, not a false readiness event, because M11/Rendezvous activation is asynchronous.
+- Same-boot daemon crash preserves fail-closed protection but does not automatically reconnect the previous country. New-boot IDLE vs same-boot recovery still needs privileged proof.
+- Independent random Exit pool selection makes the formerly deterministic client/server collision unlikely, not impossible; no global address-allocation protocol is introduced. If two selected peers still collide, the path remains fail-closed and a later allocation/conflict-handling design may be needed.
+
+Do not replace installed workstation/server binaries or claim Alpha deployment readiness until the open gates pass.

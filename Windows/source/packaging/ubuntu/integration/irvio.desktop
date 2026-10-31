@@ -1,0 +1,18 @@
+# IRVIO Project
+# Copyright (C) 2026 IRVIO Project contributors
+# SPDX-License-Identifier: AGPL-3.0-only
+# https://irvio.net
+# irvio@proton.me
+
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=IRVIO
+Comment=Private decentralized network
+Comment[ru]=Приватная децентрализованная сеть
+Exec=/usr/local/bin/irvio
+TryExec=/usr/local/bin/irvio
+Icon=/opt/irvio/ui/data/flutter_assets/assets/irvio-globe.png
+Terminal=false
+Categories=Network;
+StartupWMClass=net.irvio.irvio

@@ -1,0 +1,44 @@
+// IRVIO Project
+// Copyright (C) 2026 IRVIO Project contributors
+// SPDX-License-Identifier: AGPL-3.0-only
+// https://irvio.net
+// irvio@proton.me
+
+#define WIN32_LEAN_AND_MEAN
+#include <windows.h>
+#include <initguid.h>
+#include <fwpmu.h>
+#include <cstdio>
+#include <cstddef>
+
+#define SIZE(t) printf(#t "=%zu\n", sizeof(t))
+#define OFF(t, f) printf(#t "." #f "=%zu\n", offsetof(t, f))
+#define GUID_VALUE(g) printf(#g "={%08lx-%04x-%04x-%02x%02x-%02x%02x%02x%02x%02x%02x}\n", g.Data1,g.Data2,g.Data3,g.Data4[0],g.Data4[1],g.Data4[2],g.Data4[3],g.Data4[4],g.Data4[5],g.Data4[6],g.Data4[7])
+
+int main() {
+    SIZE(FWPM_LAYER0); OFF(FWPM_LAYER0, field); OFF(FWPM_LAYER0, defaultSubLayerKey); OFF(FWPM_LAYER0, layerId);
+    SIZE(FWPM_PROVIDER0); OFF(FWPM_PROVIDER0, providerData); OFF(FWPM_PROVIDER0, serviceName);
+    SIZE(FWPM_SUBLAYER0); OFF(FWPM_SUBLAYER0, providerKey); OFF(FWPM_SUBLAYER0, weight);
+    SIZE(FWPM_SESSION0); OFF(FWPM_SESSION0, flags); OFF(FWPM_SESSION0, txnWaitTimeoutInMSec);
+    SIZE(FWPM_FILTER0); OFF(FWPM_FILTER0, providerKey); OFF(FWPM_FILTER0, layerKey);
+    OFF(FWPM_FILTER0, weight); OFF(FWPM_FILTER0, filterCondition); OFF(FWPM_FILTER0, action);
+    OFF(FWPM_FILTER0, rawContext); OFF(FWPM_FILTER0, filterId); OFF(FWPM_FILTER0, effectiveWeight);
+    SIZE(FWPM_FILTER_CONDITION0); OFF(FWPM_FILTER_CONDITION0, conditionValue);
+    SIZE(FWP_VALUE0); SIZE(FWP_BYTE_BLOB); SIZE(FWP_V4_ADDR_AND_MASK); SIZE(FWP_V6_ADDR_AND_MASK);
+    SIZE(FWPM_FILTER_ENUM_TEMPLATE0); OFF(FWPM_FILTER_ENUM_TEMPLATE0, layerKey);
+    OFF(FWPM_FILTER_ENUM_TEMPLATE0, filterCondition); OFF(FWPM_FILTER_ENUM_TEMPLATE0, calloutKey);
+    printf("enum_fully_contained=%d enum_include_boot=%lu enum_include_disabled=%lu\n", FWP_FILTER_ENUM_FULLY_CONTAINED, FWP_FILTER_ENUM_FLAG_INCLUDE_BOOTTIME, FWP_FILTER_ENUM_FLAG_INCLUDE_DISABLED);
+    GUID_VALUE(FWPM_LAYER_ALE_AUTH_CONNECT_V4); GUID_VALUE(FWPM_LAYER_ALE_AUTH_CONNECT_V6);
+    GUID_VALUE(FWPM_LAYER_ALE_AUTH_RECV_ACCEPT_V4); GUID_VALUE(FWPM_LAYER_ALE_AUTH_RECV_ACCEPT_V6);
+    GUID_VALUE(FWPM_LAYER_OUTBOUND_TRANSPORT_V4); GUID_VALUE(FWPM_LAYER_OUTBOUND_TRANSPORT_V6);
+    GUID_VALUE(FWPM_CONDITION_IP_REMOTE_ADDRESS); GUID_VALUE(FWPM_CONDITION_IP_REMOTE_PORT);
+    GUID_VALUE(FWPM_CONDITION_IP_PROTOCOL); GUID_VALUE(FWPM_CONDITION_IP_LOCAL_INTERFACE);
+    GUID_VALUE(FWPM_CONDITION_IP_LOCAL_ADDRESS); GUID_VALUE(FWPM_CONDITION_IP_LOCAL_PORT);
+    GUID_VALUE(FWPM_CONDITION_ALE_APP_ID); GUID_VALUE(FWPM_CONDITION_FLAGS);
+    GUID_VALUE(FWPM_CONDITION_ICMP_TYPE); GUID_VALUE(FWPM_CONDITION_ICMP_CODE);
+    GUID_VALUE(FWPM_CONDITION_ALE_USER_ID);
+    printf("security_descriptor_type=%d match_filter=%lu\n", FWP_SECURITY_DESCRIPTOR_TYPE, FWP_ACTRL_MATCH_FILTER);
+    printf("loopback=%lu flags_all_set=%d\n", FWP_CONDITION_FLAG_IS_LOOPBACK, FWP_MATCH_FLAGS_ALL_SET);
+    printf("persistent_filter=%lu persistent_provider=%lu persistent_sublayer=%lu block=%lu permit=%lu\n", FWPM_FILTER_FLAG_PERSISTENT, FWPM_PROVIDER_FLAG_PERSISTENT, FWPM_SUBLAYER_FLAG_PERSISTENT, FWP_ACTION_BLOCK, FWP_ACTION_PERMIT);
+    printf("types: uint8=%d uint16=%d uint32=%d uint64=%d blob=%d v4mask=%d v6mask=%d\n",FWP_UINT8,FWP_UINT16,FWP_UINT32,FWP_UINT64,FWP_BYTE_BLOB_TYPE,FWP_V4_ADDR_MASK,FWP_V6_ADDR_MASK);
+}

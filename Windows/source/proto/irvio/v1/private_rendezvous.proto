@@ -1,0 +1,87 @@
+// IRVIO Project
+// Copyright (C) 2026 IRVIO Project contributors
+// SPDX-License-Identifier: AGPL-3.0-only
+// https://irvio.net
+// irvio@proton.me
+
+syntax = "proto3";
+
+package hydra.v1;
+
+import "proto/irvio/v1/rendezvous.proto";
+
+option go_package = "github.com/Irviodotnet/Irvio/proto/irvio/v1;irviova1";
+
+message PrivateInvitationPayload {
+  uint32 protocol_version = 1;
+  bytes host_peer_id = 2;
+  bytes locator = 3;
+  bytes invitation_id = 4;
+  bytes enrollment_secret = 5;
+  int64 created_at_unix = 6;
+  int64 expires_at_unix = 7;
+}
+
+message PrivateEnrollmentRequest {
+  uint32 protocol_version = 1;
+  bytes invitation_id = 2;
+  bytes enrollment_secret = 3;
+  bool status_only = 4;
+}
+
+message PrivateEnrollmentRelayRequest {
+  uint32 protocol_version = 1;
+  bytes target_peer_id = 2;
+  bytes locator = 3;
+  OwnerRoute owner_route = 4;
+}
+
+message PrivateEnrollmentResponse {
+  uint32 protocol_version = 1;
+  enum Status {
+    DENIED = 0;
+    PENDING = 1;
+    APPROVED = 2;
+  }
+  Status status = 2;
+}
+
+message PrivateRegistrationReceiptPayload {
+  uint32 protocol_version = 1;
+  bytes locator_commitment = 2;
+  RegistrationReceiptPayload receipt = 3;
+}
+
+message PrivateRendezvousRegister {
+  bytes locator = 1;
+  RendezvousRegister registration = 2;
+}
+
+message PrivateRendezvousLookup {
+  bytes locator = 1;
+  bytes target_peer_id = 2;
+  bytes request_id = 3;
+}
+
+message PrivateRendezvousLookupResult {
+  bytes request_id = 1;
+  BrokeredCandidate candidate = 2;
+}
+
+// Only the first request uses this frame; registered streams reuse bounded heartbeat/signaling frames.
+message PrivateRendezvousRequest {
+  uint32 protocol_version = 1;
+  oneof message {
+    PrivateRendezvousRegister register = 2;
+    PrivateRendezvousLookup lookup = 3;
+    RendezvousSignal signal = 4;
+  }
+}
+
+message PrivateRendezvousResponse {
+  uint32 protocol_version = 1;
+  oneof message {
+    PrivateRendezvousLookupResult lookup = 2;
+    RendezvousError error = 3;
+  }
+}

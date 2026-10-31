@@ -1,0 +1,23 @@
+# IRVIO Project
+# Copyright (C) 2026 IRVIO Project contributors
+# SPDX-License-Identifier: AGPL-3.0-only
+# https://irvio.net
+# irvio@proton.me
+
+[Unit]
+Description=IRVIO desktop Local API socket
+Requires=irvio-boot-recover.service
+After=irvio-boot-recover.service
+
+[Socket]
+ListenStream=/run/irvio/control.sock
+Service=irviod.service
+Accept=no
+SocketUser=root
+SocketGroup=irvio
+SocketMode=0660
+DirectoryMode=0755
+RemoveOnStop=yes
+
+[Install]
+WantedBy=sockets.target

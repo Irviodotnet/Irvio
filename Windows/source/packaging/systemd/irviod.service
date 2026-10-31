@@ -1,0 +1,26 @@
+# IRVIO Project
+# Copyright (C) 2026 IRVIO Project contributors
+# SPDX-License-Identifier: AGPL-3.0-only
+# https://irvio.net
+# irvio@proton.me
+
+[Unit]
+Description=IRVIO desktop networking daemon
+Requires=irvio.socket
+After=irvio.socket
+
+[Service]
+Type=simple
+User=root
+Group=irvio
+ExecStart=/usr/local/bin/irviod
+Restart=on-failure
+RestartSec=2s
+TimeoutStopSec=60s
+StateDirectory=irvio
+StateDirectoryMode=0700
+UMask=0007
+LimitNOFILE=65536
+NoNewPrivileges=yes
+
+# Deliberately no [Install]: irvio.socket activates this service on demand.
