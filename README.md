@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/status-alpha-D97706?style=flat-square" alt="Status: Alpha">
+  <img src="https://img.shields.io/badge/status-beta-D97706?style=flat-square" alt="Status: Beta">
   <img src="https://img.shields.io/badge/platform-Ubuntu%2024.04%20%2F%2026.04-E95420?style=flat-square&logo=ubuntu&logoColor=white" alt="Ubuntu 24.04 / 26.04">
   <img src="https://img.shields.io/badge/platform-Windows%2011-0078D4?style=flat-square" alt="Windows 11">
   <img src="https://img.shields.io/badge/architecture-AMD64-555555?style=flat-square" alt="AMD64">
